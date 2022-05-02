@@ -26,20 +26,26 @@ public class PlayerHealth : MonoBehaviour
     
     void Update()
     {
-        if (health != currentHealth)
+        if (health != currentHealth && currentHealth > 0)
         {
             animator.SetTrigger("DamageTaken");
             currentHealth = health;
         }
-
-        if (currentHealth <= 0)
+        else if (currentHealth <= 0)
         {
             animator.SetTrigger("Dead");
+            dead = true;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !dead)
         {
             health -= 5;
+        }
+
+        if (CharacterMovement.Skeleton)
+        {
+            currentHealth = 20;
+            health = currentHealth;
         }
     }
 

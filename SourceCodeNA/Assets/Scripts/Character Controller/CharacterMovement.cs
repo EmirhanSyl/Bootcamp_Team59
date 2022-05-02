@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public static bool Skeleton;
 
     [SerializeField] float movementSpeed = 5;
     [SerializeField] float sprintSpeed = 8;
     [SerializeField] float rotationSpeed = 360;
     [SerializeField] float movementSpeedWhileAttack = 2.5f;
+    [SerializeField] float deathDownSpeed = 0.5f;
 
     private float currentSpeed;
     private float speedParamOnAnimator;
@@ -20,16 +22,20 @@ public class CharacterMovement : MonoBehaviour
     private bool isMoving;
     private bool isAttack;
     private bool combo;
+    private bool isBuried;
 
     Rigidbody rig;
     Animator animator;
+    CapsuleCollider coll;
 
     Vector3 movementVector;
+    Vector3 goDownVec;
 
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        coll = GetComponent<CapsuleCollider>();
 
         currentSpeed = movementSpeed;
     }
@@ -37,15 +43,26 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         GetCharacterMovements();
-        Look();
-        Attack();
+
+        if (!PlayerHealth.dead)
+        {
+            Look();
+            Attack();
+        }
+        else
+        {
+            StartCoroutine(Dead());
+        }
 
         animator.SetFloat("Speed", speedParamOnAnimator);
     }
 
     private void FixedUpdate()
     {
-        rig.MovePosition(Time.deltaTime * currentSpeed * transform.forward * movementVector.normalized.magnitude + transform.position);        
+        if(!PlayerHealth.dead)
+        {
+            rig.MovePosition(Time.deltaTime * currentSpeed * transform.forward * movementVector.normalized.magnitude + transform.position);        
+        }
     }
 
     void GetCharacterMovements()
@@ -62,6 +79,15 @@ public class CharacterMovement : MonoBehaviour
         {
             currentSpeed = movementSpeed;            
             if(isMoving) StartCoroutine(ChangeFloatValueSmoothly(speedParamOnAnimator, 0.5f, 0.1f));
+        }
+
+        if(PlayerHealth.isHitted)
+        {
+            currentSpeed = movementSpeedWhileAttack;
+        }
+        else
+        {
+            currentSpeed = movementSpeed;
         }
     }
 
@@ -107,6 +133,41 @@ public class CharacterMovement : MonoBehaviour
                 combo = false;
             }
         }
+    }
+
+    IEnumerator Dead()
+    {
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + 1f);
+
+        if (!isBuried)
+        {
+            rig.useGravity = false;
+            coll.isTrigger = true;
+            goDownVec = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
+            isBuried = true;
+        }
+        transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
+
+        yield return new WaitForSeconds(5f);
+
+        transform.GetChild(0).gameObject.SetActive(false);
+        animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+
+        if (isBuried)
+        {
+            goDownVec = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+            transform.GetChild(1).gameObject.SetActive(true);
+            isBuried = false;
+        }
+        transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
+
+        yield return new WaitForSeconds(2);
+        rig.useGravity = true;
+        coll.isTrigger = false;
+        PlayerHealth.dead = false;
+        PlayerHealth.health = 20;
+        Skeleton = true;
     }
 
     IEnumerator ChangeFloatValueSmoothly(float v_start, float v_end, float duration)
