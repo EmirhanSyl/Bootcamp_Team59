@@ -6,10 +6,15 @@ Developers of Hidden
 
 # Ürün İle İlgili Bilgiler
 Geliştirici: Developers of Hidden
+
 Bağımsız Yapımcı 
+
 Platformlar: Windows PC
+
 Proje Yayınlanma Tarihi: 8 Haziran 2022
+
 Versiyon: 1.0
+
 Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera 
 
 ## Takım Elemanları
@@ -23,6 +28,8 @@ Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera
 ## Ürün İsmi
 
 -Half-Life 3
+
+
 ![Logo](https://user-images.githubusercontent.com/80157890/166570132-88d42174-96cf-43f0-9777-b7cc8db63c62.png)
 
 
