@@ -28,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
     Animator animator;
     CapsuleCollider coll;
 
-    Vector3 movementVector;
+    public Vector3 movementVector;
     Vector3 goDownVec;
 
     private void Awake()
@@ -48,13 +48,15 @@ public class CharacterMovement : MonoBehaviour
         {
             Look();
             Attack();
+            animator.SetFloat("Speed", speedParamOnAnimator);
+            StopCoroutine(Dead());
         }
         else
         {
             StartCoroutine(Dead());
         }
 
-        animator.SetFloat("Speed", speedParamOnAnimator);
+        
     }
 
     private void FixedUpdate()
