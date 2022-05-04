@@ -73,7 +73,8 @@ Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVOSSCpsI=/)
+https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=5tAnBa
+
 
 ---
 
@@ -83,11 +84,11 @@ Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 90 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 360 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 90-95 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 90-95 ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
-Story'ler yapılacak işlere (task'lere) bölünmüştür. Trello'da bulunan yapılacak işler kısmı belirlen tarih içerisinde atanan işin atanan kişi ya da kişiler tarafından yapılmasını gösterirken , işlemde olan işler kısmı işerin hala yapıldığını ifade eder . Tamamlanmış işler kısmı ise atanan işin atanan kişi tarafından sorunsuz bir şekilde tamalandığını ifade eder . En sağ köşede yer alan sorunlu işler kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu zamalarda Kanban tahtası üzerinden neler yapabiliriz önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız .
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats]
 ![16 04 2022](https://user-images.githubusercontent.com/80157890/166572267-f879399c-6f77-4bb6-80d0-6971e2013ab9.png)
@@ -109,21 +110,21 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Trello'da bulunan yap
 ![03 05 2022+](https://user-images.githubusercontent.com/80157890/166573052-9358c083-6924-4a4d-9417-d27a0237180e.png)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog1.png) 
-![Backlog 2](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog2.png) 
-![Backlog 3](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog3.png)
+
+![For Sprint 1 ](https://user-images.githubusercontent.com/80157890/166707673-4f4ee6e4-fb56-4aee-b8b2-fc4ea5e3b834.png)
+
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss1.png?raw=true)
-  ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss2.png?raw=true)
+
 
 - **Sprint Review**: 
-Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
+Alınan kararlar: 
+Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Unit test'ler için ayrılan efor/saat arttırılmalı 
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır . 
+  - Sprint için atama  puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı . 
+  
 
 -**Diğer Notlar**:
 - N/A
