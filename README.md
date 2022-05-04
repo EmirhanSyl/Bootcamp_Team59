@@ -25,6 +25,13 @@ Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera
 - Yusuf Talha Pazarlıklı: Developer
 - Emirhan Soylu: Developer
 
+
+
+![project charter](https://user-images.githubusercontent.com/80157890/166656473-cbbaa730-09ce-4ca6-89e7-e4e6263e53e7.png)
+
+
+
+
 ## Ürün İsmi
 
 -Half-Life 3
