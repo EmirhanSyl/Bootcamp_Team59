@@ -1,7 +1,6 @@
 
 ![image](https://user-images.githubusercontent.com/80157890/166660080-e9b7a5e1-35da-4b13-8f1f-ee87e4501fa5.png)
 
-
 # Bootcamp_Team59
 Bootcamp Takım-59 Github Repository
 # **Takım İsmi**
