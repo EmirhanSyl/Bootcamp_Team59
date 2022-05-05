@@ -114,6 +114,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak pr
 ![03 05 2022+](https://user-images.githubusercontent.com/80157890/166573052-9358c083-6924-4a4d-9417-d27a0237180e.png)
 ![04 05 2022](https://user-images.githubusercontent.com/80157890/166817119-ef84cfd3-845f-4d33-886c-6ade5ae78617.png)
 ![04 05 2022+](https://user-images.githubusercontent.com/80157890/166817174-8a1c380a-b74b-4917-869b-8d7cb5055e26.png)
+![05 05 2022](https://user-images.githubusercontent.com/80157890/167024330-dcde9e1d-399e-494c-b0a2-b7a795475b7b.png)
+![05 05 2022+](https://user-images.githubusercontent.com/80157890/167024357-9f9d7cbd-6ca0-4670-bfaa-b52eaf0942f5.png)
+
 
 
 - **Sprint board update**: Sprint board screenshotları: 
