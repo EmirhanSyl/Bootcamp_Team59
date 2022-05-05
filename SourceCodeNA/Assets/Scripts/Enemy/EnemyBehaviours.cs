@@ -20,6 +20,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool isLockedTarget;
         private bool isStunned;
         private bool isWaiting = true;
+        private bool isDead;
 
         private GameObject player;
 
@@ -30,12 +31,15 @@ namespace UnityEngine.AI.MonsterBehavior
 
         private EnemyDetector enemyDetector;
         private PlayerCombat playerCombat;
+        private Animator animator;
 
         private void Awake()
         {
             player = GameObject.FindGameObjectWithTag("Player");
+
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
             playerCombat = player.GetComponent<PlayerCombat>();
+            animator = GetComponent<Animator>();
 
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
@@ -44,7 +48,10 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void Update()
         {
-            transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+            if (!isDead)
+            {
+                transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+            }
         }
 
         void OnPlayerHit(EnemyBehaviours target)
@@ -61,12 +68,13 @@ namespace UnityEngine.AI.MonsterBehavior
                 Debug.Log(enemyHealth);
                 if (enemyHealth <= 0)
                 {
-                    //Death()
+                    Death();
                     return;
                 }
 
                 //Damage taken anim
                 transform.DOMove(transform.position - (transform.forward / 2), 0.3f).SetDelay(0.1f);
+                animator.SetTrigger("DamageTaken");
 
                 StopMoving();
             }
@@ -120,6 +128,15 @@ namespace UnityEngine.AI.MonsterBehavior
                 //counterParticles.Stop();
                 //counterParticles.Clear();
             }
+        }
+
+        void Death()
+        {
+            StopEnemyCoroutines();
+            StopMoving();
+
+            animator.SetTrigger("Dead");
+            isDead = true;
         }
 
         void StopEnemyCoroutines()

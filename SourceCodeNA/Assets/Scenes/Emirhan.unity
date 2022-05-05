@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485ace2da6d70ae469f5fb51d56324c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  enemyHealth: 100
   stunnedTimeAfterFamageTaken: 0.5
   counterParticles: {fileID: 0}
 --- !u!95 &367444673
@@ -2282,7 +2282,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756227116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -3144,6 +3144,86 @@ Transform:
   m_Father: {fileID: 389885885}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1028947523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_Name
+      value: NewFreeRPGHero@Flying Knee Punch Combo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+    - target: {fileID: 5866666021909216657, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dbe6e01dcf065044b93ca3eb6cf6bb5d, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'goggle'\n\tTransform 'goggle'\n\tFrom animation
+        clip 'DieRecover_SwordShield'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538610481937534034, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c12dcb13975c4f046aeb892393f83184, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 830f3387d02cdcf438312ddc710a8980, type: 3}
 --- !u!1 &1035003298
 GameObject:
   m_ObjectHideFlags: 0
@@ -5121,7 +5201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485ace2da6d70ae469f5fb51d56324c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  enemyHealth: 100
   stunnedTimeAfterFamageTaken: 0.5
   counterParticles: {fileID: 0}
 --- !u!95 &1886781497
@@ -6505,6 +6585,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05735af71ab75c04895719d222b48db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveToEnemyDuration: 1.2
+  attackAnimations:
+  - ComboAttack1
+  - ComboAttack2
+  - ComboAttack3
+  - ComboAttack4
+  OnLockedToEnemy:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCounterAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  isAttackingEnemy: 0
+  isCountering: 0
 --- !u!1 &1323932353661186
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +8958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485ace2da6d70ae469f5fb51d56324c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  enemyHealth: 100
   stunnedTimeAfterFamageTaken: 0.5
   counterParticles: {fileID: 0}
 --- !u!1 &5590529369269571728

@@ -19,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
     private float attackAnimIndex;
     private float timeWithoutAction;
 
+    private bool isMoveLocked;
     private bool isMoving;
     private bool isAttack;
     private bool combo;
@@ -27,6 +28,7 @@ public class CharacterMovement : MonoBehaviour
     Rigidbody rig;
     Animator animator;
     CapsuleCollider coll;
+    PlayerCombat playerCombat;
 
     public Vector3 movementVector;
     Vector3 goDownVec;
@@ -36,32 +38,33 @@ public class CharacterMovement : MonoBehaviour
         rig = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         coll = GetComponent<CapsuleCollider>();
+        playerCombat = GetComponent<PlayerCombat>();
 
         currentSpeed = movementSpeed;
     }
 
     private void Update()
     {
-        GetCharacterMovements();
-
-        if (!PlayerHealth.dead)
+        isMoveLocked = playerCombat.isAttackingEnemy ?  true :  false;
+        isMoveLocked = PlayerHealth.dead ? true : isMoveLocked;
+        
+        if (!isMoveLocked)
         {
             Look();
             Attack();
+            GetCharacterMovements();
             animator.SetFloat("Speed", speedParamOnAnimator);
             StopCoroutine(Dead());
         }
-        else
+        if (PlayerHealth.dead)
         {
-            StartCoroutine(Dead());
-        }
-
-        
+            Dead();
+        }        
     }
 
     private void FixedUpdate()
     {
-        if(!PlayerHealth.dead)
+        if (!isMoveLocked)
         {
             rig.MovePosition(Time.deltaTime * currentSpeed * transform.forward * movementVector.normalized.magnitude + transform.position);        
         }
@@ -86,10 +89,6 @@ public class CharacterMovement : MonoBehaviour
         if(PlayerHealth.isHitted)
         {
             currentSpeed = movementSpeedWhileAttack;
-        }
-        else
-        {
-            currentSpeed = movementSpeed;
         }
     }
 
