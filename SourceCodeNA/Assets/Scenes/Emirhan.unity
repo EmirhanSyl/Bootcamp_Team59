@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 41.5
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: d953e27bc4cab9543a411ded54521385, type: 2}
 --- !u!1 &13437318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,10 +1102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367444671}
-  - component: {fileID: 367444675}
   - component: {fileID: 367444674}
   - component: {fileID: 367444673}
   - component: {fileID: 367444672}
+  - component: {fileID: 367444676}
   m_Layer: 6
   m_Name: Enemy (2)
   m_TagString: Untagged
@@ -1121,7 +1121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367444670}
   m_LocalRotation: {x: -0, y: 0.892269, z: -0, w: 0.45150423}
-  m_LocalPosition: {x: 0.315, y: 0, z: 5.28}
+  m_LocalPosition: {x: 0.315, y: -0.89, z: 5.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1931617579}
@@ -1142,8 +1142,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  movementSpeed: 3.5
+  SprintSpeed: 5
   stunnedTimeAfterFamageTaken: 0.5
+  maxDistanceToTarget: 10
+  attackRange: 1.5
+  attackDuration: 2
+  minHitDamage: 5
+  maxHitDamage: 25
+  attackAnimatonsList:
+  - Attack1
+  - Attack2
   counterParticles: {fileID: 0}
+  HitThePlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &367444673
 Animator:
   serializedVersion: 3
@@ -1177,22 +1190,28 @@ CapsuleCollider:
   m_Height: 1.436312
   m_Direction: 1
   m_Center: {x: 0, y: 0.7193445, z: 0}
---- !u!54 &367444675
-Rigidbody:
+--- !u!195 &367444676
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367444670}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.3
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &389885884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2383,7 @@ MonoBehaviour:
   - {fileID: 4053913005894700}
   - {fileID: 4534101048345784}
   - {fileID: 4234082599705616}
-  - {fileID: 4975232534474314}
+  - {fileID: 0}
   - {fileID: 4927965714864600}
   - {fileID: 4162187342913350}
   - {fileID: 4726992970673134}
@@ -2670,9 +2689,11 @@ GameObject:
   - component: {fileID: 874781706}
   - component: {fileID: 874781708}
   - component: {fileID: 874781707}
+  - component: {fileID: 874781709}
+  - component: {fileID: 874781710}
   m_Layer: 6
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2740,6 +2761,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874781705}
   m_Mesh: {fileID: 4300002, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
+--- !u!64 &874781709
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874781705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
+--- !u!54 &874781710
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874781705}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &881805363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,6 +4211,36 @@ Transform:
   m_Father: {fileID: 836959987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1462121263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462121264}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462121264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462121263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466008120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,9 +4770,11 @@ GameObject:
   - component: {fileID: 1754081710}
   - component: {fileID: 1754081712}
   - component: {fileID: 1754081711}
+  - component: {fileID: 1754081713}
+  - component: {fileID: 1754081714}
   m_Layer: 6
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4759,6 +4842,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754081709}
   m_Mesh: {fileID: 4300002, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
+--- !u!64 &1754081713
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754081709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
+--- !u!54 &1754081714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754081709}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1784631513
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,10 +5275,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886781495}
-  - component: {fileID: 1886781499}
   - component: {fileID: 1886781498}
   - component: {fileID: 1886781497}
   - component: {fileID: 1886781496}
+  - component: {fileID: 1886781500}
   m_Layer: 6
   m_Name: Enemy (1)
   m_TagString: Untagged
@@ -5181,7 +5294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886781494}
   m_LocalRotation: {x: -0, y: 0.892269, z: -0, w: 0.45150423}
-  m_LocalPosition: {x: -5.11, y: 0, z: 3.06}
+  m_LocalPosition: {x: -5.11, y: -0.89, z: 3.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1824230974}
@@ -5202,8 +5315,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  movementSpeed: 3.5
+  SprintSpeed: 5
   stunnedTimeAfterFamageTaken: 0.5
+  maxDistanceToTarget: 10
+  attackRange: 1.5
+  attackDuration: 2
+  minHitDamage: 5
+  maxHitDamage: 25
+  attackAnimatonsList:
+  - Attack1
+  - Attack2
   counterParticles: {fileID: 0}
+  HitThePlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1886781497
 Animator:
   serializedVersion: 3
@@ -5237,22 +5363,28 @@ CapsuleCollider:
   m_Height: 1.436312
   m_Direction: 1
   m_Center: {x: 0, y: 0.7193445, z: 0}
---- !u!54 &1886781499
-Rigidbody:
+--- !u!195 &1886781500
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886781494}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.3
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1900863078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6157,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &2141110328
 MeshCollider:
@@ -8603,13 +8735,45 @@ GameObject:
   - component: {fileID: 4498450250299727200}
   - component: {fileID: 4498450250298924352}
   - component: {fileID: 4498450250297827200}
+  - component: {fileID: 4498450250300014913}
+  - component: {fileID: 4498450250300014914}
   m_Layer: 6
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4498450250300014913
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498450250300014912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
+--- !u!54 &4498450250300014914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498450250300014912}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!33 &4878333687319878319
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8935,10 +9099,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5590529369269603502}
-  - component: {fileID: 5590529369269571731}
   - component: {fileID: 5590529369269571729}
   - component: {fileID: 5590529369260090176}
   - component: {fileID: 5590529369269571727}
+  - component: {fileID: 5590529369269571733}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -8959,8 +9123,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  movementSpeed: 3.5
+  SprintSpeed: 5
   stunnedTimeAfterFamageTaken: 0.5
+  maxDistanceToTarget: 10
+  attackRange: 1.5
+  attackDuration: 2
+  minHitDamage: 5
+  maxHitDamage: 25
+  attackAnimatonsList:
+  - Attack1
+  - Attack2
   counterParticles: {fileID: 0}
+  HitThePlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5590529369269571728
 GameObject:
   m_ObjectHideFlags: 0
@@ -9007,22 +9184,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &5590529369269571731
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5590529369269571726}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &5590529369269571732
 GameObject:
   m_ObjectHideFlags: 0
@@ -9039,6 +9200,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!195 &5590529369269571733
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590529369269571726}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.3
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5590529369269571734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10348,7 +10531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5590529369269571726}
   m_LocalRotation: {x: -0, y: 0.892269, z: -0, w: 0.45150423}
-  m_LocalPosition: {x: 4.96, y: 0, z: 2.58}
+  m_LocalPosition: {x: 4.96, y: -0.89, z: 2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5590529369269603630}

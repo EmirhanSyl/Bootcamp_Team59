@@ -10,19 +10,38 @@ namespace UnityEngine.AI.MonsterBehavior
     public class EnemyBehaviours : MonoBehaviour
     {
         [SerializeField] private float enemyHealth = 100f;
+        [SerializeField] private float movementSpeed = 3.5f;
+        [SerializeField] private float SprintSpeed = 5f;
         [SerializeField] private float stunnedTimeAfterFamageTaken = 0.5f;
+        [SerializeField] private float maxDistanceToTarget = 10f;
+        [SerializeField] private float attackRange = 2f;
+        [SerializeField] private float attackDuration = 0.6f;
+        [SerializeField] private float minHitDamage = 5f;
+        [SerializeField] private float maxHitDamage = 25f;
 
-        [SerializeField] private ParticleSystem counterParticles;        
+        [SerializeField] private string[] attackAnimatonsList;
+
+        [SerializeField] private ParticleSystem counterParticles;
+
+        public UnityEvent<PlayerHealth> HitThePlayer;
+
+        private float distanceToTarget;
+        private float currentSpeed;
+        private float animatorSpeed;
+
+        private int attackAnimationIndex;
 
         private bool isPraperingAttack;
         private bool isMoving;
         private bool isRetreating;
         private bool isLockedTarget;
         private bool isStunned;
-        private bool isWaiting = true;
+        private bool isCharging;
         private bool isDead;
+        private bool isPlayerInAttackRange;
 
         private GameObject player;
+        private GameObject enemyTarget;
 
         private Coroutine prepareToAttackCoroutine;
         private Coroutine RetreatCoroutine;
@@ -32,6 +51,9 @@ namespace UnityEngine.AI.MonsterBehavior
         private EnemyDetector enemyDetector;
         private PlayerCombat playerCombat;
         private Animator animator;
+        private NavMeshAgent agent;
+
+        private Vector3 targetVector;
 
         private void Awake()
         {
@@ -40,18 +62,81 @@ namespace UnityEngine.AI.MonsterBehavior
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
             playerCombat = player.GetComponent<PlayerCombat>();
             animator = GetComponent<Animator>();
+            agent = GetComponent<NavMeshAgent>();
 
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
+
+            enemyTarget = player;
         }
 
         void Update()
         {
+            targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+            agent.speed = currentSpeed;
+            animator.SetFloat("Speed", animatorSpeed);
+
             if (!isDead)
             {
-                transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+                transform.LookAt(targetVector);
+                EnemyMovement();
             }
+        }
+
+        void EnemyMovement()
+        {
+            distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
+
+            if (distanceToTarget <= maxDistanceToTarget && distanceToTarget > attackRange)
+            {
+                agent.SetDestination(targetVector);
+                currentSpeed = movementSpeed;
+
+                DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);                
+
+                isPlayerInAttackRange = false;
+            }
+            else if(distanceToTarget < attackRange)
+            {
+                DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
+                isPlayerInAttackRange = true;
+                EnemyAttack();
+            }
+            else
+            {
+                isPlayerInAttackRange = false;
+                DOVirtual.Float(animatorSpeed, 0.5f, 0.1f, (speed) => animatorSpeed = speed);
+                currentSpeed = SprintSpeed;
+            }
+
+        }
+
+        void EnemyAttack()
+        {
+            StopMoving();
+            if (RetreatCoroutine != null)
+            {
+                return;
+            }
+            RetreatCoroutine = StartCoroutine(Charging(attackDuration));           
+
+            IEnumerator Charging(float chargeDuration)
+            {
+                isCharging = true;
+
+                yield return new WaitForSeconds(chargeDuration);
+                
+                RetreatCoroutine = null;
+                animator.SetTrigger(attackAnimatonsList[attackAnimationIndex]);
+                attackAnimationIndex = (int)Mathf.Repeat(attackAnimationIndex + 1, attackAnimatonsList.Length);            
+                isCharging = false;
+            }
+        }
+
+        public float EnemyHitDamage()
+        {
+            return Random.Range(minHitDamage, maxHitDamage);
         }
 
         void OnPlayerHit(EnemyBehaviours target)
@@ -78,7 +163,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 StopMoving();
             }
-
+            
             IEnumerator DamageTakenCoroutine()
             {
                 isStunned = true;
@@ -110,7 +195,7 @@ namespace UnityEngine.AI.MonsterBehavior
         public void StopMoving()
         {
             isMoving = false;
-            //Stop Enemy
+            agent.SetDestination(transform.position);
         }
 
 
@@ -135,7 +220,7 @@ namespace UnityEngine.AI.MonsterBehavior
             StopEnemyCoroutines();
             StopMoving();
 
-            animator.SetTrigger("Dead");
+            animator.SetBool("Dead", true);
             isDead = true;
         }
 

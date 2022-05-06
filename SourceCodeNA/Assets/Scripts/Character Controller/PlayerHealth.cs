@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI.MonsterBehavior;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,10 +18,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
+        animator = GetComponent<Animator>();
+
         health = healthOnInspector;
         currentHealth = health;
-
-        animator = GetComponent<Animator>();
     }
 
     
@@ -49,15 +50,29 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void TransformToSkeleton()
-    {
-
-    }
-
     IEnumerator DamageCooldown()
     {
         isHitted = true;
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         isHitted = false;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyWeapon"))
+        {
+            EnemyBehaviours enemy = collision.gameObject.GetComponentInParent<EnemyBehaviours>();
+            health -= enemy.EnemyHitDamage();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EnemyWeapon"))
+        {
+            EnemyBehaviours enemy = other.gameObject.GetComponentInParent<EnemyBehaviours>();
+            health -= enemy.EnemyHitDamage();
+        }
+    }
+
 }

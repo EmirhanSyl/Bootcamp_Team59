@@ -47,7 +47,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
             if (Physics.SphereCast(transform.position, 3f, inputDirection, out info, 10, layerMask))
             {
-                if (info.collider.transform.GetComponent<EnemyBehaviours>().IsAttackable())
+                if ( info.collider.transform.GetComponent<EnemyBehaviours>() != null && info.collider.transform.GetComponent<EnemyBehaviours>().IsAttackable())
                 {
                     currentTarget = info.collider.transform.GetComponent<EnemyBehaviours>();
                 }
@@ -68,7 +68,7 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, inputDirection);
-
+            Gizmos.DrawRay(new Ray(transform.position,inputDirection));
             Gizmos.DrawWireSphere(transform.position, 1);
             if (CurrentTarget() != null)
             {
