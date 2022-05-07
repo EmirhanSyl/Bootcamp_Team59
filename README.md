@@ -100,7 +100,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak pr
 
 Ekran Görüntüleri le İlgili Dosya : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EYgE3chpUNVImS83hTY397IBIqhMjoZ248MenU-WtWURpg?e=DzkiRJ
 
-Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : 
+Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EVmhqZ6BnjBIs6BVmqIkdEABme9T4i68Zzpt6IaEeHbk0w?e=Fz9nRE
 
 
 - **Sprint board update**: Sprint board screenshotları: 
