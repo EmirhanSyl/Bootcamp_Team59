@@ -97,28 +97,10 @@ https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJ
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats]
-![16 04 2022](https://user-images.githubusercontent.com/80157890/166572267-f879399c-6f77-4bb6-80d0-6971e2013ab9.png)
-![23 04 2022](https://user-images.githubusercontent.com/80157890/166572304-b0a4657e-be8e-4fbe-a5ea-3c0e87843c34.png)
-![24 04 2022](https://user-images.githubusercontent.com/80157890/166572344-14531ea5-ed9c-4be3-a4f5-1d44ea0df133.png)
-![25 04 2022](https://user-images.githubusercontent.com/80157890/166572377-0bbc72f7-18f8-4016-a3c1-afab3a0523f6.png)
-![25 04 2022+](https://user-images.githubusercontent.com/80157890/166572396-73e0f321-a87a-44b1-9998-0f5a16d4f9bf.png)
-![25 04 2022+++](https://user-images.githubusercontent.com/80157890/166572413-47b487ad-2ca7-489d-9677-2e8b6441db4c.png)
-![26 04 2022](https://user-images.githubusercontent.com/80157890/166572436-a8396bcf-4f71-40f6-a1bb-d50b575c992a.png)
-![27 04 2022](https://user-images.githubusercontent.com/80157890/166572452-0bff2e00-334b-43f1-8120-4bf508ef1eff.png)
-![28 04 2022](https://user-images.githubusercontent.com/80157890/166572488-249390b9-02c1-4aa8-9419-42105797cb0e.png)
-![29 04 2022](https://user-images.githubusercontent.com/80157890/166572527-17d0ebd8-6d63-4da2-a2db-4dd5785400f1.png)
-![30 04 2022](https://user-images.githubusercontent.com/80157890/166572555-d995be7a-0589-41ac-8ff9-0d2efa75ca43.png)
-![01 05 2022](https://user-images.githubusercontent.com/80157890/166572597-807d2ee5-7b66-443e-9bf1-b5d1ceecebdf.png)
-![01 05 2022 ++](https://user-images.githubusercontent.com/80157890/166572646-ac740915-a02d-4df0-8010-f93ea4f96b07.png)
-![02 05 2022 asset](https://user-images.githubusercontent.com/80157890/166572709-179d42d1-930e-4164-b5f0-19b6c5592465.png)
-![02 05 2022 +](https://user-images.githubusercontent.com/80157890/166572730-e1ebddc0-444f-4db7-a596-355fc0aef69a.png)
-![03 05 2022](https://user-images.githubusercontent.com/80157890/166572761-eeda7871-70f8-4dc7-a7c2-eda7762a4127.png)
-![03 05 2022+](https://user-images.githubusercontent.com/80157890/166573052-9358c083-6924-4a4d-9417-d27a0237180e.png)
-![04 05 2022](https://user-images.githubusercontent.com/80157890/166817119-ef84cfd3-845f-4d33-886c-6ade5ae78617.png)
-![04 05 2022+](https://user-images.githubusercontent.com/80157890/166817174-8a1c380a-b74b-4917-869b-8d7cb5055e26.png)
-![05 05 2022](https://user-images.githubusercontent.com/80157890/167024330-dcde9e1d-399e-494c-b0a2-b7a795475b7b.png)
-![05 05 2022+](https://user-images.githubusercontent.com/80157890/167024357-9f9d7cbd-6ca0-4670-bfaa-b52eaf0942f5.png)
 
+Ekran Görüntüleri le İlgili Dosya : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EYgE3chpUNVImS83hTY397IBIqhMjoZ248MenU-WtWURpg?e=DzkiRJ
+
+Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : 
 
 
 - **Sprint board update**: Sprint board screenshotları: 
