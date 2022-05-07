@@ -128,13 +128,21 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak pr
 
 
 - **Sprint Review**: 
+
+
+
+
+
+
 Alınan kararlar: 
 Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır . 
-  - Sprint için atama  puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı . 
-  
+ 
+ ![retropective for sprint 1](https://user-images.githubusercontent.com/80157890/167249230-c45a9571-3616-420e-8a44-f2fb3715c2bf.png)
+ 
+ https://miro.com/app/board/uXjVO3uXwKg=/?share_link_id=401438600957
+ 
 
 -**Diğer Notlar**:
 - N/A
