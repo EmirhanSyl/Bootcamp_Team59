@@ -37,6 +37,8 @@ Tarz: Aksiyon, Strateji, Keşif, Koloni Yönetimi , Macera
 
 ![project charter](https://user-images.githubusercontent.com/80157890/166656473-cbbaa730-09ce-4ca6-89e7-e4e6263e53e7.png)
 
+https://miro.com/app/board/uXjVO6kTy8k=/?share_link_id=587989567305
+
 
 
 
