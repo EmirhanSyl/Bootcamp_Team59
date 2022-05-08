@@ -9,11 +9,13 @@ namespace UnityEngine.AI.MonsterBehavior
 {
     public class EnemyBehaviours : MonoBehaviour
     {
+        [Header("Enemy States")]
         [SerializeField] private float enemyHealth = 100f;
         [SerializeField] private float movementSpeed = 1.5f;
         [SerializeField] private float SprintSpeed = 3.5f;
         [SerializeField] private float stunnedTimeAfterFamageTaken = 0.5f;
-        [SerializeField] private float maxDistanceToTarget = 10f;
+        public float maxDistanceToTarget = 10f;
+        [Header("Attack Stats")]
         [SerializeField] private float attackRange = 2f;
         [SerializeField] private float attackDuration = 0.6f;
         [SerializeField] private float minHitDamage = 5f;
@@ -22,21 +24,28 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private string[] attackAnimatonsList;
 
         [SerializeField] private ParticleSystem counterParticles;
+        [SerializeField] private ParticleSystem bloodParticles;
 
-        public EnemyStateType enemyStateTypeDropdown;
-        public enum EnemyStateType { Purposeless, Guardian };
+        public enum EnemyStateType { Purposeless, Guardian, TowerWizard };
+        [Header("Enemy Type Informations")]public EnemyStateType enemyStateTypeDropdown;
+
+        public enum Region {Desert, Forest, Ice };
+        [Header("Region Informations")]public Region regionDrowpdown;
 
         public LayerMask groundMask;
 
-        public UnityEvent<PlayerHealth> HitThePlayer;
+        [HideInInspector]public UnityEvent<PlayerHealth> HitThePlayer;
 
-        private float distanceToTarget;
+        public float rotatioSpeed = 50f;
+        public bool controllingByGroupManager;
+
+        public float distanceToTarget;
         private float currentSpeed;
         private float animatorSpeed;
 
         private int attackAnimationIndex;
 
-        private bool[] enemyStateTypeBool = new bool[2];
+        private bool[] enemyStateTypeBool = new bool[3];
         private bool isPraperingAttack;
         private bool isMoving;
         private bool isRetreating;
@@ -47,6 +56,8 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool isPlayerInAttackRange;
         private bool isPlayingAttackAnimation;
         private bool leftClicked;
+        public bool hittedByPlayer;
+        private bool stopBlood;
 
         //Purposeless Enemy
         [SerializeField] private float walkRange = 5;
@@ -77,7 +88,8 @@ namespace UnityEngine.AI.MonsterBehavior
         private Animator animator;
         private NavMeshAgent agent;
 
-        private Vector3 targetVector;
+        public Vector3 targetVector;
+        public GameObject targetObject;
 
         private void Awake()
         {
@@ -87,7 +99,11 @@ namespace UnityEngine.AI.MonsterBehavior
             characterMovement = player.GetComponent<CharacterMovement>();
             playerCombat = player.GetComponent<PlayerCombat>();
             animator = GetComponent<Animator>();
-            agent = GetComponent<NavMeshAgent>();
+            if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
+            {
+                agent = GetComponent<NavMeshAgent>();
+                controllingByGroupManager = true;
+            }
 
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
@@ -105,17 +121,27 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void Update()
         {
-            agent.SetDestination(targetVector);
-            agent.speed = currentSpeed;
-            animator.SetFloat("Speed", animatorSpeed);
+            if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
+            {
+                agent.SetDestination(targetVector);
+                agent.speed = currentSpeed;
+                animator.SetFloat("Speed", animatorSpeed);
+            }
 
             if (!isDead)
             {
                 //transform.LookAt(targetVector);
                 var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
                 rotation.y = 0;
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 50 * Time.deltaTime);
-                EnemyMovement();
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotatioSpeed * Time.deltaTime);
+                if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
+                {
+                    EnemyMovement();
+                }
+                else
+                {
+                    TowerWizard();
+                }
             }
             else
             {
@@ -125,16 +151,33 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 Death();
                 animator.SetBool("Dead", true);
+                Destroy(gameObject, 4);
+                StartCoroutine(DeadPart());
+                IEnumerator DeadPart()
+                {
+                    yield return new WaitForSeconds(3.9f);
+                    if (!stopBlood)
+                    {
+                        Instantiate(bloodParticles, transform.position, Quaternion.identity);
+                        stopBlood = true;
+                    }
+                }
             }
         }
 
         void EnemyMovement()
         {
-            distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
+            if (!controllingByGroupManager)
+            {
+                distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
+            }
 
             if (distanceToTarget <= maxDistanceToTarget && distanceToTarget > attackRange)
             {
-                targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+                if (!controllingByGroupManager)
+                {
+                    targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+                }
 
                 DOVirtual.Float(currentSpeed, SprintSpeed, 0.4f, (speed) => currentSpeed = speed);
                 DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);
@@ -253,7 +296,7 @@ namespace UnityEngine.AI.MonsterBehavior
             }
             else
             {
-                agent.SetDestination(targetVector);
+                //agent.SetDestination(targetVector);
             }
 
             Vector3 distanceToTargetPoint = transform.position - targetVector;
@@ -280,6 +323,19 @@ namespace UnityEngine.AI.MonsterBehavior
             }
         }
         
+        void TowerWizard()
+        {
+            if (targetVector == null)
+            {
+                return;
+            }
+            if (distanceToTarget < attackRange)
+            {
+                EnemyAttack();
+            }
+            
+        }
+
         void OnPlayerHit(EnemyBehaviours target)
         {
             if (target == this)
@@ -290,14 +346,18 @@ namespace UnityEngine.AI.MonsterBehavior
                 enemyDetector.SetCurrentTarget(null);
                 isLockedTarget = false;
 
-                if (!leftClicked)
+                if (hittedByPlayer)
                 {
-                    enemyHealth -= Random.Range(25f, 50f);
-                }
-                else
-                {
-                    enemyHealth -= characterMovement.WeaponDamage();
-                    leftClicked = false;
+                    if (!leftClicked)
+                    {
+                        enemyHealth -= Random.Range(25f, 50f);
+                    }
+                    else
+                    {
+                        enemyHealth -= characterMovement.WeaponDamage();
+                        leftClicked = false;
+                    }
+                    hittedByPlayer = false;
                 }
 
                 Debug.Log(enemyHealth);
@@ -341,7 +401,10 @@ namespace UnityEngine.AI.MonsterBehavior
         public void StopMoving()
         {
             isMoving = false;
-            agent.SetDestination(transform.position);
+            if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
+            {
+                agent.SetDestination(transform.position);
+            }
         }
 
         public void AttackAnimationPlayingEvent()
@@ -374,7 +437,10 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             StopEnemyCoroutines();
             StopMoving();
-            weaponController.beAbleToAttack = true;
+            if (weaponController != null)
+            {
+                weaponController.beAbleToAttack = true;
+            }
 
             animator.SetBool("Dead", true);
             isDead = true;
@@ -416,7 +482,14 @@ namespace UnityEngine.AI.MonsterBehavior
                 OnPlayerHit(this);
                 weaponController = other.gameObject.GetComponent<WeaponController>();
                 weaponController.beAbleToAttack = false;
+                hittedByPlayer = true;
             }
+        }
+
+        public void GetHittedFromNPC(float damage)
+        {
+            enemyHealth -= damage;
+            OnPlayerHit(this);
         }
 
         #region Return Public Bools
@@ -444,6 +517,11 @@ namespace UnityEngine.AI.MonsterBehavior
         public bool IsOnAttack()
         {
             return isPlayingAttackAnimation;
+        }
+
+        public bool IsAttacking()
+        {
+            return isPlayerInAttackRange;
         }
         #endregion
 

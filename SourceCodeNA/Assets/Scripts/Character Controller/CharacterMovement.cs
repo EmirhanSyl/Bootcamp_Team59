@@ -18,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float minWeaponDamage;
     [SerializeField] private float maxWeaponDamage;
 
+    [SerializeField] private GameObject cameraPivot;
+
     private float currentSpeed;
     private float speedParamOnAnimator;
     private float attackDuration;
@@ -37,6 +39,8 @@ public class CharacterMovement : MonoBehaviour
 
     public Vector3 movementVector;
     Vector3 goDownVec;
+
+    float rot = 45;
 
     private void Awake()
     {
@@ -64,7 +68,14 @@ public class CharacterMovement : MonoBehaviour
         if (PlayerHealth.dead)
         {
             Dead();
-        }        
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            cameraPivot.transform.Rotate(cameraPivot.transform.rotation.x, cameraPivot.transform.rotation.y + 90, cameraPivot.transform.rotation.z, Space.World);
+            IsoMovementHelper._isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, rot + 90, 0));
+            rot += 90;
+        }
     }
 
     private void FixedUpdate()
@@ -197,6 +208,6 @@ public class CharacterMovement : MonoBehaviour
 
 public static class IsoMovementHelper
 {
-    private static Matrix4x4 _isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+    public static Matrix4x4 _isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
     public static Vector3 ToIso(this Vector3 input) => _isoMatrix.MultiplyPoint3x4(input);
 }

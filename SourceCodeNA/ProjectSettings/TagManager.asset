@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyWeapon
   - Villiager
-  - Food
-  - Stone
-  - Soul
-  - Wood
+  - EnemyWeapon
+  - PlayerWeapon
   layers:
   - Default
   - TransparentFX
@@ -17,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
+  - GroundMask
   - Enemy
-  - Ground
-  - Clickable
-  - 
-  - 
+  - Desert
+  - Forest
+  - Ice
   - 
   - 
   - 

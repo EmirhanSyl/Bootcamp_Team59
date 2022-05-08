@@ -117,6 +117,7 @@ public class PlayerCombat : MonoBehaviour
 
             OnDamageTaken.Invoke(locedTarget);
             //Particle codes
+            locedTarget.hittedByPlayer = true;
         }
     }
 }
