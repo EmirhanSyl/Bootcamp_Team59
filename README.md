@@ -109,6 +109,9 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+- 
+
+
 ![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png)
 ![sprin içint4](https://user-images.githubusercontent.com/80157890/167312604-5489f213-1fb0-42f6-a40c-b4351c060bef.png)
 ![sprint için2](https://user-images.githubusercontent.com/80157890/167312610-4dd7ea6a-bbe1-49db-b4cd-70c814735fce.png)
