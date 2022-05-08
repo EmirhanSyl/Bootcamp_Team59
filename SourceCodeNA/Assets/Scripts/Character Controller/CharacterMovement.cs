@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +7,16 @@ public class CharacterMovement : MonoBehaviour
 {
     public static bool Skeleton;
 
+    public bool isAttack;
+
     [SerializeField] float movementSpeed = 5;
     [SerializeField] float sprintSpeed = 8;
     [SerializeField] float rotationSpeed = 360;
     [SerializeField] float movementSpeedWhileAttack = 2.5f;
     [SerializeField] float deathDownSpeed = 0.5f;
+
+    [SerializeField] private float minWeaponDamage;
+    [SerializeField] private float maxWeaponDamage;
 
     private float currentSpeed;
     private float speedParamOnAnimator;
@@ -21,7 +27,6 @@ public class CharacterMovement : MonoBehaviour
 
     private bool isMoveLocked;
     private bool isMoving;
-    private bool isAttack;
     private bool combo;
     private bool isBuried;
 
@@ -76,19 +81,19 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && !isAttack)
         {
-            currentSpeed = sprintSpeed;
-            
+            DOVirtual.Float(currentSpeed, sprintSpeed, 0.4f, (speed) => currentSpeed = speed);
+
             if (isMoving) StartCoroutine(ChangeFloatValueSmoothly(speedParamOnAnimator, 1f, 0.1f));
         }
         else if(!isAttack)
         {
-            currentSpeed = movementSpeed;            
-            if(isMoving) StartCoroutine(ChangeFloatValueSmoothly(speedParamOnAnimator, 0.5f, 0.1f));
+            DOVirtual.Float(currentSpeed, movementSpeed, 0.4f, (speed) => currentSpeed = speed);
+            if (isMoving) StartCoroutine(ChangeFloatValueSmoothly(speedParamOnAnimator, 0.5f, 0.1f));
         }
 
         if(PlayerHealth.isHitted)
         {
-            currentSpeed = movementSpeedWhileAttack;
+            DOVirtual.Float(currentSpeed, movementSpeedWhileAttack, 0.4f, (speed) => currentSpeed = speed);
         }
     }
 
@@ -110,29 +115,13 @@ public class CharacterMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isAttack)
+        if (Input.GetMouseButtonDown(0) && !isAttack)
         {
             StartCoroutine(Attacking());
-            comboTimer = 0;
         }
         else if (isAttack)
         {
-            comboTimer += Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Space) && comboTimer > attackDuration * 70 / 100)
-            {
-                combo = true;
-                attackAnimIndex = 1;
-                animator.SetFloat("AttackAnim", attackAnimIndex);
-            }            
-        }
-        else if (!isAttack)
-        {
-            timeWithoutAction += Time.deltaTime;
-
-            if (timeWithoutAction > 0.5f && combo)
-            {
-                combo = false;
-            }
+               
         }
     }
 
@@ -171,6 +160,12 @@ public class CharacterMovement : MonoBehaviour
         Skeleton = true;
     }
 
+    public float WeaponDamage()
+    {
+        float weaponDamage = Random.Range(minWeaponDamage, maxWeaponDamage);
+        return weaponDamage;
+    }
+
     IEnumerator ChangeFloatValueSmoothly(float v_start, float v_end, float duration)
     {
         float elapsed = 0.0f;
@@ -186,18 +181,15 @@ public class CharacterMovement : MonoBehaviour
     IEnumerator Attacking()
     {
         isAttack = true;
-        currentSpeed = movementSpeedWhileAttack;
+        DOVirtual.Float(currentSpeed, movementSpeedWhileAttack, 0.4f, (speed) => currentSpeed = speed);
         animator.SetTrigger("Attack");
         attackDuration = animator.GetCurrentAnimatorStateInfo(0).length;
 
-        yield return new WaitForSeconds(attackDuration);
+        yield return new WaitForSeconds(attackDuration + 0.1f);
 
-        if (!combo)
-        {
-            attackAnimIndex = 0;
-            animator.SetFloat("AttackAnim", attackAnimIndex);
-        }
-        currentSpeed = movementSpeed;
+        attackAnimIndex = (int)Mathf.Repeat(attackAnimIndex + 1, 2);
+        animator.SetFloat("AttackAnim", attackAnimIndex);
+        DOVirtual.Float(currentSpeed, movementSpeed, 0.4f, (speed) => currentSpeed = speed);
         isAttack = false;
     }
 

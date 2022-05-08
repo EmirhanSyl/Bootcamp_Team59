@@ -12,7 +12,11 @@ public class PlayerHealth : MonoBehaviour
 
     public float healthOnInspector = 100f;
 
+    [SerializeField] private float noTakeDamageTime = 0.5f;
+
     private float currentHealth;
+
+    private bool godMode;
 
     Animator animator;
 
@@ -36,11 +40,6 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetTrigger("Dead");
             dead = true;
-        }
-
-        if (Input.GetMouseButtonDown(0) && !dead)
-        {
-            health -= 5;
         }
 
         if (CharacterMovement.Skeleton)
@@ -71,8 +70,19 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyWeapon"))
         {
             EnemyBehaviours enemy = other.gameObject.GetComponentInParent<EnemyBehaviours>();
-            health -= enemy.EnemyHitDamage();
+            if (enemy.IsOnAttack() && !godMode)
+            {
+                health -= enemy.EnemyHitDamage();
+                StartCoroutine(NoTakeDamageCoroutine());
+            }
         }
+    }
+
+    IEnumerator NoTakeDamageCoroutine()
+    {
+        godMode = true;
+        yield return new WaitForSeconds(noTakeDamageTime);
+        godMode = false;
     }
 
 }

@@ -10,8 +10,8 @@ namespace UnityEngine.AI.MonsterBehavior
     public class EnemyBehaviours : MonoBehaviour
     {
         [SerializeField] private float enemyHealth = 100f;
-        [SerializeField] private float movementSpeed = 3.5f;
-        [SerializeField] private float SprintSpeed = 5f;
+        [SerializeField] private float movementSpeed = 1.5f;
+        [SerializeField] private float SprintSpeed = 3.5f;
         [SerializeField] private float stunnedTimeAfterFamageTaken = 0.5f;
         [SerializeField] private float maxDistanceToTarget = 10f;
         [SerializeField] private float attackRange = 2f;
@@ -23,6 +23,11 @@ namespace UnityEngine.AI.MonsterBehavior
 
         [SerializeField] private ParticleSystem counterParticles;
 
+        public EnemyStateType enemyStateTypeDropdown;
+        public enum EnemyStateType { Purposeless, Guardian };
+
+        public LayerMask groundMask;
+
         public UnityEvent<PlayerHealth> HitThePlayer;
 
         private float distanceToTarget;
@@ -31,6 +36,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         private int attackAnimationIndex;
 
+        private bool[] enemyStateTypeBool = new bool[2];
         private bool isPraperingAttack;
         private bool isMoving;
         private bool isRetreating;
@@ -39,6 +45,21 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool isCharging;
         private bool isDead;
         private bool isPlayerInAttackRange;
+        private bool isPlayingAttackAnimation;
+        private bool leftClicked;
+
+        //Purposeless Enemy
+        [SerializeField] private float walkRange = 5;
+        [SerializeField] private float waitTime = 3;
+
+        private float currentWaitedTime;
+
+        private bool destinationPointSet;
+
+        //Guardian Enemy
+        [SerializeField] private GameObject protectedResource;
+        [SerializeField] private float resourceAreaBorderRange;
+        [SerializeField] private float protectedAreaBorderRange;
 
         private GameObject player;
         private GameObject enemyTarget;
@@ -47,9 +68,12 @@ namespace UnityEngine.AI.MonsterBehavior
         private Coroutine RetreatCoroutine;
         private Coroutine DamageCoroutine;
         private Coroutine MovementCoroutine;
+        private Coroutine WaitForNothingCoroutine;
 
         private EnemyDetector enemyDetector;
         private PlayerCombat playerCombat;
+        private CharacterMovement characterMovement;
+        private WeaponController weaponController;
         private Animator animator;
         private NavMeshAgent agent;
 
@@ -60,6 +84,7 @@ namespace UnityEngine.AI.MonsterBehavior
             player = GameObject.FindGameObjectWithTag("Player");
 
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
+            characterMovement = player.GetComponent<CharacterMovement>();
             playerCombat = player.GetComponent<PlayerCombat>();
             animator = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
@@ -69,18 +94,37 @@ namespace UnityEngine.AI.MonsterBehavior
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
 
             enemyTarget = player;
+
+            for (int i = 0; i < enemyStateTypeBool.Length; i++)
+            {
+                enemyStateTypeBool[i] = false;
+            }
+
+            enemyStateTypeBool[(int)enemyStateTypeDropdown] = true;
         }
 
         void Update()
         {
-            targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+            agent.SetDestination(targetVector);
             agent.speed = currentSpeed;
             animator.SetFloat("Speed", animatorSpeed);
 
             if (!isDead)
             {
-                transform.LookAt(targetVector);
+                //transform.LookAt(targetVector);
+                var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
+                rotation.y = 0;
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 50 * Time.deltaTime);
                 EnemyMovement();
+            }
+            else
+            {
+                animator.SetBool("Dead", true);
+            }
+            if (enemyHealth <= 0)
+            {
+                Death();
+                animator.SetBool("Dead", true);
             }
         }
 
@@ -90,10 +134,10 @@ namespace UnityEngine.AI.MonsterBehavior
 
             if (distanceToTarget <= maxDistanceToTarget && distanceToTarget > attackRange)
             {
-                agent.SetDestination(targetVector);
-                currentSpeed = movementSpeed;
+                targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
 
-                DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);                
+                DOVirtual.Float(currentSpeed, SprintSpeed, 0.4f, (speed) => currentSpeed = speed);
+                DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);
 
                 isPlayerInAttackRange = false;
             }
@@ -107,7 +151,17 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 isPlayerInAttackRange = false;
                 DOVirtual.Float(animatorSpeed, 0.5f, 0.1f, (speed) => animatorSpeed = speed);
-                currentSpeed = SprintSpeed;
+                DOVirtual.Float(currentSpeed, movementSpeed, 0.4f, (speed) => currentSpeed = speed);
+
+                switch ((int)enemyStateTypeDropdown)
+                {
+                    case 0:
+                        PurposelessEnemyPatrol();
+                        break;
+                    case 1:
+                        GuardianEnemyPatrol();
+                        break;
+                }
             }
 
         }
@@ -119,7 +173,7 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 return;
             }
-            RetreatCoroutine = StartCoroutine(Charging(attackDuration));           
+            RetreatCoroutine = StartCoroutine(Charging(attackDuration));
 
             IEnumerator Charging(float chargeDuration)
             {
@@ -129,7 +183,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 
                 RetreatCoroutine = null;
                 animator.SetTrigger(attackAnimatonsList[attackAnimationIndex]);
-                attackAnimationIndex = (int)Mathf.Repeat(attackAnimationIndex + 1, attackAnimatonsList.Length);            
+                attackAnimationIndex = (int)Mathf.Repeat(attackAnimationIndex + 1, attackAnimatonsList.Length);
                 isCharging = false;
             }
         }
@@ -139,6 +193,93 @@ namespace UnityEngine.AI.MonsterBehavior
             return Random.Range(minHitDamage, maxHitDamage);
         }
 
+        void PurposelessEnemyPatrol()
+        {
+            if (!destinationPointSet)
+            {
+                float randomX = Random.Range(-walkRange, walkRange);
+                float randomZ = Random.Range(-walkRange, walkRange);
+
+                targetVector = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+                destinationPointSet = true;
+            }
+            else
+            {
+                agent.SetDestination(targetVector);
+            }
+
+            Vector3 distanceToTargetPoint = transform.position - targetVector;
+            if (distanceToTargetPoint.magnitude < 0.5f)
+            {
+                //targetVector = transform.position;
+                DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
+                if (WaitForNothingCoroutine != null)
+                {
+                    return;
+                }
+                WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
+            }
+            if (!Physics.Raycast(targetVector, -transform.up ,2.0f, groundMask))
+            {
+                destinationPointSet = false;
+            }
+
+            IEnumerator WaitForNothing()
+            {
+                yield return new WaitForSeconds(waitTime);
+                destinationPointSet = false;
+                WaitForNothingCoroutine = null;
+            }
+        }
+
+        void GuardianEnemyPatrol()
+        {
+            if (!destinationPointSet)
+            {
+                float randomX = Random.Range(-protectedAreaBorderRange, protectedAreaBorderRange);
+                float randomZ = Random.Range(-protectedAreaBorderRange, protectedAreaBorderRange);
+
+                if ((randomX > 0 && randomX < resourceAreaBorderRange) || (randomX < 0 && randomX > -resourceAreaBorderRange))
+                {
+                    return;
+                }
+                else if((randomZ > 0 && randomZ < resourceAreaBorderRange) || (randomZ < 0 && randomZ > -resourceAreaBorderRange))
+                {
+                    return;
+                }
+
+                targetVector = new Vector3(protectedResource.transform.position.x + randomX, protectedResource.transform.position.y, protectedResource.transform.position.z + randomZ);
+                destinationPointSet = true;
+            }
+            else
+            {
+                agent.SetDestination(targetVector);
+            }
+
+            Vector3 distanceToTargetPoint = transform.position - targetVector;
+            if (distanceToTargetPoint.magnitude < 0.5f)
+            {
+                //targetVector = transform.position;
+                DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
+                if (WaitForNothingCoroutine != null)
+                {
+                    return;
+                }
+                WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
+            }
+            if (!Physics.Raycast(targetVector, -transform.up, 2.0f, groundMask))
+            {
+                //destinationPointSet = false;
+            }
+
+            IEnumerator WaitForNothing()
+            {
+                yield return new WaitForSeconds(waitTime);
+                destinationPointSet = false;
+                WaitForNothingCoroutine = null;
+            }
+        }
+        
         void OnPlayerHit(EnemyBehaviours target)
         {
             if (target == this)
@@ -149,13 +290,17 @@ namespace UnityEngine.AI.MonsterBehavior
                 enemyDetector.SetCurrentTarget(null);
                 isLockedTarget = false;
 
-                enemyHealth -= Random.Range(5f, 25f);
-                Debug.Log(enemyHealth);
-                if (enemyHealth <= 0)
+                if (!leftClicked)
                 {
-                    Death();
-                    return;
+                    enemyHealth -= Random.Range(25f, 50f);
                 }
+                else
+                {
+                    enemyHealth -= characterMovement.WeaponDamage();
+                    leftClicked = false;
+                }
+
+                Debug.Log(enemyHealth);
 
                 //Damage taken anim
                 transform.DOMove(transform.position - (transform.forward / 2), 0.3f).SetDelay(0.1f);
@@ -168,6 +313,7 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 isStunned = true;
                 yield return new WaitForSeconds(stunnedTimeAfterFamageTaken);
+                weaponController.beAbleToAttack = true;
                 isStunned = false;                
             }
         }
@@ -198,6 +344,15 @@ namespace UnityEngine.AI.MonsterBehavior
             agent.SetDestination(transform.position);
         }
 
+        public void AttackAnimationPlayingEvent()
+        {
+            isPlayingAttackAnimation = true;
+        } 
+        public void AttackAnimationStoppedEvent()
+        {
+            isPlayingAttackAnimation = false;
+        }
+
 
         void PrepareAttack(bool active)
         {
@@ -219,6 +374,7 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             StopEnemyCoroutines();
             StopMoving();
+            weaponController.beAbleToAttack = true;
 
             animator.SetBool("Dead", true);
             isDead = true;
@@ -251,6 +407,18 @@ namespace UnityEngine.AI.MonsterBehavior
                 StopCoroutine(MovementCoroutine);
             }
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("PlayerWeapon") && characterMovement.isAttack && other.gameObject.GetComponent<WeaponController>().beAbleToAttack)
+            {
+                leftClicked = true;
+                OnPlayerHit(this);
+                weaponController = other.gameObject.GetComponent<WeaponController>();
+                weaponController.beAbleToAttack = false;
+            }
+        }
+
         #region Return Public Bools
         public bool IsAttackable()
         {
@@ -272,7 +440,18 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             return isStunned;
         }
+
+        public bool IsOnAttack()
+        {
+            return isPlayingAttackAnimation;
+        }
         #endregion
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(targetVector, 0.3f);
+        }
     }
 
 }
