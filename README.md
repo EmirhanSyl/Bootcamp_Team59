@@ -109,17 +109,18 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png)
+![sprin içint4](https://user-images.githubusercontent.com/80157890/167312604-5489f213-1fb0-42f6-a40c-b4351c060bef.png)
+![sprint için2](https://user-images.githubusercontent.com/80157890/167312610-4dd7ea6a-bbe1-49db-b4cd-70c814735fce.png)
+![sprint için1](https://user-images.githubusercontent.com/80157890/167312623-7def8562-6ed1-4b08-9353-fff34ec13de0.png)
+![Ekran görüntüsü 2022-05-08 223235](https://user-images.githubusercontent.com/80157890/167312677-31ab9383-bd13-44ba-992c-1264d90c73ba.png)
+![Ekran görüntüsü 2022-05-08 223211](https://user-images.githubusercontent.com/80157890/167312684-76a707c8-21de-46b2-946e-ff7c19e7f76d.png)
+
 
 
 - **Sprint Review**: 
-
-
-
-
-
-
 Alınan kararlar: 
-Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
+Map dizaynı bölümüne devam edilecek . Bunun için ortak bir terrarin üzerinden gidilmesi kararı alındı . Map dizaynı kısmında çok detaya girilmemesi üzerinde karar kılındı . UI kısmı için oyunun tarzını yansıtacak ve oyuncuya kendini oyunun içinde hissettirecek UI tasarımı yapılması önerildi . Oyunda bütünlük kısmının hissedilmesi konusunda endişeler bulunmaktadır . Her parça ayrı ayrı yapıldığı için sistem uyuşmazlıkları yaşanabilir tüm bunları göz önüne alarak bir planlama yapılması kararı alındı . Ana hedefin bitirilmiş bir oyun olması gerektiği ve detaylara zaman kalması durumunda devam edilmesi kararı alındı . 
 
 - **Sprint Retrospective:**
  
