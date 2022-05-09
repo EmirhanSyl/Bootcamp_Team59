@@ -20,6 +20,7 @@ namespace UnityEngine.AI.MonsterBehavior
         GameObject player;
         Camera mainCam;
         CharacterMovement characterMovement;
+        Collider[] enemyHitColliders;
 
         private void Awake()
         {
@@ -36,6 +37,11 @@ namespace UnityEngine.AI.MonsterBehavior
         
         void Update()
         {
+            if (PlayerHealth.dead)
+            {
+                return;
+            }
+
             forward.y = 0;
             forward.Normalize();
 
@@ -47,10 +53,36 @@ namespace UnityEngine.AI.MonsterBehavior
 
             if (Physics.SphereCast(transform.position, 3f, inputDirection, out info, 10, layerMask))
             {
-                if ( info.collider.transform.GetComponent<EnemyBehaviours>() != null && info.collider.transform.GetComponent<EnemyBehaviours>().IsAttackable())
+                if ( info.collider.transform.GetComponent<EnemyBehaviours>() != null && info.collider.transform.GetComponent<EnemyBehaviours>().IsAttackable() && !info.collider.transform.GetComponent<EnemyBehaviours>().IsDead())
                 {
-                    currentTarget = info.collider.transform.GetComponent<EnemyBehaviours>();
+                    if (!info.collider.gameObject.GetComponentInParent<EnemyBehaviours>().IsFriend())
+                    {
+                        currentTarget = info.collider.transform.GetComponent<EnemyBehaviours>();
+                    }
                 }
+            }
+            else
+            {
+                if (currentTarget != null)
+                {
+                    return;
+                }
+                enemyHitColliders = Physics.OverlapSphere(transform.position, 5f, layerMask);
+
+                if (enemyHitColliders.Length == 0)
+                {
+                    return;
+                }
+                int x = Random.Range(0, enemyHitColliders.Length);
+                if (enemyHitColliders[x].gameObject.GetComponent<EnemyBehaviours>() != null && !enemyHitColliders[x].gameObject.GetComponent<EnemyBehaviours>().IsFriend() && !enemyHitColliders[x].gameObject.GetComponent<EnemyBehaviours>().IsDead())
+                {
+                    currentTarget = enemyHitColliders[x].gameObject.GetComponent<EnemyBehaviours>();
+                }
+            }
+
+            if (currentTarget != null && Vector3.Distance(transform.position, currentTarget.gameObject.transform.position) > 10f)
+            {
+                currentTarget = null;
             }
         }
 
@@ -68,7 +100,7 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, inputDirection);
-            Gizmos.DrawRay(new Ray(transform.position,inputDirection));
+            Gizmos.DrawLine(transform.position, inputDirection * 10);
             Gizmos.DrawWireSphere(transform.position, 1);
             if (CurrentTarget() != null)
             {

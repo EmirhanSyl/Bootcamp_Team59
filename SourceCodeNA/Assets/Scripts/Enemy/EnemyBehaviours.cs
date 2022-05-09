@@ -38,10 +38,14 @@ namespace UnityEngine.AI.MonsterBehavior
 
         public float rotatioSpeed = 50f;
         public bool controllingByGroupManager;
+        public bool hittedByPlayer;
+        public bool friendWithPlayer;
 
         public float distanceToTarget;
         private float currentSpeed;
         private float animatorSpeed;
+        private float destinationRestarter = 5;
+        private float minDist = Mathf.Infinity;
 
         private int attackAnimationIndex;
 
@@ -56,8 +60,8 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool isPlayerInAttackRange;
         private bool isPlayingAttackAnimation;
         private bool leftClicked;
-        public bool hittedByPlayer;
         private bool stopBlood;
+        private bool damageTakenAnimIsPlaying;
 
         //Purposeless Enemy
         [SerializeField] private float walkRange = 5;
@@ -72,6 +76,10 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private float resourceAreaBorderRange;
         [SerializeField] private float protectedAreaBorderRange;
 
+        //TowerWizard
+        [SerializeField] private GameObject projectile;
+        [SerializeField] private Transform projectileInitLocation;
+
         private GameObject player;
         private GameObject enemyTarget;
 
@@ -80,6 +88,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private Coroutine DamageCoroutine;
         private Coroutine MovementCoroutine;
         private Coroutine WaitForNothingCoroutine;
+        private Coroutine CannotArriveToDestinationCoroutine;
 
         private EnemyDetector enemyDetector;
         private PlayerCombat playerCombat;
@@ -102,6 +111,9 @@ namespace UnityEngine.AI.MonsterBehavior
             if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
             {
                 agent = GetComponent<NavMeshAgent>();
+            }
+            else
+            {
                 controllingByGroupManager = true;
             }
 
@@ -117,6 +129,25 @@ namespace UnityEngine.AI.MonsterBehavior
             }
 
             enemyStateTypeBool[(int)enemyStateTypeDropdown] = true;
+
+            if (regionDrowpdown == Region.Forest)
+            {
+                friendWithPlayer = true;
+            }
+
+            switch (regionDrowpdown)
+            {
+                case Region.Desert:
+                    gameObject.transform.GetChild(2).gameObject.layer = 8;
+                    break;
+                case Region.Forest:
+                    gameObject.transform.GetChild(2).gameObject.layer = 9;
+                    break;
+                case Region.Ice:
+                    gameObject.transform.GetChild(2).gameObject.layer = 10;
+                    break;
+
+            }
         }
 
         void Update()
@@ -125,7 +156,10 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 agent.SetDestination(targetVector);
                 agent.speed = currentSpeed;
-                animator.SetFloat("Speed", animatorSpeed);
+                if (!isDead)
+                {
+                    animator.SetFloat("Speed", animatorSpeed);
+                }
             }
 
             if (!isDead)
@@ -163,6 +197,28 @@ namespace UnityEngine.AI.MonsterBehavior
                     }
                 }
             }
+
+            //foreach (Collider enemyColl in gameObject.transform.parent.gameObject.GetComponent<NPCGroupManager>().enemyHitColliders)
+            //{
+            //    float dist = Vector3.Distance(transform.position, enemyColl.gameObject.transform.position);
+            //    if (dist < minDist)
+            //    {
+            //        targetObject = enemyColl.gameObject;
+            //        targetVector = enemyColl.gameObject.transform.position;
+            //        distanceToTarget = dist;
+            //        rotatioSpeed = 200f;
+            //        if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+            //        {
+            //            return;
+            //        }
+            //        if (!IsDead())
+            //        {
+            //            gameObject.transform.LookAt(new Vector3(targetVector.x, gameObject.transform.position.y, targetVector.z));
+            //        }
+                    
+            //        minDist = dist;
+            //    }
+            //}
         }
 
         void EnemyMovement()
@@ -188,7 +244,14 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
                 isPlayerInAttackRange = true;
-                EnemyAttack();
+                if (!damageTakenAnimIsPlaying)
+                {
+                    if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+                    {
+                        return;
+                    }
+                    EnemyAttack();
+                }
             }
             else
             {
@@ -225,8 +288,16 @@ namespace UnityEngine.AI.MonsterBehavior
                 yield return new WaitForSeconds(chargeDuration);
                 
                 RetreatCoroutine = null;
-                animator.SetTrigger(attackAnimatonsList[attackAnimationIndex]);
-                attackAnimationIndex = (int)Mathf.Repeat(attackAnimationIndex + 1, attackAnimatonsList.Length);
+                if (!isDead)
+                {
+                    animator.SetTrigger(attackAnimatonsList[attackAnimationIndex]);
+                    attackAnimationIndex = (int)Mathf.Repeat(attackAnimationIndex + 1, attackAnimatonsList.Length);
+                }
+                if (enemyStateTypeDropdown == EnemyStateType.TowerWizard)
+                {
+                    var initiatedProjectile = Instantiate(projectile, projectileInitLocation.position, Quaternion.identity);
+                    initiatedProjectile.GetComponent<ProjectileMovement>().ThrowProjectile(targetObject);
+                }
                 isCharging = false;
             }
         }
@@ -245,6 +316,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 targetVector = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
                 destinationPointSet = true;
+                
             }
             else
             {
@@ -262,15 +334,21 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
                 WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
             }
-            if (!Physics.Raycast(targetVector, -transform.up ,2.0f, groundMask))
+            else
             {
-                destinationPointSet = false;
-            }
+                destinationRestarter -= Time.deltaTime;
+                if (destinationRestarter < 0)
+                {
+                    destinationPointSet = false;
+                    destinationRestarter = 5;
+                }
+            }            
 
             IEnumerator WaitForNothing()
             {
                 yield return new WaitForSeconds(waitTime);
                 destinationPointSet = false;
+                destinationRestarter = 5;
                 WaitForNothingCoroutine = null;
             }
         }
@@ -310,10 +388,6 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
                 WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
             }
-            if (!Physics.Raycast(targetVector, -transform.up, 2.0f, groundMask))
-            {
-                //destinationPointSet = false;
-            }
 
             IEnumerator WaitForNothing()
             {
@@ -331,6 +405,11 @@ namespace UnityEngine.AI.MonsterBehavior
             }
             if (distanceToTarget < attackRange)
             {
+                if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+                {
+                    return;
+                }
+
                 EnemyAttack();
             }
             
@@ -364,7 +443,11 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 //Damage taken anim
                 transform.DOMove(transform.position - (transform.forward / 2), 0.3f).SetDelay(0.1f);
-                animator.SetTrigger("DamageTaken");
+
+                if (!isDead)
+                {
+                    animator.SetTrigger("DamageTaken");
+                }
 
                 StopMoving();
             }
@@ -476,7 +559,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("PlayerWeapon") && characterMovement.isAttack && other.gameObject.GetComponent<WeaponController>().beAbleToAttack)
+            if (other.gameObject.CompareTag("PlayerWeapon") && characterMovement.isAttack && other.gameObject.GetComponent<WeaponController>().beAbleToAttack && !friendWithPlayer)
             {
                 leftClicked = true;
                 OnPlayerHit(this);
@@ -490,6 +573,15 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             enemyHealth -= damage;
             OnPlayerHit(this);
+        }
+
+        public void GetHitAnimPlaying()
+        {
+            damageTakenAnimIsPlaying = true;
+        }
+        public void GetHitAnimStopped()
+        {
+            damageTakenAnimIsPlaying = false;
         }
 
         #region Return Public Bools
@@ -513,15 +605,21 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             return isStunned;
         }
-
         public bool IsOnAttack()
         {
             return isPlayingAttackAnimation;
         }
-
         public bool IsAttacking()
         {
             return isPlayerInAttackRange;
+        }
+        public bool IsFriend()
+        {
+            return friendWithPlayer;
+        }
+        public bool IsDead()
+        {
+            return isDead;
         }
         #endregion
 

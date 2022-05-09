@@ -30,6 +30,9 @@ public class EnemyBehaviourEditor : Editor
         walkRange_Prop,
         waitTime_Prop,
 
+        projectile_Prop,
+        projectileInitLocation_Prop,
+
         protectedResource_Prop,
         resourceAreaBorderRange_Prop,
         protectedAreaBorderRange_Prop,
@@ -63,6 +66,9 @@ public class EnemyBehaviourEditor : Editor
 
         walkRange_Prop = serializedObject.FindProperty("walkRange");
         waitTime_Prop = serializedObject.FindProperty("waitTime");
+
+        projectile_Prop = serializedObject.FindProperty("projectile");
+        projectileInitLocation_Prop = serializedObject.FindProperty("projectileInitLocation");
 
         protectedResource_Prop = serializedObject.FindProperty("protectedResource");
         resourceAreaBorderRange_Prop = serializedObject.FindProperty("resourceAreaBorderRange");
@@ -119,6 +125,8 @@ public class EnemyBehaviourEditor : Editor
             case EnemyBehaviours.EnemyStateType.TowerWizard:
                 EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));
                 EditorGUILayout.PropertyField(attackDuration_Prop, new GUIContent("Attack Duration"));
+                EditorGUILayout.PropertyField(projectile_Prop, new GUIContent("Projectile"));
+                EditorGUILayout.PropertyField(projectileInitLocation_Prop, new GUIContent("Projectile Spawn Location"));
                 break;
         }
 

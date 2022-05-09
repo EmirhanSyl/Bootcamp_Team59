@@ -48,26 +48,27 @@ public class PlayerHealth : MonoBehaviour
             health = currentHealth;
         }
     }
-
-    IEnumerator DamageCooldown()
+    public void DamageTakenAnimPlaying()
     {
         isHitted = true;
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+    }
+    public void DamageTakenAnimStopped()
+    {
         isHitted = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("EnemyWeapon"))
-        {
-            EnemyBehaviours enemy = collision.gameObject.GetComponentInParent<EnemyBehaviours>();
-            health -= enemy.EnemyHitDamage();
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("EnemyWeapon"))
+    //    {
+    //        EnemyBehaviours enemy = collision.gameObject.GetComponentInParent<EnemyBehaviours>();
+    //        health -= enemy.EnemyHitDamage();
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("EnemyWeapon"))
+        if (other.gameObject.CompareTag("EnemyWeapon") && other.GetComponentInParent<EnemyBehaviours>().regionDrowpdown != EnemyBehaviours.Region.Forest)
         {
             EnemyBehaviours enemy = other.gameObject.GetComponentInParent<EnemyBehaviours>();
             if (enemy.IsOnAttack() && !godMode)
@@ -83,6 +84,7 @@ public class PlayerHealth : MonoBehaviour
         godMode = true;
         yield return new WaitForSeconds(noTakeDamageTime);
         godMode = false;
+        StopCoroutine(NoTakeDamageCoroutine());
     }
 
 }

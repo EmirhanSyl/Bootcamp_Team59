@@ -126,7 +126,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && !isAttack)
+        if (Input.GetMouseButtonDown(0) && !isAttack && !PlayerHealth.isHitted)
         {
             StartCoroutine(Attacking());
         }
