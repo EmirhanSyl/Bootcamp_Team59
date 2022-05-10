@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,7 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private float movementSpeed = 1.5f;
         [SerializeField] private float SprintSpeed = 3.5f;
         [SerializeField] private float stunnedTimeAfterFamageTaken = 0.5f;
+        [SerializeField] private float knocbackDevider = 1f;
         public float maxDistanceToTarget = 10f;
         [Header("Attack Stats")]
         [SerializeField] private float attackRange = 2f;
@@ -81,7 +83,7 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private Transform projectileInitLocation;
 
         private GameObject player;
-        private GameObject enemyTarget;
+        private Collider[] enemyColls;
 
         private Coroutine prepareToAttackCoroutine;
         private Coroutine RetreatCoroutine;
@@ -103,7 +105,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private void Awake()
         {
             player = GameObject.FindGameObjectWithTag("Player");
-
+            
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
             characterMovement = player.GetComponent<CharacterMovement>();
             playerCombat = player.GetComponent<PlayerCombat>();
@@ -120,8 +122,6 @@ namespace UnityEngine.AI.MonsterBehavior
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
-
-            enemyTarget = player;
 
             for (int i = 0; i < enemyStateTypeBool.Length; i++)
             {
@@ -147,7 +147,7 @@ namespace UnityEngine.AI.MonsterBehavior
                     gameObject.transform.GetChild(2).gameObject.layer = 10;
                     break;
 
-            }
+            }            
         }
 
         void Update()
@@ -164,6 +164,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
             if (!isDead)
             {
+                LockToTheTarget();
                 //transform.LookAt(targetVector);
                 var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
                 rotation.y = 0;
@@ -197,28 +198,50 @@ namespace UnityEngine.AI.MonsterBehavior
                     }
                 }
             }
-
-            //foreach (Collider enemyColl in gameObject.transform.parent.gameObject.GetComponent<NPCGroupManager>().enemyHitColliders)
+        }
+        void LockToTheTarget()
+        {
+            //if (targetObject != null)
             //{
-            //    float dist = Vector3.Distance(transform.position, enemyColl.gameObject.transform.position);
-            //    if (dist < minDist)
-            //    {
-            //        targetObject = enemyColl.gameObject;
-            //        targetVector = enemyColl.gameObject.transform.position;
-            //        distanceToTarget = dist;
-            //        rotatioSpeed = 200f;
-            //        if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
-            //        {
-            //            return;
-            //        }
-            //        if (!IsDead())
-            //        {
-            //            gameObject.transform.LookAt(new Vector3(targetVector.x, gameObject.transform.position.y, targetVector.z));
-            //        }
-                    
-            //        minDist = dist;
-            //    }
+            //    return;
             //}
+
+            if (Physics.CheckSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask))
+            {
+                enemyColls = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask);
+               
+                float distanceToClosestEnemy = Mathf.Infinity;
+                GameObject closestEnemy = null;
+                Collider[] allEnemies = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask);
+
+                foreach (var currentEnemyColl in allEnemies)
+                {
+                    float distanceToCurrentEnemy = (currentEnemyColl.gameObject.transform.position - transform.position).sqrMagnitude;
+                    if (distanceToCurrentEnemy < distanceToClosestEnemy)
+                    {
+                        distanceToClosestEnemy = distanceToCurrentEnemy;
+                        closestEnemy = currentEnemyColl.gameObject.transform.parent.gameObject;
+                        targetObject = closestEnemy;
+                        targetVector = targetObject.transform.position;
+                        distanceToTarget = Vector3.Distance(transform.position, targetVector);
+                    }
+                    if ((targetObject.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponent<EnemyBehaviours>() != null && targetObject.GetComponent<EnemyBehaviours>().IsDead()))
+                    {
+                        targetObject = null;
+                        return;
+                    }
+
+                    if (!IsDead())
+                    {
+                        gameObject.transform.LookAt(new Vector3(targetVector.x, gameObject.transform.position.y, targetVector.z));
+                    }
+                }
+            }
+            else
+            {
+                distanceToTarget = maxDistanceToTarget + 1;
+            }
+
         }
 
         void EnemyMovement()
@@ -246,7 +269,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 isPlayerInAttackRange = true;
                 if (!damageTakenAnimIsPlaying)
                 {
-                    if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+                    if ((targetObject.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponent<EnemyBehaviours>() != null && targetObject.GetComponent<EnemyBehaviours>().IsDead()))
                     {
                         return;
                     }
@@ -405,7 +428,7 @@ namespace UnityEngine.AI.MonsterBehavior
             }
             if (distanceToTarget < attackRange)
             {
-                if ((targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponentInParent<EnemyBehaviours>() != null && targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+                if ((targetObject.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponent<EnemyBehaviours>() != null && targetObject.GetComponent<EnemyBehaviours>().IsDead()))
                 {
                     return;
                 }
@@ -442,7 +465,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 Debug.Log(enemyHealth);
 
                 //Damage taken anim
-                transform.DOMove(transform.position - (transform.forward / 2), 0.3f).SetDelay(0.1f);
+                transform.DOMove(transform.position - (transform.forward / knocbackDevider), 0.3f).SetDelay(0.1f);
 
                 if (!isDead)
                 {

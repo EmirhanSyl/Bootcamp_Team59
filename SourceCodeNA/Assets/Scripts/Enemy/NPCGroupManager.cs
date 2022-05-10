@@ -49,48 +49,48 @@ public class NPCGroupManager : MonoBehaviour
     
     void Update()
     {
-        foreach (EnemyBehaviours NPC in NPCGroup)
-        {               
-            if (Physics.CheckSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask))
-            {
-                enemyHitColliders = Physics.OverlapSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask);
-                NPC.targetObject = enemyHitColliders[enemyHitColliders.Length - 1].gameObject;
-                NPC.targetVector = enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position;
-                NPC.distanceToTarget = Vector3.Distance(enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position, NPC.gameObject.transform.position);
-                NPC.rotatioSpeed = 200f;
-                if ((NPC.targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (NPC.targetObject.GetComponentInParent<EnemyBehaviours>() != null && NPC.targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
-                {
-                    return;
-                }
-                if (!NPC.IsDead())
-                {
-                    NPC.gameObject.transform.LookAt(new Vector3(NPC.targetVector.x, NPC.gameObject.transform.position.y, NPC.targetVector.z));
-                }
-                if (NPC.IsAttacking())
-                {
-                    Attack(NPC);
-                }
-            }
-            else
-            {
-                NPC.distanceToTarget = NPC.maxDistanceToTarget + 1;
-            }
+        //foreach (EnemyBehaviours NPC in NPCGroup)
+        //{               
+        //    if (Physics.CheckSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask))
+        //    {
+        //        enemyHitColliders = Physics.OverlapSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask);
+        //        NPC.targetObject = enemyHitColliders[enemyHitColliders.Length - 1].gameObject;
+        //        NPC.targetVector = enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position;
+        //        NPC.distanceToTarget = Vector3.Distance(enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position, NPC.gameObject.transform.position);
+        //        NPC.rotatioSpeed = 200f;
+        //        if ((NPC.targetObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (NPC.targetObject.GetComponentInParent<EnemyBehaviours>() != null && NPC.targetObject.GetComponentInParent<EnemyBehaviours>().IsDead()))
+        //        {
+        //            return;
+        //        }
+        //        if (!NPC.IsDead())
+        //        {
+        //            NPC.gameObject.transform.LookAt(new Vector3(NPC.targetVector.x, NPC.gameObject.transform.position.y, NPC.targetVector.z));
+        //        }
+        //        if (NPC.IsAttacking())
+        //        {
+        //            Attack(NPC);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        NPC.distanceToTarget = NPC.maxDistanceToTarget + 1;
+        //    }
 
-            if (enemyHitColliders != null && enemyHitColliders.Length != 0 && NPC.targetObject == null)
-            {
-                enemyHitColliders = Physics.OverlapSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask);
-                NPC.targetObject = enemyHitColliders[enemyHitColliders.Length - 1].gameObject;
-                NPC.targetVector = enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position;
-                NPC.distanceToTarget = Vector3.Distance(enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position, NPC.gameObject.transform.position);
-                NPC.rotatioSpeed = 200f;
+        //    if (enemyHitColliders != null && enemyHitColliders.Length != 0 && NPC.targetObject == null)
+        //    {
+        //        enemyHitColliders = Physics.OverlapSphere(NPC.gameObject.transform.position, NPC.maxDistanceToTarget, enemyMask);
+        //        NPC.targetObject = enemyHitColliders[enemyHitColliders.Length - 1].gameObject;
+        //        NPC.targetVector = enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position;
+        //        NPC.distanceToTarget = Vector3.Distance(enemyHitColliders[enemyHitColliders.Length - 1].gameObject.transform.position, NPC.gameObject.transform.position);
+        //        NPC.rotatioSpeed = 200f;
 
-                Debug.Log("Burada biþiler oldu!");
-            }
-        }
+        //        Debug.Log("Burada biþiler oldu!");
+        //    }
+        //}
     }
 
-    void Attack(EnemyBehaviours target)
-    {
+    //void Attack(EnemyBehaviours target)
+    //{
 
-    }
+    //}
 }

@@ -15,6 +15,7 @@ public class EnemyBehaviourEditor : Editor
         movementSpeed_Prop,
         SprintSpeed_Prop,
         stunnedTimeAfterFamageTaken_Prop,
+        knocbackDevider_Prop,
         maxDistanceToTarget_Prop,
         attackRange_Prop,
         attackDuration_Prop,
@@ -52,6 +53,7 @@ public class EnemyBehaviourEditor : Editor
 
         maxDistanceToTarget_Prop = serializedObject.FindProperty("maxDistanceToTarget");
         stunnedTimeAfterFamageTaken_Prop = serializedObject.FindProperty("stunnedTimeAfterFamageTaken");
+        knocbackDevider_Prop = serializedObject.FindProperty("knocbackDevider");
 
         attackRange_Prop = serializedObject.FindProperty("attackRange");
         attackDuration_Prop = serializedObject.FindProperty("attackDuration");
@@ -94,6 +96,7 @@ public class EnemyBehaviourEditor : Editor
 
         EditorGUILayout.PropertyField(maxDistanceToTarget_Prop, new GUIContent("Max Distance To Target"));
         EditorGUILayout.PropertyField(stunnedTimeAfterFamageTaken_Prop, new GUIContent("Stunned Time After Damage Taken"));
+        EditorGUILayout.PropertyField(knocbackDevider_Prop, new GUIContent("Knocback Devider", "The amount of knokback. (camera.forward/knocbackDevider)"));
         EditorGUILayout.Space(20);
 
         EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));

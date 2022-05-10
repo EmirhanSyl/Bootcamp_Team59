@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestDemo : MonoBehaviour {
+public class ChestDemo2 : MonoBehaviour {
 
     //This script goes on the ChestComplete prefab;
 
