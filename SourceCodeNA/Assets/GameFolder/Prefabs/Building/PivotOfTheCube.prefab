@@ -47,7 +47,7 @@ MonoBehaviour:
   _realBuilding: {fileID: 7882919177748402206, guid: ab74d1cf2f4b3c142ada7631b3ddf6cf, type: 3}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!1 &5202722679855126778
 GameObject:
   m_ObjectHideFlags: 0

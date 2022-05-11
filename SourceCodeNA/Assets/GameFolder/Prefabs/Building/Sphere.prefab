@@ -111,4 +111,4 @@ MonoBehaviour:
   _realBuilding: {fileID: 1811232963825153211, guid: 10cf3b7e390532441a666a6c5155ea8b, type: 3}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
