@@ -1,16 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BluePrint : MonoBehaviour
 {
     RaycastHit _hit;
+
+    Camera _cam;
+
     [SerializeField] GameObject _realBuilding;
     [SerializeField] LayerMask _layerMask;
-    
+
+
+    private void Start()
+    {
+        _cam = Camera.main;
+    }
+
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out _hit, float.MaxValue, _layerMask))
         {
             transform.position = _hit.point;

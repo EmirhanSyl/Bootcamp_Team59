@@ -7,7 +7,7 @@ public class UnitSelections : MonoBehaviour
     public List<GameObject> _unitList = new List<GameObject>();
     public List<GameObject> _unitSelectedList = new List<GameObject>();
 
-    // proplarý static yapýyoruz ki unit scriptinden ulaþabilelim
+    // proplarý static yap?yoruz ki unit scriptinden ulaþabilelim
     public static UnitSelections _unitSelectionsInstance;
     public static UnitSelections Instance { get { return _unitSelectionsInstance; } }
 
@@ -22,6 +22,11 @@ public class UnitSelections : MonoBehaviour
         {
             _unitSelectionsInstance = this;
         }
+    }
+
+    private void Update()
+    {
+
     }
 
     public void ClickSelect(GameObject unitToAdd)
@@ -71,5 +76,19 @@ public class UnitSelections : MonoBehaviour
     public void deselect(GameObject unitToDeselect)
     {
 
+    }
+
+    public void SelectAll()
+    {
+
+        if (_unitSelectedList.Count <= (_unitList.Count - 1)) //selectedliste gereksiz atama yapýlmamasý için
+        {
+            _unitSelectedList.AddRange(_unitList);
+            for (int i = 0; i < _unitList.Count; i++)
+            {
+                _unitList[i].transform.GetChild(0).gameObject.SetActive(true);
+                _unitList[i].GetComponent<UnitMovement>().enabled = true;
+            }
+        }
     }
 }

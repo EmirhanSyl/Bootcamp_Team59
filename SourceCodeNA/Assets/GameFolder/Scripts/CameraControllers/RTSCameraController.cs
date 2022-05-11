@@ -5,13 +5,6 @@ public class RTSCameraController : MonoBehaviour
 {
     [SerializeField] float _panSpeed = 2f;
 
-    //[SerializeField]
-    //float _zoomSpeed = 3f;
-    //float _minZoom = 40f;
-    //float _maxZoom = 90f;
-
-
-
     private CinemachineInputProvider _inputProvider;
     private CinemachineVirtualCamera _virtualCamera;
     private Transform _cameraTransform;
@@ -23,33 +16,17 @@ public class RTSCameraController : MonoBehaviour
         _cameraTransform = _virtualCamera.VirtualCameraGameObject.transform;
     }
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float x = _inputProvider.GetAxisValue(0);
         float y = _inputProvider.GetAxisValue(1);
         float z = _inputProvider.GetAxisValue(2);
 
-        if (x !=0 || y != 0)
+        if (x != 0 || y != 0)
         {
             PanScreen(x, y);
         }
-        //if (z != 0)
-        //{
-        //    ZoomScreen(z);
-        //}
     }
-
-    //public void ZoomScreen(float increment)
-    //{
-    //    float fov = _virtualCamera.m_Lens.FieldOfView;
-    //    float targetZoom = Mathf.Clamp(fov + increment, _maxZoom, _minZoom);
-    //    _virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(fov, targetZoom, _zoomSpeed * Time.deltaTime);
-    //}
 
     public Vector2 PanDirection(float x, float y)
     {
@@ -59,7 +36,7 @@ public class RTSCameraController : MonoBehaviour
         {
             direction.y += 1;
         }
-        else if (y <=Screen.height * 0.05f)
+        else if (y <= Screen.height * 0.05f)
         {
             direction.y -= 1;
         }
@@ -68,7 +45,7 @@ public class RTSCameraController : MonoBehaviour
         {
             direction.x += 1;
         }
-        else if (x<= Screen.width * 0.05f)
+        else if (x <= Screen.width * 0.05f)
         {
             direction.x -= 1;
         }

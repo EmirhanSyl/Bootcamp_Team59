@@ -7,6 +7,12 @@ TagManager:
   - Villiager
   - EnemyWeapon
   - PlayerWeapon
+  - FxTemporaire
+  - Food
+  - Stone
+  - Wood
+  - Soul
+  - Storage
   layers:
   - Default
   - TransparentFX
@@ -19,7 +25,7 @@ TagManager:
   - Desert
   - Forest
   - Ice
-  - 
+  - Clickable
   - 
   - 
   - 

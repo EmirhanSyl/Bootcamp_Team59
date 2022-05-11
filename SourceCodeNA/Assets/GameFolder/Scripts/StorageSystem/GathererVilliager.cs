@@ -1,38 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GathererVilliager : MonoBehaviour
 {
-        
 
-    void Deneme()
+    string _tag;
+    NavMeshAgent _navMeshAgent;
+    GameObject _storage;
+    GameObject _player;
+
+    public static GathererVilliager _gathererInstance;
+    public static GathererVilliager Instance { get { return _gathererInstance; } }
+
+    private void Start()
     {
-        //switch (other)
-        //{
-        //    case other.gameObject.CompareTag("Food"):
-        //        // þu fonksiyonu çalýþtýr
-        //        _whatAmIDelievering = "Food"; //sýfýra çekiyoruz ki köylü kardeþimiz her gir çýk yaptýðýnda kaynak eklenmesin depoya
-        //        break;
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _storage = GameObject.FindGameObjectWithTag("Storage");
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
 
-        //    case other.gameObject.CompareTag("Food"):
-        //        //þu fonksiyonu çalýþtýr
-        //        _whatAmIDelievering = 0;
-        //        break;
+    private void Update()
+    {
+        _tag = this.gameObject.tag;
+        GoToTheStorage();
+    }
+    void GoToTheStorage()
+    {
+        if (_tag != "Villiager") //tag villiager de?ilse bi kaynak ta??yodur, depoya gitmelidir
+        {
+            _navMeshAgent.SetDestination(_storage.transform.position);
+        }
+    }
 
-        //    case other.gameObject.CompareTag("Food"):
-        //        //þu fonksiyonu çalýþtýr
-        //        _whatAmIDelievering = 0;
-        //        break;
-        //    case other.gameObject.CompareTag("Food"):
-        //        //þu fonksiyonu çalýþtýr
-        //        _whatAmIDelievering = 0;
-        //        break;
-
-        //    default:
-        //        //býrak iþine bak
-        //        _whatAmIDelievering = 0;
-        //        break;
-        //}
+    public void GoToTheResource()
+    {
+        _navMeshAgent.SetDestination(_player.transform.position);
     }
 }
