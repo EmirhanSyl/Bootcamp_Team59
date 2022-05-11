@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _stoneText;
+    [SerializeField] TextMeshProUGUI _foodText;
 
 
     public static int _food;
@@ -15,7 +15,7 @@ public class Storage : MonoBehaviour
 
     private void Update()
     {
-        _stoneText.text = _stone.ToString();
+        _foodText.text = _food.ToString();
     }
 
     private void OnTriggerEnter(Collider other)

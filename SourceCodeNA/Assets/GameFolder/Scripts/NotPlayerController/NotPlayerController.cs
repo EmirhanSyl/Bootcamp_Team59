@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NotPlayerController : MonoBehaviour
@@ -9,7 +7,7 @@ public class NotPlayerController : MonoBehaviour
 
     private void Update()
     {
-
+        
         if (Input.GetKey(KeyCode.X))
         {
             _villiagers = GameObject.FindGameObjectsWithTag("Villiager");
