@@ -27,12 +27,15 @@ public class EnemyBehaviourEditor : Editor
         counterParticles_Prop,
         bloodParticles_Prop,
         groundMask_Prop,
+        enemyLayers_Prop,
 
         walkRange_Prop,
         waitTime_Prop,
 
         projectile_Prop,
         projectileInitLocation_Prop,
+
+        dodgeChance_Prop,
 
         protectedResource_Prop,
         resourceAreaBorderRange_Prop,
@@ -65,12 +68,15 @@ public class EnemyBehaviourEditor : Editor
         counterParticles_Prop = serializedObject.FindProperty("counterParticles");
         bloodParticles_Prop = serializedObject.FindProperty("bloodParticles");
         groundMask_Prop = serializedObject.FindProperty("groundMask");
+        enemyLayers_Prop = serializedObject.FindProperty("enemyLayers");
 
         walkRange_Prop = serializedObject.FindProperty("walkRange");
         waitTime_Prop = serializedObject.FindProperty("waitTime");
 
         projectile_Prop = serializedObject.FindProperty("projectile");
         projectileInitLocation_Prop = serializedObject.FindProperty("projectileInitLocation");
+
+        dodgeChance_Prop = serializedObject.FindProperty("dodgeChance");
 
         protectedResource_Prop = serializedObject.FindProperty("protectedResource");
         resourceAreaBorderRange_Prop = serializedObject.FindProperty("resourceAreaBorderRange");
@@ -83,10 +89,16 @@ public class EnemyBehaviourEditor : Editor
     {
         serializedObject.Update();
 
-        EditorGUILayout.PropertyField(regionDrowpdown_Prop);
-        EnemyBehaviours.Region region = (EnemyBehaviours.Region)regionDrowpdown_Prop.enumValueIndex;
-        EditorGUILayout.PropertyField(controllingByGroupManager_Prop, new GUIContent("Controlling By GroupManager"));
-        EditorGUILayout.Space(20);
+        var enemyBehaviours = target as EnemyBehaviours;
+        enemyBehaviours.controllingByGroupManager = GUILayout.Toggle(enemyBehaviours.controllingByGroupManager, "Controlling By GroupManager");
+
+        if (!enemyBehaviours.controllingByGroupManager)
+        {
+            EditorGUILayout.PropertyField(regionDrowpdown_Prop);
+            EnemyBehaviours.Region region = (EnemyBehaviours.Region)regionDrowpdown_Prop.enumValueIndex;
+            EditorGUILayout.PropertyField(enemyLayers_Prop, new GUIContent("Enemy Mask"));
+        }
+        EditorGUILayout.Space(10);
 
         EditorGUILayout.PropertyField(enemyHealth_Prop, new GUIContent("Enemy Health"));
         EditorGUILayout.PropertyField(movementSpeed_Prop, new GUIContent("Movement Speed"));
@@ -119,11 +131,13 @@ public class EnemyBehaviourEditor : Editor
             case EnemyBehaviours.EnemyStateType.Purposeless:
                 EditorGUILayout.PropertyField(walkRange_Prop, new GUIContent("Walk Range"));
                 EditorGUILayout.PropertyField(waitTime_Prop, new GUIContent("Wait Time"));
+                EditorGUILayout.Slider(dodgeChance_Prop, 0f, 1f, new GUIContent("Dodge Chance"));
                 break;
             case EnemyBehaviours.EnemyStateType.Guardian:
                 EditorGUILayout.PropertyField(protectedResource_Prop, new GUIContent("Protected Resource"));
                 EditorGUILayout.PropertyField(resourceAreaBorderRange_Prop, new GUIContent("Resource Area Border Range"));
                 EditorGUILayout.PropertyField(protectedAreaBorderRange_Prop, new GUIContent("Protected Area Border Range"));
+                EditorGUILayout.Slider(dodgeChance_Prop, 0f, 1f, new GUIContent("Dodge Chance"));
                 break;
             case EnemyBehaviours.EnemyStateType.TowerWizard:
                 EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));
@@ -132,6 +146,7 @@ public class EnemyBehaviourEditor : Editor
                 EditorGUILayout.PropertyField(projectileInitLocation_Prop, new GUIContent("Projectile Spawn Location"));
                 break;
         }
+        
 
         serializedObject.ApplyModifiedProperties();
     }

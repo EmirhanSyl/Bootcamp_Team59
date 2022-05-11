@@ -28,6 +28,8 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private ParticleSystem counterParticles;
         [SerializeField] private ParticleSystem bloodParticles;
 
+        [SerializeField] private LayerMask enemyLayers;
+
         public enum EnemyStateType { Purposeless, Guardian, TowerWizard };
         [Header("Enemy Type Informations")]public EnemyStateType enemyStateTypeDropdown;
 
@@ -64,15 +66,16 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool leftClicked;
         private bool stopBlood;
         private bool damageTakenAnimIsPlaying;
+        private bool dodgenAnimIsPlaying;
 
         //Purposeless Enemy
         [SerializeField] private float walkRange = 5;
         [SerializeField] private float waitTime = 3;
+        [SerializeField] private float dodgeChance = 0.2f; 
 
         private float currentWaitedTime;
 
         private bool destinationPointSet;
-
         //Guardian Enemy
         [SerializeField] private GameObject protectedResource;
         [SerializeField] private float resourceAreaBorderRange;
@@ -98,9 +101,10 @@ namespace UnityEngine.AI.MonsterBehavior
         private WeaponController weaponController;
         private Animator animator;
         private NavMeshAgent agent;
+        private NPCGroupManager groupController;
 
-        public Vector3 targetVector;
         public GameObject targetObject;
+        public Vector3 targetVector;
 
         private void Awake()
         {
@@ -147,7 +151,14 @@ namespace UnityEngine.AI.MonsterBehavior
                     gameObject.transform.GetChild(2).gameObject.layer = 10;
                     break;
 
-            }            
+            }
+
+            if (controllingByGroupManager)
+            {
+                groupController = GetComponentInParent<NPCGroupManager>();
+                enemyLayers = groupController.enemyMask;
+            }
+
         }
 
         void Update()
@@ -166,9 +177,10 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 LockToTheTarget();
                 //transform.LookAt(targetVector);
-                var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
-                rotation.y = 0;
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotatioSpeed * Time.deltaTime);
+                //var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
+                //rotation.y = 0;
+                //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotatioSpeed * Time.deltaTime);
+                transform.DOLookAt(new Vector3(targetVector.x, transform.position.y, targetVector.z), 0.5f);
                 if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
                 {
                     EnemyMovement();
@@ -206,13 +218,13 @@ namespace UnityEngine.AI.MonsterBehavior
             //    return;
             //}
 
-            if (Physics.CheckSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask))
+            if (Physics.CheckSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers))
             {
-                enemyColls = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask);
+                //enemyColls = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers);
                
                 float distanceToClosestEnemy = Mathf.Infinity;
                 GameObject closestEnemy = null;
-                Collider[] allEnemies = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, transform.GetComponentInParent<NPCGroupManager>().enemyMask);
+                Collider[] allEnemies = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers);
 
                 foreach (var currentEnemyColl in allEnemies)
                 {
@@ -246,17 +258,9 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void EnemyMovement()
         {
-            if (!controllingByGroupManager)
-            {
-                distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
-            }
 
             if (distanceToTarget <= maxDistanceToTarget && distanceToTarget > attackRange)
-            {
-                if (!controllingByGroupManager)
-                {
-                    targetVector = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-                }
+            {            
 
                 DOVirtual.Float(currentSpeed, SprintSpeed, 0.4f, (speed) => currentSpeed = speed);
                 DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);
@@ -265,6 +269,11 @@ namespace UnityEngine.AI.MonsterBehavior
             }
             else if(distanceToTarget < attackRange)
             {
+                if (targetObject == null)
+                {
+                    return;
+                }
+
                 DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
                 isPlayerInAttackRange = true;
                 if (!damageTakenAnimIsPlaying)
@@ -275,6 +284,7 @@ namespace UnityEngine.AI.MonsterBehavior
                     }
                     EnemyAttack();
                 }
+                
             }
             else
             {
@@ -321,6 +331,10 @@ namespace UnityEngine.AI.MonsterBehavior
                     var initiatedProjectile = Instantiate(projectile, projectileInitLocation.position, Quaternion.identity);
                     initiatedProjectile.GetComponent<ProjectileMovement>().ThrowProjectile(targetObject);
                 }
+                else if(enemyStateTypeDropdown != EnemyStateType.TowerWizard && targetObject.GetComponent<EnemyBehaviours>() != null)
+                {
+                    OnNPCCounter();
+                }
                 isCharging = false;
             }
         }
@@ -341,15 +355,11 @@ namespace UnityEngine.AI.MonsterBehavior
                 destinationPointSet = true;
                 
             }
-            else
-            {
-                agent.SetDestination(targetVector);
-            }
 
             Vector3 distanceToTargetPoint = transform.position - targetVector;
             if (distanceToTargetPoint.magnitude < 0.5f)
             {
-                //targetVector = transform.position;
+                targetVector = transform.position;
                 DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
                 if (WaitForNothingCoroutine != null)
                 {
@@ -434,8 +444,31 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
 
                 EnemyAttack();
+            }            
+        }
+
+        public void OnNPCCounter()
+        {
+            float dodgeFloat = Random.value;
+            if (dodgeFloat < dodgeChance)
+            {
+                EnemyBehaviours targetScript = null;
+                if (targetObject.GetComponent<EnemyBehaviours>() != null)
+                {
+                    targetScript = targetObject.GetComponent<EnemyBehaviours>();
+                }
+
+                if (targetScript != null && targetScript.isPlayingAttackAnimation && targetScript.targetObject == gameObject)
+                {
+                    animator.SetTrigger("Dodge");
+                    transform.DOMove(transform.position - (new Vector3(transform.right.x + 2f, 0f, transform.right.z)), 1f).SetDelay(0.2f);
+                }
+                else if (targetObject.CompareTag("Player"))
+                {
+                    animator.SetTrigger("Dodge");
+                    transform.DOMove(transform.position - (new Vector3(transform.right.x + 2f, 0f, transform.right.z)), 1f).SetDelay(0.2f);
+                }
             }
-            
         }
 
         void OnPlayerHit(EnemyBehaviours target)
@@ -606,6 +639,14 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             damageTakenAnimIsPlaying = false;
         }
+        public void DodgeStarted()
+        {
+            dodgenAnimIsPlaying = true;
+        }
+        public void DodgeFinished()
+        {
+            dodgenAnimIsPlaying = false;
+        }
 
         #region Return Public Bools
         public bool IsAttackable()
@@ -631,6 +672,10 @@ namespace UnityEngine.AI.MonsterBehavior
         public bool IsOnAttack()
         {
             return isPlayingAttackAnimation;
+        }
+        public bool IsOnDodge()
+        {
+            return dodgenAnimIsPlaying;
         }
         public bool IsAttacking()
         {

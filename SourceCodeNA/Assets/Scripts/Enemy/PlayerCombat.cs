@@ -21,6 +21,7 @@ public class PlayerCombat : MonoBehaviour
 
     public bool isAttackingEnemy;
     public bool isCountering;
+    public bool playingCombatAnim;
 
     private Animator animator;
     private EnemyDetector enemyDetector;
@@ -114,10 +115,23 @@ public class PlayerCombat : MonoBehaviour
             {
                 return;
             }
-
-            OnDamageTaken.Invoke(locedTarget);
+            if (!locedTarget.IsOnDodge())
+            {
+                OnDamageTaken.Invoke(locedTarget);
+            }
             //Particle codes
             locedTarget.hittedByPlayer = true;
+            playingCombatAnim = false;
+        }
+        
+    }
+
+    public void OnGoingToEnemy()
+    {        
+        if (!playingCombatAnim)
+        {
+            locedTarget.OnNPCCounter();
+            playingCombatAnim = true;
         }
     }
 }

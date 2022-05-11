@@ -68,7 +68,12 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("EnemyWeapon") && other.GetComponentInParent<EnemyBehaviours>().regionDrowpdown != EnemyBehaviours.Region.Forest)
+        EnemyBehaviours enemyScript = null;
+        if (other.CompareTag("EnemyWeapon"))
+        {
+            enemyScript = other.GetComponentInParent<EnemyBehaviours>();
+        }
+        if (enemyScript != null && enemyScript.regionDrowpdown != EnemyBehaviours.Region.Forest && enemyScript.targetObject == gameObject && enemyScript.IsOnAttack())
         {
             EnemyBehaviours enemy = other.gameObject.GetComponentInParent<EnemyBehaviours>();
             if (enemy.IsOnAttack() && !godMode)

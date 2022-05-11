@@ -8,6 +8,7 @@ namespace UnityEngine.AI.MonsterBehavior
     public class EnemyDetector : MonoBehaviour
     {
         public LayerMask layerMask;
+        [SerializeField] private GameObject targetIndicator;
 
         private Vector3 inputDirection;
         private Vector3 forward;
@@ -32,6 +33,8 @@ namespace UnityEngine.AI.MonsterBehavior
             //forward = player.transform.forward;
             //right = player.transform.right;
 
+            targetIndicator.SetActive(false);
+
             characterMovement = GetComponentInParent<CharacterMovement>();
         }
         
@@ -40,6 +43,15 @@ namespace UnityEngine.AI.MonsterBehavior
             if (PlayerHealth.dead)
             {
                 return;
+            }
+            if (currentTarget != null)
+            {
+                targetIndicator.SetActive(true);
+                targetIndicator.transform.position = new Vector3(currentTarget.gameObject.transform.position.x, targetIndicator.transform.position.y, currentTarget.gameObject.transform.position.z);
+            }
+            else
+            {
+                targetIndicator.SetActive(false);
             }
 
             forward.y = 0;
@@ -84,6 +96,7 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 currentTarget = null;
             }
+            
         }
 
         public void SetCurrentTarget(EnemyBehaviours target)
