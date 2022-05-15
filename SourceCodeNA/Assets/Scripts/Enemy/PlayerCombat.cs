@@ -26,12 +26,14 @@ public class PlayerCombat : MonoBehaviour
     private Animator animator;
     private EnemyDetector enemyDetector;
     private EnemyBehaviours locedTarget;
+    private CharacterMovement characterMovement;
 
     private Coroutine attackCoroutine;
 
     void Awake()
     {
         enemyDetector = GetComponentInChildren<EnemyDetector>();
+        characterMovement = GetComponent<CharacterMovement>();
         animator = GetComponent<Animator>();
     }
 
@@ -41,6 +43,10 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             AttackCheck();
+        }
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Dodge();
         }
     }
 
@@ -124,6 +130,19 @@ public class PlayerCombat : MonoBehaviour
             playingCombatAnim = false;
         }
         
+    }
+
+    void Dodge()
+    {
+        if (PlayerHealth.isHitted || isAttackingEnemy || characterMovement.isAttack || PlayerHealth.dead)
+        {
+            return;
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            animator.SetTrigger("Dodge");
+            transform.DOMove(transform.position + (transform.right * 5), 0.8f).SetDelay(0.2f);
+        }
     }
 
     public void OnGoingToEnemy()

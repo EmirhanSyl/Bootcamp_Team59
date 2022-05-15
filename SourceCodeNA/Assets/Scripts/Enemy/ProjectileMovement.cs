@@ -33,7 +33,7 @@ public class ProjectileMovement : MonoBehaviour
     {
         if (!stopCachingTheTarget)
         {
-            generalTarget = target.transform.parent.gameObject;
+            generalTarget = target;
             distance = target.transform.position - transform.position;
             transform.LookAt(target.transform.position);
             stopCachingTheTarget = true;

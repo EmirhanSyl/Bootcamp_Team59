@@ -42,6 +42,8 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             if (PlayerHealth.dead)
             {
+                currentTarget = null;
+                targetIndicator.SetActive(false);
                 return;
             }
             if (currentTarget != null)
