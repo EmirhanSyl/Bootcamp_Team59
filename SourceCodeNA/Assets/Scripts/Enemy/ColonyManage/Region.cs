@@ -8,6 +8,7 @@ public class Region : ScriptableObject
 {
     public new string name;
     public EnemyBehaviours.Region RegionSelection;
+    public LayerMask EnemyRegions;
 
     [Header("Resources")]
     [Range(0, 10)] public int Wood;

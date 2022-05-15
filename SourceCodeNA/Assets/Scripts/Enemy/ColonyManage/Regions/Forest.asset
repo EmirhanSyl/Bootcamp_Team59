@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Forest
   RegionSelection: 1
-  Wood: 10
+  EnemyRegions:
+    serializedVersion: 2
+    m_Bits: 0
+  Wood: 3
   Stone: 6
   Food: 7
   MilitaryPower: 8

@@ -10,8 +10,8 @@ public class InformationHolder : MonoBehaviour
 
     private void Awake()
     {
-        woodResouces = GameObject.FindGameObjectsWithTag("WoodResouce");
+        woodResouces = GameObject.FindGameObjectsWithTag("WoodResource");
         stoneResouces = GameObject.FindGameObjectsWithTag("StoneResource");
-        foodResouces = GameObject.FindGameObjectsWithTag("FootResouce");
+        foodResouces = GameObject.FindGameObjectsWithTag("FoodResource");
     }
 }

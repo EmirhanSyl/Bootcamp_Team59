@@ -13,6 +13,9 @@ TagManager:
   - Wood
   - Soul
   - Storage
+  - WoodResource
+  - StoneResource
+  - FoodResource
   layers:
   - Default
   - TransparentFX

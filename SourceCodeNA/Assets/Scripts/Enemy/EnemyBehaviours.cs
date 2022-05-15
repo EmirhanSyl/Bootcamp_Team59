@@ -67,6 +67,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool stopBlood;
         private bool damageTakenAnimIsPlaying;
         private bool dodgenAnimIsPlaying;
+        private bool deadForOneTime;
 
         //Purposeless Enemy
         [SerializeField] private float walkRange = 5;
@@ -77,7 +78,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         private bool destinationPointSet;
         //Guardian Enemy
-        [SerializeField] private GameObject protectedResource;
+        public GameObject protectedResource;
         [SerializeField] private float resourceAreaBorderRange;
         [SerializeField] private float protectedAreaBorderRange;
 
@@ -106,7 +107,7 @@ namespace UnityEngine.AI.MonsterBehavior
         public GameObject targetObject;
         public Vector3 targetVector;
 
-        private void Awake()
+        private void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
             
@@ -153,6 +154,10 @@ namespace UnityEngine.AI.MonsterBehavior
 
             }
 
+            if (transform.parent.gameObject.GetComponent<NPCGroupManager>() != null)
+            {
+                controllingByGroupManager = true;
+            }
             if (controllingByGroupManager)
             {
                 groupController = GetComponentInParent<NPCGroupManager>();
@@ -200,6 +205,11 @@ namespace UnityEngine.AI.MonsterBehavior
                 animator.SetBool("Dead", true);
                 Destroy(gameObject, 4);
                 StartCoroutine(DeadPart());
+                if (!deadForOneTime)
+                {
+                    groupController.SomebodyDied();
+                    deadForOneTime = true;
+                }
                 IEnumerator DeadPart()
                 {
                     yield return new WaitForSeconds(3.9f);
@@ -514,7 +524,10 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 isStunned = true;
                 yield return new WaitForSeconds(stunnedTimeAfterFamageTaken);
-                weaponController.beAbleToAttack = true;
+                if (weaponController != null)
+                {
+                    weaponController.beAbleToAttack = true;
+                }
                 isStunned = false;                
             }
         }
@@ -621,8 +634,11 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 leftClicked = true;
                 OnPlayerHit(this);
-                weaponController = other.gameObject.GetComponent<WeaponController>();
-                weaponController.beAbleToAttack = false;
+                if (other.gameObject.GetComponent<WeaponController>() != null)
+                {
+                    weaponController = other.gameObject.GetComponent<WeaponController>();
+                    weaponController.beAbleToAttack = false;
+                }
                 hittedByPlayer = true;
             }
         }
@@ -691,8 +707,64 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             return isDead;
         }
-        #endregion
+        #endregion        
+        public void BackupAwake()
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
 
+            enemyDetector = player.GetComponentInChildren<EnemyDetector>();
+            characterMovement = player.GetComponent<CharacterMovement>();
+            playerCombat = player.GetComponent<PlayerCombat>();
+            animator = GetComponent<Animator>();
+            if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
+            {
+                agent = GetComponent<NavMeshAgent>();
+            }
+            else
+            {
+                controllingByGroupManager = true;
+            }
+
+            playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
+            playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
+            playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
+
+            for (int i = 0; i < enemyStateTypeBool.Length; i++)
+            {
+                enemyStateTypeBool[i] = false;
+            }
+
+            enemyStateTypeBool[(int)enemyStateTypeDropdown] = true;
+
+            if (regionDrowpdown == Region.Forest)
+            {
+                friendWithPlayer = true;
+            }
+
+            switch (regionDrowpdown)
+            {
+                case Region.Desert:
+                    gameObject.transform.GetChild(2).gameObject.layer = 8;
+                    break;
+                case Region.Forest:
+                    gameObject.transform.GetChild(2).gameObject.layer = 9;
+                    break;
+                case Region.Ice:
+                    gameObject.transform.GetChild(2).gameObject.layer = 10;
+                    break;
+
+            }
+
+            if (transform.parent.gameObject.GetComponent<NPCGroupManager>() != null)
+            {
+                controllingByGroupManager = true;
+            }
+            if (controllingByGroupManager)
+            {
+                groupController = GetComponentInParent<NPCGroupManager>();
+                enemyLayers = groupController.enemyMask;
+            }
+        }
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
