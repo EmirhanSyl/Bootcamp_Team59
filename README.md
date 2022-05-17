@@ -157,6 +157,8 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 **Sprint board update**: Sprint board screenshotları: 
 
+https://miro.com/app/board/uXjVO1kqEZ4=/?share_link_id=447961356012
+
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
