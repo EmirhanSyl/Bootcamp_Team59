@@ -77,6 +77,10 @@ https://miro.com/app/board/uXjVO6kTy8k=/?share_link_id=587989567305
 - Tarih ve orta çağa ait tasarımlarla ilgileneler 
 - Fantastik oyunlardan hoşlanalar 
 
+
+## User Story URL
+
+
 ## Product Backlog URL
 
 https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=5tAnBa
@@ -182,6 +186,8 @@ Alınan kararlar:
 
 
 - **Sprint Retrospective:**
+
+https://miro.com/app/board/uXjVO0bgrzU=/?share_link_id=791288919896 
  
  
 
