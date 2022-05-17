@@ -92,7 +92,7 @@ https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJ
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 130-135 ile başlaması gerektiğine karar verildi.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde öncelik sıralamsına seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
 
@@ -145,7 +145,7 @@ Map dizaynı bölümüne devam edilecek . Bunun için ortak bir terrarin üzerin
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 130-135 ile başlaması gerektiğine karar verildi.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde öncelik ve önem sırasına göre seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
 
@@ -154,6 +154,13 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak pr
 Ekran Görüntüleri le İlgili Dosya : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/Ec77p2rFuspMsqq56JcywJEBRjdXVoAK_2VlSDzPfi9vbw?e=mIpPGp
 
 Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EUTRIu5WOthMg8Sf7pURqgcBZMB-uz8LTb22R8Zf5qeTWg?e=9Bo46K 
+
+-** Akla Takılabilcek Sorular İçin Soru Tahtası :
+
+
+
+https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=553068347675
+
 
 **Sprint board update**: Sprint board screenshotları: 
 
@@ -169,6 +176,8 @@ https://miro.com/app/board/uXjVO1kqEZ4=/?share_link_id=447961356012
 
 
 - **Sprint Review**: 
+
+
 Alınan kararlar: 
 
 
