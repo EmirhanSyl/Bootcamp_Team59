@@ -187,11 +187,20 @@ Alınan kararlar:
 
 - **Sprint Retrospective:**
 
+![image](https://user-images.githubusercontent.com/80157890/169146464-579f0df9-1847-47e5-994b-88faf2c56a29.png)
+
+
 https://miro.com/app/board/uXjVO0bgrzU=/?share_link_id=791288919896 
  
  
 
 -**Diğer Notlar**:
+Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
+
+![image](https://user-images.githubusercontent.com/80157890/169149883-6c22cd93-0c77-49fd-b0f3-26200f8869f0.png)
+
+https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=124684485203 
+
 - N/A
 
 
