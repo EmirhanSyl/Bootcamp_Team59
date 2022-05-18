@@ -159,12 +159,6 @@ Ekran Görüntüleri le İlgili Dosya : https://gtu-my.sharepoint.com/:w:/g/pers
 
 Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EUTRIu5WOthMg8Sf7pURqgcBZMB-uz8LTb22R8Zf5qeTWg?e=9Bo46K 
 
--** Akla Takılabilcek Sorular İçin Soru Tahtası :
-
-
-
-https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=553068347675
-
 
 **Sprint board update**: Sprint board screenshotları: 
 
@@ -182,10 +176,24 @@ https://miro.com/app/board/uXjVO1kqEZ4=/?share_link_id=447961356012
 - **Sprint Review**: 
 
 
-Alınan kararlar: 
+Alınan kararlar:
+Map dizaynı için product backlog içerisindeki puanlamanın arttırılması gerektiğne karar verildi .
+Map dizaynı için üç farklı bölüm tasarımı olması sebebiyle bu bölümleri sprintler içine eşit bir dağılım izleyerek dağıtımının yapılmasına karar verildi . Product backlog içerisine de yapılan bu değişiklik aktarıldı  ve değişiklik sürece yansıtılmış oldu .
+Bu sprint içerisinde aklımıza takılan en önemli noktalarda bir de  tasarlamış olduğumuz oyunun ne kadar sürmesi gerektiği ile ilgili kısımdı . 
+Oyunun kaçıncı dakikasından sonra düşman yapay zekasının oyun içerisinde hissedilmesi gerektiği kısmı da diğer bir önemli nokta idi . 
+Bu iki kısmında sürece bağlı olarak değşiklik göstereceği ve ilerleyen aşamalarda kararlaştırılmasına karar verildi .
+Map dizaynı içinde kaynak eklenmesi kısmı için her bir kaynak için belirli bir kısıtın olması gerektiğine karar verildi .
+Envanter sistemi kısmının süre kalması durumunda oyuna dahil edilebileceği konusunda hem fikir olundu . 
+Bina inşa etme aşamasında yıkılan binalar üzerinden mi upgrade edilmesi ya da istenilen yere yapılması arasında bir tercih yapmamız gerekti ve tercihimizistenlen yer üzerine oldu .
+Askeri sistem ve atak sstemi temel olarak bitmiş olsa da sistemleri güçlendirecek eklemeler yapılmasına karar verildi . Karaktere özel güç verilmesi önerisi ortaya atılsa da bu sistemin kalan süre içerisinde yetiştirilemeyeceği göz önüne alınarak ikinci plana bırakıldı . 
 
 
 - **Sprint Retrospective:**
+- İkinci sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . 
+
+Toplantı Görüntüsü : 
+![image](https://user-images.githubusercontent.com/80157890/169154193-a215bed6-b577-439e-81ab-669e730d7b39.png)
+
 
 ![image](https://user-images.githubusercontent.com/80157890/169146464-579f0df9-1847-47e5-994b-88faf2c56a29.png)
 
