@@ -189,7 +189,8 @@ Askeri sistem ve atak sstemi temel olarak bitmiş olsa da sistemleri güçlendir
 
 
 - **Sprint Retrospective:**
-- İkinci sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . 
+
+İkinci sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . 
 
 Toplantı Görüntüsü : 
 ![image](https://user-images.githubusercontent.com/80157890/169154193-a215bed6-b577-439e-81ab-669e730d7b39.png)
@@ -203,6 +204,7 @@ https://miro.com/app/board/uXjVO0bgrzU=/?share_link_id=791288919896
  
 
 -**Diğer Notlar**:
+
 Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
 
 ![image](https://user-images.githubusercontent.com/80157890/169149883-6c22cd93-0c77-49fd-b0f3-26200f8869f0.png)
