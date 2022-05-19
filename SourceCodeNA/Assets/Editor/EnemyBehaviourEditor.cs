@@ -23,6 +23,8 @@ public class EnemyBehaviourEditor : Editor
         maxHitDamage_Prop,
         rotatioSpeed_Prop,
         controllingByGroupManager_Prop,
+        poisonedTakeDamageDuration_Prop,
+        poisonedHitCount_Prop,
         attackAnimatonsList_Prop,
         counterParticles_Prop,
         bloodParticles_Prop,
@@ -40,6 +42,9 @@ public class EnemyBehaviourEditor : Editor
         protectedResource_Prop,
         resourceAreaBorderRange_Prop,
         protectedAreaBorderRange_Prop,
+
+        collectAnimatonsList_Prop,
+        carryingCapacity_Prop,
 
         targetObject_Prop;
 
@@ -64,6 +69,8 @@ public class EnemyBehaviourEditor : Editor
         maxHitDamage_Prop = serializedObject.FindProperty("maxHitDamage");
 
         controllingByGroupManager_Prop = serializedObject.FindProperty("controllingByGroupManager");
+        poisonedTakeDamageDuration_Prop = serializedObject.FindProperty("poisonedTakeDamageDuration");
+        poisonedHitCount_Prop = serializedObject.FindProperty("poisonedHitCount");
         attackAnimatonsList_Prop = serializedObject.FindProperty("attackAnimatonsList");
         counterParticles_Prop = serializedObject.FindProperty("counterParticles");
         bloodParticles_Prop = serializedObject.FindProperty("bloodParticles");
@@ -81,6 +88,9 @@ public class EnemyBehaviourEditor : Editor
         protectedResource_Prop = serializedObject.FindProperty("protectedResource");
         resourceAreaBorderRange_Prop = serializedObject.FindProperty("resourceAreaBorderRange");
         protectedAreaBorderRange_Prop = serializedObject.FindProperty("protectedAreaBorderRange");
+
+        collectAnimatonsList_Prop = serializedObject.FindProperty("collectAnimatonsList");
+        carryingCapacity_Prop = serializedObject.FindProperty("carryingCapacity");
 
         targetObject_Prop = serializedObject.FindProperty("targetObject");
     }
@@ -109,6 +119,8 @@ public class EnemyBehaviourEditor : Editor
         EditorGUILayout.PropertyField(maxDistanceToTarget_Prop, new GUIContent("Max Distance To Target"));
         EditorGUILayout.PropertyField(stunnedTimeAfterFamageTaken_Prop, new GUIContent("Stunned Time After Damage Taken"));
         EditorGUILayout.PropertyField(knocbackDevider_Prop, new GUIContent("Knocback Devider", "The amount of knokback. (camera.forward/knocbackDevider)"));
+        EditorGUILayout.PropertyField(poisonedTakeDamageDuration_Prop, new GUIContent("Poisoned Take Damage Duration"));
+        EditorGUILayout.PropertyField(poisonedHitCount_Prop, new GUIContent("PoisonedHit Count"));
         EditorGUILayout.Space(20);
 
         EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));
@@ -144,6 +156,12 @@ public class EnemyBehaviourEditor : Editor
                 EditorGUILayout.PropertyField(attackDuration_Prop, new GUIContent("Attack Duration"));
                 EditorGUILayout.PropertyField(projectile_Prop, new GUIContent("Projectile"));
                 EditorGUILayout.PropertyField(projectileInitLocation_Prop, new GUIContent("Projectile Spawn Location"));
+                break;
+            case EnemyBehaviours.EnemyStateType.RobotWorker:
+                EditorGUILayout.PropertyField(protectedResource_Prop, new GUIContent("Protected Resource"));
+                EditorGUILayout.PropertyField(resourceAreaBorderRange_Prop, new GUIContent("Resource Area Border Range"));
+                EditorGUILayout.PropertyField(carryingCapacity_Prop, new GUIContent("Carrying Capacity"));
+                EditorGUILayout.PropertyField(collectAnimatonsList_Prop, new GUIContent("Collect Animatons List"));
                 break;
         }
         

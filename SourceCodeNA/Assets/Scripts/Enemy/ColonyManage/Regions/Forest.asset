@@ -16,7 +16,7 @@ MonoBehaviour:
   RegionSelection: 1
   EnemyRegions:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1280
   Wood: 3
   Stone: 6
   Food: 7

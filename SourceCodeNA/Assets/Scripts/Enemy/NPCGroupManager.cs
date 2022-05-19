@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.AI.MonsterBehavior;
 
 public class NPCGroupManager : MonoBehaviour
-{    
+{
+    public bool questDone;
     public EnemyBehaviours.Region groupRegionDropdown;
 
     public GameObject groupTargeResource;
+    public GameObject castleLocation;
     public RegionManager regionManager;
     public LayerMask enemyMask;
 

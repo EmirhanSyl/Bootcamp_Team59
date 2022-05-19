@@ -31,6 +31,8 @@ public class CharacterMovement : MonoBehaviour
     private bool isMoving;
     private bool combo;
     private bool isBuried;
+    private bool BuryControl;
+    private bool BuryDownControl;
 
     Rigidbody rig;
     Animator animator;
@@ -38,6 +40,7 @@ public class CharacterMovement : MonoBehaviour
     PlayerCombat playerCombat;
 
     public Vector3 movementVector;
+    public Vector3 goUpVec;
     Vector3 goDownVec;
 
     float rot = 45;
@@ -67,7 +70,7 @@ public class CharacterMovement : MonoBehaviour
         }
         if (PlayerHealth.dead)
         {
-            Dead();
+            StartCoroutine(Dead());
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -145,29 +148,41 @@ public class CharacterMovement : MonoBehaviour
         {
             rig.useGravity = false;
             coll.isTrigger = true;
-            goDownVec = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
             isBuried = true;
         }
-        transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
+        if (!BuryDownControl)
+        {
+            goDownVec = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
+            transform.DOMove(goDownVec, 4f);
+            BuryDownControl = true;
+        }
+        //transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
 
         transform.GetChild(0).gameObject.SetActive(false);
         animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
 
         if (isBuried)
         {
-            goDownVec = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
             transform.GetChild(1).gameObject.SetActive(true);
             isBuried = false;
         }
-        transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
+        if (!BuryControl)
+        {
+            goUpVec = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            transform.DOMove(goUpVec, 2f);
+            BuryControl = true;
+        }
+        //transform.position = Vector3.Lerp(transform.position, goDownVec, deathDownSpeed * Time.deltaTime);
 
         yield return new WaitForSeconds(2);
         rig.useGravity = true;
         coll.isTrigger = false;
         PlayerHealth.dead = false;
         PlayerHealth.health = 20;
+        movementSpeed = 4;
+        sprintSpeed = 6;
         Skeleton = true;
     }
 

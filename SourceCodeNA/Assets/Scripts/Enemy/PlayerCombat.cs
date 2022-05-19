@@ -23,6 +23,8 @@ public class PlayerCombat : MonoBehaviour
     public bool isCountering;
     public bool playingCombatAnim;
 
+    private bool turnedIntoASkeleton;
+
     private Animator animator;
     private EnemyDetector enemyDetector;
     private EnemyBehaviours locedTarget;
@@ -47,6 +49,11 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftAlt))
         {
             Dodge();
+        }
+        if (CharacterMovement.Skeleton && !turnedIntoASkeleton)
+        {
+            animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+            turnedIntoASkeleton = true;
         }
     }
 

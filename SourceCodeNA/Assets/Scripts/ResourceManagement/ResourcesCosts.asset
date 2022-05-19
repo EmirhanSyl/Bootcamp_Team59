@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0158c87f599ef44469cd8b6b108d80b0, type: 3}
+  m_Name: ResourcesCosts
+  m_EditorClassIdentifier: 
+  foodCost_PoisonMagic_Level1: 500
+  soulCost_PoisonMagic_Level1: 3
+  foodCost_PoisonMagic_Level2: 1500
+  soulCost_PoisonMagic_Level2: 8
+  foodCost_PoisonMagic_Level3: 2500
+  soulCost_PoisonMagic_Level3: 20
+  foodCost_ElectricMagic_Level1: 750
+  soulCost_ElectricMagic_Level1: 8
+  foodCost_ElectricMagic_Level2: 2000
+  soulCost_ElectricMagic_Level2: 15
+  foodCost_ElectricMagic_Level3: 3500
+  soulCost_ElectricMagic_Level3: 30
+  foodCost_HealMagic_Level1: 1500
+  soulCost_HealMagic_Level1: 20
+  foodCost_HealMagic_Level2: 2750
+  soulCost_HealMagic_Level2: 30
+  foodCost_HealMagic_Level3: 5000
+  soulCost_HealMagic_Level3: 45

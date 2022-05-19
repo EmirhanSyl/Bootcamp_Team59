@@ -30,7 +30,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         [SerializeField] private LayerMask enemyLayers;
 
-        public enum EnemyStateType { Purposeless, Guardian, TowerWizard };
+        public enum EnemyStateType { Purposeless, Guardian, TowerWizard, RobotWorker };
         [Header("Enemy Type Informations")]public EnemyStateType enemyStateTypeDropdown;
 
         public enum Region {Desert, Forest, Ice };
@@ -46,6 +46,10 @@ namespace UnityEngine.AI.MonsterBehavior
         public bool friendWithPlayer;
 
         public float distanceToTarget;
+        public float poisonedTakeDamageDuration;
+        public float poisonedHitCount;
+
+        private float poisonedTakeDamageTimer;
         private float currentSpeed;
         private float animatorSpeed;
         private float destinationRestarter = 5;
@@ -53,7 +57,6 @@ namespace UnityEngine.AI.MonsterBehavior
 
         private int attackAnimationIndex;
 
-        private bool[] enemyStateTypeBool = new bool[3];
         private bool isPraperingAttack;
         private bool isMoving;
         private bool isRetreating;
@@ -68,6 +71,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool damageTakenAnimIsPlaying;
         private bool dodgenAnimIsPlaying;
         private bool deadForOneTime;
+        private bool poisenedAlready;
 
         //Purposeless Enemy
         [SerializeField] private float walkRange = 5;
@@ -85,6 +89,16 @@ namespace UnityEngine.AI.MonsterBehavior
         //TowerWizard
         [SerializeField] private GameObject projectile;
         [SerializeField] private Transform projectileInitLocation;
+
+        //Robot Worker
+        [SerializeField] private string[] collectAnimatonsList;
+        [SerializeField] private float carryingCapacity;
+
+        private float collectedResource;
+        private int collectAnimationIndex;
+        private bool isGetheringResource;
+        public bool resourceCompletelyExploited;
+
 
         private GameObject player;
         private Collider[] enemyColls;
@@ -128,12 +142,6 @@ namespace UnityEngine.AI.MonsterBehavior
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
 
-            for (int i = 0; i < enemyStateTypeBool.Length; i++)
-            {
-                enemyStateTypeBool[i] = false;
-            }
-
-            enemyStateTypeBool[(int)enemyStateTypeDropdown] = true;
 
             if (regionDrowpdown == Region.Forest)
             {
@@ -195,10 +203,10 @@ namespace UnityEngine.AI.MonsterBehavior
                     TowerWizard();
                 }
             }
-            else
-            {
-                animator.SetBool("Dead", true);
-            }
+            //else
+            //{
+            //    animator.SetBool("Dead", true);
+            //}
             if (enemyHealth <= 0)
             {
                 Death();
@@ -220,8 +228,11 @@ namespace UnityEngine.AI.MonsterBehavior
                     }
                 }
             }
+            if (poisenedAlready)
+            {
+                GetPoisoned();
+            }
 
-            
         }
         void LockToTheTarget()
         {
@@ -240,6 +251,11 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 foreach (var currentEnemyColl in allEnemies)
                 {
+                    if ((currentEnemyColl.gameObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (currentEnemyColl.GetComponentInParent<EnemyBehaviours>() != null && currentEnemyColl.GetComponentInParent<EnemyBehaviours>().IsDead()))
+                    {
+                        targetObject = null;
+                        return;
+                    }
                     float distanceToCurrentEnemy = (currentEnemyColl.gameObject.transform.position - transform.position).sqrMagnitude;
                     if (distanceToCurrentEnemy < distanceToClosestEnemy)
                     {
@@ -249,11 +265,11 @@ namespace UnityEngine.AI.MonsterBehavior
                         targetVector = targetObject.transform.position;
                         distanceToTarget = Vector3.Distance(transform.position, targetVector);
                     }
-                    if ((targetObject.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponent<EnemyBehaviours>() != null && targetObject.GetComponent<EnemyBehaviours>().IsDead()))
-                    {
-                        targetObject = null;
-                        return;
-                    }
+                    //if ((targetObject.gameObject.CompareTag("Player") && PlayerHealth.dead) || (targetObject.GetComponent<EnemyBehaviours>() != null && targetObject.GetComponent<EnemyBehaviours>().IsDead()))
+                    //{
+                    //    targetObject = null;
+                    //    return;
+                    //}
 
                     if (!IsDead())
                     {
@@ -304,6 +320,12 @@ namespace UnityEngine.AI.MonsterBehavior
                 DOVirtual.Float(animatorSpeed, 0.5f, 0.1f, (speed) => animatorSpeed = speed);
                 DOVirtual.Float(currentSpeed, movementSpeed, 0.4f, (speed) => currentSpeed = speed);
 
+                if (controllingByGroupManager && groupController.questDone)
+                {
+                    targetObject = groupController.castleLocation;
+                    targetVector = targetObject.transform.position;
+                    return;
+                }
                 switch ((int)enemyStateTypeDropdown)
                 {
                     case 0:
@@ -311,6 +333,9 @@ namespace UnityEngine.AI.MonsterBehavior
                         break;
                     case 1:
                         GuardianEnemyPatrol();
+                        break;
+                    case 3:
+                        RobotWorker();
                         break;
                 }
             }
@@ -433,6 +458,15 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
                 WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
             }
+            else if(distanceToTargetPoint.magnitude >= 0.5f && distanceToTargetPoint.magnitude < 7f)
+            {
+                destinationRestarter -= Time.deltaTime;
+                if (destinationRestarter < 0)
+                {
+                    destinationPointSet = false;
+                    destinationRestarter = 5;
+                }
+            }
 
             IEnumerator WaitForNothing()
             {
@@ -457,6 +491,53 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 EnemyAttack();
             }            
+        }
+
+
+        void RobotWorker()
+        {
+            if (collectedResource >= carryingCapacity || resourceCompletelyExploited)
+            {
+                groupController.questDone = true;
+            }
+            if (!destinationPointSet)
+            {
+                float randomX = Random.Range(-resourceAreaBorderRange, resourceAreaBorderRange);
+                float randomZ = Random.Range(-resourceAreaBorderRange, resourceAreaBorderRange);
+
+                targetVector = new Vector3(protectedResource.transform.position.x + randomX, protectedResource.transform.position.y, protectedResource.transform.position.z + randomZ);
+                destinationPointSet = true;
+            }
+
+            Vector3 distanceToTargetPoint = transform.position - targetVector;
+            if (distanceToTargetPoint.magnitude < 0.5f)
+            {
+                //targetVector = transform.position;
+                DOVirtual.Float(animatorSpeed, 0, 0.1f, (speed) => animatorSpeed = speed);
+                if (WaitForNothingCoroutine != null)
+                {
+                    return;
+                }
+                WaitForNothingCoroutine = StartCoroutine(WaitForNothing());
+            }
+            else if (distanceToTargetPoint.magnitude >= 0.5f && distanceToTargetPoint.magnitude < 7f)
+            {
+                destinationRestarter -= Time.deltaTime;
+                if (destinationRestarter < 0)
+                {
+                    destinationPointSet = false;
+                    destinationRestarter = 5;
+                }
+            }
+
+            IEnumerator WaitForNothing()
+            {
+                animator.SetTrigger(collectAnimatonsList[collectAnimationIndex]);
+                collectAnimationIndex = (int)Mathf.Repeat(collectAnimationIndex + 1, collectAnimatonsList.Length);
+                yield return new WaitForSeconds(waitTime);
+                destinationPointSet = false;
+                WaitForNothingCoroutine = null;
+            }
         }
 
         public void OnNPCCounter()
@@ -561,6 +642,32 @@ namespace UnityEngine.AI.MonsterBehavior
             }
         }
 
+        void GetPoisoned()
+        {
+            poisonedTakeDamageTimer += Time.deltaTime;
+            if (poisonedTakeDamageTimer >= poisonedTakeDamageDuration && poisonedHitCount > 0)
+            {
+                GetHittedFromNPC(Random.Range(5f, 10f));
+                poisonedHitCount--;
+                poisonedTakeDamageTimer = 0f;
+            }
+            if (poisonedHitCount == 0)
+            {
+                poisenedAlready = false;
+                poisonedHitCount = 3;
+            }
+        }
+
+        void GetShocked()
+        {
+
+        }
+
+        void Healing()
+        {
+
+        }
+
         public void AttackAnimationPlayingEvent()
         {
             isPlayingAttackAnimation = true;
@@ -640,6 +747,20 @@ namespace UnityEngine.AI.MonsterBehavior
                     weaponController.beAbleToAttack = false;
                 }
                 hittedByPlayer = true;
+            }
+            if (other.gameObject.CompareTag("Poison") && !friendWithPlayer && !poisenedAlready)
+            {
+                GetHittedFromNPC(Random.Range(5f, 10f));
+                poisonedHitCount--;
+                poisenedAlready = true;
+            }
+            else if(other.gameObject.CompareTag("ElectricMagic") && !friendWithPlayer)
+            {
+
+            }
+            else if (other.gameObject.CompareTag("HealMagic") && friendWithPlayer)
+            {
+
             }
         }
 
@@ -728,13 +849,6 @@ namespace UnityEngine.AI.MonsterBehavior
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
-
-            for (int i = 0; i < enemyStateTypeBool.Length; i++)
-            {
-                enemyStateTypeBool[i] = false;
-            }
-
-            enemyStateTypeBool[(int)enemyStateTypeDropdown] = true;
 
             if (regionDrowpdown == Region.Forest)
             {

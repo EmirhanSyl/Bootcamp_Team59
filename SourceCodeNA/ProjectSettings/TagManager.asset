@@ -16,6 +16,9 @@ TagManager:
   - WoodResource
   - StoneResource
   - FoodResource
+  - Poison
+  - ElectricMagic
+  - HealMagic
   layers:
   - Default
   - TransparentFX

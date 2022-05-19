@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ice
   RegionSelection: 2
+  EnemyRegions:
+    serializedVersion: 2
+    m_Bits: 768
   Wood: 3
   Stone: 5
   Food: 10

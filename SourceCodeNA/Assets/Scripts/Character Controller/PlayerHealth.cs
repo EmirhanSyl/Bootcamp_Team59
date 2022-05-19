@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public static bool isHitted;
     public static bool dead;
+    public bool deadIndicator;
 
     public float healthOnInspector = 100f;
 
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
     
     void Update()
     {
+        deadIndicator = dead;
         if (health != currentHealth && currentHealth > 0)
         {
             animator.SetTrigger("DamageTaken");
@@ -46,6 +48,11 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = 20;
             health = currentHealth;
+            animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            health -= 110;
         }
     }
     public void DamageTakenAnimPlaying()

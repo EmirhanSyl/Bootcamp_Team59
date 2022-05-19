@@ -92,6 +92,10 @@ namespace UnityEngine.AI.MonsterBehavior
                 {
                     currentTarget = enemyHitColliders[x].gameObject.GetComponent<EnemyBehaviours>();
                 }
+                else
+                {
+                    currentTarget = null;
+                }
             }
 
             if (currentTarget != null && Vector3.Distance(transform.position, currentTarget.gameObject.transform.position) > 10f)
