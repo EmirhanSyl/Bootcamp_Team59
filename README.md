@@ -113,7 +113,7 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-- 
+ 
 
 
 ![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png)
@@ -171,6 +171,12 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=411349470758
+
+
+Burndawn Chart Sprint 2 İçin : 
+
+
+https://miro.com/app/board/uXjVOzJ7le4=/?share_link_id=947624934222
 
 
 
