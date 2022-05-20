@@ -176,6 +176,9 @@ https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=411349470758
 Burndawn Chart Sprint 2 İçin : 
 
 
+![image](https://user-images.githubusercontent.com/80157890/169471920-873b4869-b3ab-487a-a2c9-d642f5d0905f.png)
+
+
 https://miro.com/app/board/uXjVOzJ7le4=/?share_link_id=947624934222
 
 
