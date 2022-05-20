@@ -143,11 +143,14 @@ Map dizaynı bölümüne devam edilecek . Bunun için ortak bir terrarin üzerin
 
 # Sprint 2
 
+PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
+
+
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 130 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 130-135 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 130 puan  ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde öncelik ve önem sırasına göre seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
@@ -177,7 +180,7 @@ https://miro.com/app/board/uXjVO1kqEZ4=/?share_link_id=447961356012
 
 
 Alınan kararlar:
-Map dizaynı için product backlog içerisindeki puanlamanın arttırılması gerektiğne karar verildi .
+Map dizaynı için product backlog içerisindeki dağılımının bir ve ikinci sprinte dağıtılmasına karar verildi ve her sprint için gereken puanlamanın ne fazlası ne de eksiği olacak şekilde dağıtım yapıldı . 
 Map dizaynı için üç farklı bölüm tasarımı olması sebebiyle bu bölümleri sprintler içine eşit bir dağılım izleyerek dağıtımının yapılmasına karar verildi . Product backlog içerisine de yapılan bu değişiklik aktarıldı  ve değişiklik sürece yansıtılmış oldu .
 Bu sprint içerisinde aklımıza takılan en önemli noktalarda bir de  tasarlamış olduğumuz oyunun ne kadar sürmesi gerektiği ile ilgili kısımdı . 
 Oyunun kaçıncı dakikasından sonra düşman yapay zekasının oyun içerisinde hissedilmesi gerektiği kısmı da diğer bir önemli nokta idi . 
