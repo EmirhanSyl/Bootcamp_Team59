@@ -14,6 +14,7 @@ public class EnemyBehaviourEditor : Editor
         enemyHealth_Prop,
         movementSpeed_Prop,
         SprintSpeed_Prop,
+        poisonedSpeed_Prop,
         stunnedTimeAfterFamageTaken_Prop,
         knocbackDevider_Prop,
         maxDistanceToTarget_Prop,
@@ -24,6 +25,7 @@ public class EnemyBehaviourEditor : Editor
         rotatioSpeed_Prop,
         controllingByGroupManager_Prop,
         poisonedTakeDamageDuration_Prop,
+        healDuration_prop,
         poisonedHitCount_Prop,
         attackAnimatonsList_Prop,
         counterParticles_Prop,
@@ -45,6 +47,7 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop,
         carryingCapacity_Prop,
+        enemyHealthBar_Prop,
 
         targetObject_Prop;
 
@@ -57,6 +60,7 @@ public class EnemyBehaviourEditor : Editor
         enemyHealth_Prop = serializedObject.FindProperty("enemyHealth");
         movementSpeed_Prop = serializedObject.FindProperty("movementSpeed");
         SprintSpeed_Prop = serializedObject.FindProperty("SprintSpeed");
+        poisonedSpeed_Prop = serializedObject.FindProperty("poisonedSpeed");
         rotatioSpeed_Prop = serializedObject.FindProperty("rotatioSpeed");
 
         maxDistanceToTarget_Prop = serializedObject.FindProperty("maxDistanceToTarget");
@@ -71,6 +75,7 @@ public class EnemyBehaviourEditor : Editor
         controllingByGroupManager_Prop = serializedObject.FindProperty("controllingByGroupManager");
         poisonedTakeDamageDuration_Prop = serializedObject.FindProperty("poisonedTakeDamageDuration");
         poisonedHitCount_Prop = serializedObject.FindProperty("poisonedHitCount");
+        healDuration_prop = serializedObject.FindProperty("healDuration");
         attackAnimatonsList_Prop = serializedObject.FindProperty("attackAnimatonsList");
         counterParticles_Prop = serializedObject.FindProperty("counterParticles");
         bloodParticles_Prop = serializedObject.FindProperty("bloodParticles");
@@ -91,6 +96,7 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop = serializedObject.FindProperty("collectAnimatonsList");
         carryingCapacity_Prop = serializedObject.FindProperty("carryingCapacity");
+        enemyHealthBar_Prop = serializedObject.FindProperty("enemyHealthBar");
 
         targetObject_Prop = serializedObject.FindProperty("targetObject");
     }
@@ -113,6 +119,7 @@ public class EnemyBehaviourEditor : Editor
         EditorGUILayout.PropertyField(enemyHealth_Prop, new GUIContent("Enemy Health"));
         EditorGUILayout.PropertyField(movementSpeed_Prop, new GUIContent("Movement Speed"));
         EditorGUILayout.PropertyField(SprintSpeed_Prop, new GUIContent("Sprint Speed"));
+        EditorGUILayout.PropertyField(poisonedSpeed_Prop, new GUIContent("Poisoned Speed"));
         EditorGUILayout.PropertyField(rotatioSpeed_Prop, new GUIContent("Rotation Speed"));
         EditorGUILayout.Space(20);
 
@@ -121,6 +128,7 @@ public class EnemyBehaviourEditor : Editor
         EditorGUILayout.PropertyField(knocbackDevider_Prop, new GUIContent("Knocback Devider", "The amount of knokback. (camera.forward/knocbackDevider)"));
         EditorGUILayout.PropertyField(poisonedTakeDamageDuration_Prop, new GUIContent("Poisoned Take Damage Duration"));
         EditorGUILayout.PropertyField(poisonedHitCount_Prop, new GUIContent("PoisonedHit Count"));
+        EditorGUILayout.PropertyField(healDuration_prop, new GUIContent("Heal Duration"));
         EditorGUILayout.Space(20);
 
         EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));
@@ -133,11 +141,12 @@ public class EnemyBehaviourEditor : Editor
         EditorGUILayout.PropertyField(counterParticles_Prop, new GUIContent("Counter Particles"));
         EditorGUILayout.PropertyField(bloodParticles_Prop, new GUIContent("Blood Particles"));
         EditorGUILayout.PropertyField(groundMask_Prop, new GUIContent("Ground Mask"));
+        EditorGUILayout.PropertyField(enemyHealthBar_Prop, new GUIContent("Enemy Health Bar"));
         EditorGUILayout.Space(20);
 
         EditorGUILayout.PropertyField(enemyStateTypeDropdown_Prop);
         EnemyBehaviours.EnemyStateType enemyStateType = (EnemyBehaviours.EnemyStateType)enemyStateTypeDropdown_Prop.enumValueIndex;
-
+         
         switch (enemyStateType)
         {
             case EnemyBehaviours.EnemyStateType.Purposeless:

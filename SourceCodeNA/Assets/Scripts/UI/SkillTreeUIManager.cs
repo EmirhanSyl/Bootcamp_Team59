@@ -161,7 +161,14 @@ public class SkillTreeUIManager : MonoBehaviour
             return;
         }
         text_PoisonLevelAtInfoTab.text = "Lvl: " + level_PoisonMagic;
-        text_PoisonUpgrateLevelAtInfoTab.text = "Lvl: " + level_PoisonMagic + " -> " + (level_PoisonMagic+1).ToString();
+        if (level_PoisonMagic < 3)
+        {
+            text_PoisonUpgrateLevelAtInfoTab.text = "Lvl: " + level_PoisonMagic + " -> " + (level_PoisonMagic+1).ToString();
+        }
+        else
+        {
+            text_PoisonUpgrateLevelAtInfoTab.text = "Max Level";
+        }
 
         switch (level_PoisonMagic)
         {
@@ -225,6 +232,10 @@ public class SkillTreeUIManager : MonoBehaviour
                     text_FoodCost_PoisonUpgrateLevelAtInfoTab.color = Color.black;
                 }
                 break;
+            case 3:
+                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = "Max Level";
+                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = "Max Level";
+                break;
         }
         
 
@@ -285,6 +296,8 @@ public class SkillTreeUIManager : MonoBehaviour
 
         level_PoisonMagic++;
         magicAttacks.poisonMagicLock = true;
+        magicAttacks.poisonLevel = level_PoisonMagic;
+        magicAttacks.magicLevelChanged = true;
         text_PoisonLevel.text = "Level: " + level_PoisonMagic.ToString();
         poisonMagicPanel.SetActive(false);
         status_PoisonMagicInfoPanel = false;
@@ -300,7 +313,15 @@ public class SkillTreeUIManager : MonoBehaviour
             return;
         }
         text_ElectricLevelAtInfoTab.text = "Lvl: " + level_ElectricMagic;
-        text_ElectricUpgrateLevelAtInfoTab.text = "Lvl: " + level_ElectricMagic + " -> " + (level_ElectricMagic + 1).ToString();
+        if (level_ElectricMagic < 3)
+        {
+            text_ElectricUpgrateLevelAtInfoTab.text = "Lvl: " + level_ElectricMagic + " -> " + (level_ElectricMagic + 1).ToString();
+        }
+        else
+        {
+            text_ElectricUpgrateLevelAtInfoTab.text = "Max Level";
+        }
+        
 
         switch (level_ElectricMagic)
         {
@@ -364,6 +385,10 @@ public class SkillTreeUIManager : MonoBehaviour
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.black;
                 }
                 break;
+            case 3:
+                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = "Max Level";
+                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = "Max Level";
+                break;
         }
 
         status_ElectricMagicInfoPanel = true;
@@ -423,6 +448,8 @@ public class SkillTreeUIManager : MonoBehaviour
 
         level_ElectricMagic++;
         magicAttacks.electricMagicLock = true;
+        magicAttacks.electricLevel = level_ElectricMagic;
+        magicAttacks.magicLevelChanged = true;
         text_ElectricLevel.text = "Level: " + level_ElectricMagic.ToString();
         electricMagicPanel.SetActive(false);
         status_ElectricMagicInfoPanel = false;
@@ -438,7 +465,14 @@ public class SkillTreeUIManager : MonoBehaviour
             return;
         }
         text_HealLevelAtInfoTab.text = "Lvl: " + level_HealMagic;
-        text_HealUpgrateLevelAtInfoTab.text = "Lvl: " + level_HealMagic + " -> " + (level_HealMagic + 1).ToString();
+        if (level_HealMagic < 3)
+        {
+            text_HealUpgrateLevelAtInfoTab.text = "Lvl: " + level_HealMagic + " -> " + (level_HealMagic + 1).ToString();
+        }
+        else
+        {
+            text_HealUpgrateLevelAtInfoTab.text = "Max Level";
+        }       
 
         switch (level_HealMagic)
         {
@@ -502,6 +536,10 @@ public class SkillTreeUIManager : MonoBehaviour
                     text_FoodCost_HealUpgrateLevelAtInfoTab.color = Color.black;
                 }
                 break;
+            case 3:
+                text_FoodCost_HealUpgrateLevelAtInfoTab.text = "Max Level";
+                text_SoulCost_HealUpgrateLevelAtInfoTab.text = "Max Level";
+                break;
         }
 
 
@@ -562,6 +600,8 @@ public class SkillTreeUIManager : MonoBehaviour
 
         level_HealMagic++;
         magicAttacks.healMagicLock = true;
+        magicAttacks.healLevel = level_HealMagic;
+        magicAttacks.magicLevelChanged = true;
         text_HealLevel.text = "Level: " + level_HealMagic.ToString();
         healMagicPanel.SetActive(false);
         status_HealMagicInfoPanel = false;

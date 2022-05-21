@@ -130,10 +130,10 @@ public class PlayerCombat : MonoBehaviour
             }
             if (!locedTarget.IsOnDodge())
             {
+                locedTarget.hittedByPlayer = true;
                 OnDamageTaken.Invoke(locedTarget);
             }
             //Particle codes
-            locedTarget.hittedByPlayer = true;
             playingCombatAnim = false;
         }
         

@@ -14,6 +14,7 @@ namespace UnityEngine.AI.MonsterBehavior
         [SerializeField] private float enemyHealth = 100f;
         [SerializeField] private float movementSpeed = 1.5f;
         [SerializeField] private float SprintSpeed = 3.5f;
+        [SerializeField] private float poisonedSpeed = 1f;
         [SerializeField] private float stunnedTimeAfterFamageTaken = 0.5f;
         [SerializeField] private float knocbackDevider = 1f;
         public float maxDistanceToTarget = 10f;
@@ -25,7 +26,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         [SerializeField] private string[] attackAnimatonsList;
 
-        [SerializeField] private ParticleSystem counterParticles;
+        [SerializeField] private ParticleSystem poisonedDamageParticles;
         [SerializeField] private ParticleSystem bloodParticles;
 
         [SerializeField] private LayerMask enemyLayers;
@@ -38,7 +39,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         public LayerMask groundMask;
 
-        [HideInInspector]public UnityEvent<PlayerHealth> HitThePlayer;
+        public UnityEvent<PlayerHealth> HitThePlayer;
 
         public float rotatioSpeed = 50f;
         public bool controllingByGroupManager;
@@ -47,9 +48,11 @@ namespace UnityEngine.AI.MonsterBehavior
 
         public float distanceToTarget;
         public float poisonedTakeDamageDuration;
+        public float healDuration;
         public float poisonedHitCount;
 
         private float poisonedTakeDamageTimer;
+        private float healingTimer;
         private float currentSpeed;
         private float animatorSpeed;
         private float destinationRestarter = 5;
@@ -110,6 +113,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private Coroutine WaitForNothingCoroutine;
         private Coroutine CannotArriveToDestinationCoroutine;
 
+        [SerializeField] private EnemyHealthBar enemyHealthBar;
         private EnemyDetector enemyDetector;
         private PlayerCombat playerCombat;
         private CharacterMovement characterMovement;
@@ -117,6 +121,7 @@ namespace UnityEngine.AI.MonsterBehavior
         private Animator animator;
         private NavMeshAgent agent;
         private NPCGroupManager groupController;
+        private MagicAttacks magicAttacks;
 
         public GameObject targetObject;
         public Vector3 targetVector;
@@ -128,6 +133,7 @@ namespace UnityEngine.AI.MonsterBehavior
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
             characterMovement = player.GetComponent<CharacterMovement>();
             playerCombat = player.GetComponent<PlayerCombat>();
+            magicAttacks = player.GetComponent<MagicAttacks>();
             animator = GetComponent<Animator>();
             if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
             {
@@ -172,10 +178,16 @@ namespace UnityEngine.AI.MonsterBehavior
                 enemyLayers = groupController.enemyMask;
             }
 
+            enemyHealthBar.SetMaxHealth(enemyHealth);
         }
 
         void Update()
         {
+            if (enemyHealthBar.gameObject.activeSelf)
+            {
+                enemyHealthBar.SetHealth(enemyHealth);
+            }
+
             if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
             {
                 agent.SetDestination(targetVector);
@@ -288,11 +300,13 @@ namespace UnityEngine.AI.MonsterBehavior
         {
 
             if (distanceToTarget <= maxDistanceToTarget && distanceToTarget > attackRange)
-            {            
-
-                DOVirtual.Float(currentSpeed, SprintSpeed, 0.4f, (speed) => currentSpeed = speed);
-                DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);
-
+            {
+                if (!poisenedAlready)
+                {
+                    DOVirtual.Float(currentSpeed, SprintSpeed, 0.4f, (speed) => currentSpeed = speed);
+                    DOVirtual.Float(animatorSpeed, 1, 0.1f, (speed) => animatorSpeed = speed);
+                }
+                enemyHealthBar.gameObject.SetActive(true);
                 isPlayerInAttackRange = false;
             }
             else if(distanceToTarget < attackRange)
@@ -319,7 +333,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 isPlayerInAttackRange = false;
                 DOVirtual.Float(animatorSpeed, 0.5f, 0.1f, (speed) => animatorSpeed = speed);
                 DOVirtual.Float(currentSpeed, movementSpeed, 0.4f, (speed) => currentSpeed = speed);
-
+                enemyHealthBar.gameObject.SetActive(false);
                 if (controllingByGroupManager && groupController.questDone)
                 {
                     targetObject = groupController.castleLocation;
@@ -488,9 +502,13 @@ namespace UnityEngine.AI.MonsterBehavior
                 {
                     return;
                 }
-
+                enemyHealthBar.gameObject.SetActive(true);
                 EnemyAttack();
-            }            
+            }
+            else
+            {
+                enemyHealthBar.gameObject.SetActive(false);
+            }
         }
 
 
@@ -576,15 +594,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 if (hittedByPlayer)
                 {
-                    if (!leftClicked)
-                    {
-                        enemyHealth -= Random.Range(25f, 50f);
-                    }
-                    else
-                    {
-                        enemyHealth -= characterMovement.WeaponDamage();
-                        leftClicked = false;
-                    }
+                    enemyHealth -= Random.Range(25f, 50f);
                     hittedByPlayer = false;
                 }
 
@@ -645,14 +655,23 @@ namespace UnityEngine.AI.MonsterBehavior
         void GetPoisoned()
         {
             poisonedTakeDamageTimer += Time.deltaTime;
+
+            DOVirtual.Float(currentSpeed, poisonedSpeed, 0.4f, (speed) => currentSpeed = speed);
             if (poisonedTakeDamageTimer >= poisonedTakeDamageDuration && poisonedHitCount > 0)
             {
-                GetHittedFromNPC(Random.Range(5f, 10f));
+                GetHittedFromNPC(magicAttacks.currentDamageAmount_Poison);
                 poisonedHitCount--;
+                poisonedDamageParticles.gameObject.transform.position = transform.position;
+                poisonedDamageParticles.gameObject.SetActive(true); 
+                poisonedDamageParticles.Play();
                 poisonedTakeDamageTimer = 0f;
             }
             if (poisonedHitCount == 0)
             {
+                if (enemyStateTypeDropdown != EnemyStateType.RobotWorker)
+                {
+                    gameObject.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material.color = Color.white;
+                }
                 poisenedAlready = false;
                 poisonedHitCount = 3;
             }
@@ -665,7 +684,17 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void Healing()
         {
+            healingTimer += Time.deltaTime;
 
+            if (healingTimer >= healDuration)
+            {
+                enemyHealth += magicAttacks.currentHealAmount_Heal;
+                if (enemyHealth > 100)
+                {
+                    enemyHealth = 100;
+                }
+                healingTimer = 0f;
+            }
         }
 
         public void AttackAnimationPlayingEvent()
@@ -738,20 +767,26 @@ namespace UnityEngine.AI.MonsterBehavior
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("PlayerWeapon") && characterMovement.isAttack && other.gameObject.GetComponent<WeaponController>().beAbleToAttack && !friendWithPlayer)
-            {
-                leftClicked = true;
+            {                
                 OnPlayerHit(this);
+                GetHittedFromNPC(characterMovement.WeaponDamage());
                 if (other.gameObject.GetComponent<WeaponController>() != null)
                 {
                     weaponController = other.gameObject.GetComponent<WeaponController>();
                     weaponController.beAbleToAttack = false;
-                }
-                hittedByPlayer = true;
+                }                
             }
             if (other.gameObject.CompareTag("Poison") && !friendWithPlayer && !poisenedAlready)
             {
                 GetHittedFromNPC(Random.Range(5f, 10f));
                 poisonedHitCount--;
+                if (enemyStateTypeDropdown != EnemyStateType.RobotWorker)
+                {
+                    gameObject.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material.color = Color.green;
+                }                
+                poisonedDamageParticles.gameObject.transform.position = transform.position;
+                poisonedDamageParticles.gameObject.SetActive(true);
+                poisonedDamageParticles.Play();
                 poisenedAlready = true;
             }
             else if(other.gameObject.CompareTag("ElectricMagic") && !friendWithPlayer)
@@ -761,6 +796,13 @@ namespace UnityEngine.AI.MonsterBehavior
             else if (other.gameObject.CompareTag("HealMagic") && friendWithPlayer)
             {
 
+            }
+        }
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.gameObject.CompareTag("HealMagic") && friendWithPlayer)
+            {
+                Healing();
             }
         }
 
