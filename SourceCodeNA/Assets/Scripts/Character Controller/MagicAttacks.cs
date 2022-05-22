@@ -142,31 +142,40 @@ public class MagicAttacks : MonoBehaviour
             magicLevelChanged = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && poisonMagicLock && magicCooldownTimer > magicCooldown && enemyDetector.CurrentTarget() != null)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && poisonMagicLock && magicCooldownTimer > magicCooldown && enemyDetector.CurrentTarget() != null && ManaManager.readyToMagic)
         {
             poisonMagic.transform.position = targetIndicator.position;
             poisonMagic.gameObject.SetActive(true);
             poisonMagic.Play();
             particlePlaying = true;
             particleDuration = poisonDuration;
+
+            ManaManager.manaAmount = 1f;
+            ManaManager.readyToMagic = false;
             magicCooldownTimer = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && electricMagicLock && magicCooldownTimer > magicCooldown && enemyDetector.CurrentTarget() != null)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && electricMagicLock && magicCooldownTimer > magicCooldown && enemyDetector.CurrentTarget() != null && ManaManager.readyToMagic)
         {
             electricMagic.transform.position = new Vector3(targetIndicator.position.x, targetIndicator.position.y + 2f, targetIndicator.position.z);
             electricMagic.gameObject.SetActive(true);
             electricMagic.Play();
             particlePlaying = true;
             particleDuration = electricDuration;
+
+            ManaManager.manaAmount = 1f;
+            ManaManager.readyToMagic = false;
             magicCooldownTimer = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && healMagicLock && magicCooldownTimer > magicCooldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && healMagicLock && magicCooldownTimer > magicCooldown && ManaManager.readyToMagic)
         {
             healMagic.transform.position = transform.position;
             healMagic.gameObject.SetActive(true);
             healMagic.Play();
             particlePlaying = true;
             particleDuration = healDuration;
+
+            ManaManager.manaAmount = 1f;
+            ManaManager.readyToMagic = false;
             magicCooldownTimer = 0;
         }
 

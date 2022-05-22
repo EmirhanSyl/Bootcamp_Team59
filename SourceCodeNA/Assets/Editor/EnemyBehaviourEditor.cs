@@ -28,7 +28,7 @@ public class EnemyBehaviourEditor : Editor
         healDuration_prop,
         poisonedHitCount_Prop,
         attackAnimatonsList_Prop,
-        counterParticles_Prop,
+        poisonedDamageParticles_Prop,
         bloodParticles_Prop,
         groundMask_Prop,
         enemyLayers_Prop,
@@ -47,6 +47,8 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop,
         carryingCapacity_Prop,
+
+        hugeKnightNPC_Prop,
         enemyHealthBar_Prop,
 
         targetObject_Prop;
@@ -55,7 +57,6 @@ public class EnemyBehaviourEditor : Editor
     {
         enemyStateTypeDropdown_Prop = serializedObject.FindProperty("enemyStateTypeDropdown");
         regionDrowpdown_Prop = serializedObject.FindProperty("regionDrowpdown");
-
 
         enemyHealth_Prop = serializedObject.FindProperty("enemyHealth");
         movementSpeed_Prop = serializedObject.FindProperty("movementSpeed");
@@ -77,7 +78,7 @@ public class EnemyBehaviourEditor : Editor
         poisonedHitCount_Prop = serializedObject.FindProperty("poisonedHitCount");
         healDuration_prop = serializedObject.FindProperty("healDuration");
         attackAnimatonsList_Prop = serializedObject.FindProperty("attackAnimatonsList");
-        counterParticles_Prop = serializedObject.FindProperty("counterParticles");
+        poisonedDamageParticles_Prop = serializedObject.FindProperty("poisonedDamageParticles");
         bloodParticles_Prop = serializedObject.FindProperty("bloodParticles");
         groundMask_Prop = serializedObject.FindProperty("groundMask");
         enemyLayers_Prop = serializedObject.FindProperty("enemyLayers");
@@ -96,6 +97,8 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop = serializedObject.FindProperty("collectAnimatonsList");
         carryingCapacity_Prop = serializedObject.FindProperty("carryingCapacity");
+
+        hugeKnightNPC_Prop = serializedObject.FindProperty("hugeKnightNPC");
         enemyHealthBar_Prop = serializedObject.FindProperty("enemyHealthBar");
 
         targetObject_Prop = serializedObject.FindProperty("targetObject");
@@ -137,28 +140,30 @@ public class EnemyBehaviourEditor : Editor
         EditorGUILayout.PropertyField(maxHitDamage_Prop, new GUIContent("Max Hit Damage"));
         EditorGUILayout.Space(20);
 
-        EditorGUILayout.PropertyField(attackAnimatonsList_Prop, new GUIContent("Attack Animatons List"));
-        EditorGUILayout.PropertyField(counterParticles_Prop, new GUIContent("Counter Particles"));
-        EditorGUILayout.PropertyField(bloodParticles_Prop, new GUIContent("Blood Particles"));
         EditorGUILayout.PropertyField(groundMask_Prop, new GUIContent("Ground Mask"));
         EditorGUILayout.PropertyField(enemyHealthBar_Prop, new GUIContent("Enemy Health Bar"));
-        EditorGUILayout.Space(20);
+        EditorGUILayout.PropertyField(poisonedDamageParticles_Prop, new GUIContent("Counter Particles"));
+        EditorGUILayout.PropertyField(bloodParticles_Prop, new GUIContent("Blood Particles"));
+        EditorGUILayout.PropertyField(attackAnimatonsList_Prop, new GUIContent("Attack Animatons List"));
+        EditorGUILayout.Space(10);
 
         EditorGUILayout.PropertyField(enemyStateTypeDropdown_Prop);
         EnemyBehaviours.EnemyStateType enemyStateType = (EnemyBehaviours.EnemyStateType)enemyStateTypeDropdown_Prop.enumValueIndex;
-         
+
         switch (enemyStateType)
         {
             case EnemyBehaviours.EnemyStateType.Purposeless:
                 EditorGUILayout.PropertyField(walkRange_Prop, new GUIContent("Walk Range"));
                 EditorGUILayout.PropertyField(waitTime_Prop, new GUIContent("Wait Time"));
                 EditorGUILayout.Slider(dodgeChance_Prop, 0f, 1f, new GUIContent("Dodge Chance"));
+                EditorGUILayout.PropertyField(hugeKnightNPC_Prop, new GUIContent("Huge Knight NPC"));
                 break;
             case EnemyBehaviours.EnemyStateType.Guardian:
                 EditorGUILayout.PropertyField(protectedResource_Prop, new GUIContent("Protected Resource"));
                 EditorGUILayout.PropertyField(resourceAreaBorderRange_Prop, new GUIContent("Resource Area Border Range"));
                 EditorGUILayout.PropertyField(protectedAreaBorderRange_Prop, new GUIContent("Protected Area Border Range"));
                 EditorGUILayout.Slider(dodgeChance_Prop, 0f, 1f, new GUIContent("Dodge Chance"));
+                EditorGUILayout.PropertyField(hugeKnightNPC_Prop, new GUIContent("Huge Knight NPC"));
                 break;
             case EnemyBehaviours.EnemyStateType.TowerWizard:
                 EditorGUILayout.PropertyField(attackRange_Prop, new GUIContent("Attack Range"));
@@ -173,8 +178,6 @@ public class EnemyBehaviourEditor : Editor
                 EditorGUILayout.PropertyField(collectAnimatonsList_Prop, new GUIContent("Collect Animatons List"));
                 break;
         }
-        
-
         serializedObject.ApplyModifiedProperties();
     }
 }

@@ -117,7 +117,7 @@ public class PlayerCombat : MonoBehaviour
     {
         Vector3 position;
         position = target.position;
-        return Vector3.MoveTowards(position, transform.position, 0.9f);
+        return Vector3.MoveTowards(position, transform.position, 0.8f);
     }
 
     public void HitEvent()

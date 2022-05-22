@@ -11,7 +11,7 @@ public class NPCWeapon : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject == gameObject.GetComponentInParent<EnemyBehaviours>().targetObject && gameObject.GetComponentInParent<EnemyBehaviours>().IsAttacking() && !other.gameObject.GetComponent<EnemyBehaviours>().IsOnDodge())
+        if (other.gameObject == gameObject.GetComponentInParent<EnemyBehaviours>().targetObject && gameObject.GetComponentInParent<EnemyBehaviours>().IsAttacking() && !other.gameObject.GetComponent<EnemyBehaviours>().IsOnDodge() && !other.gameObject.GetComponent<EnemyBehaviours>().InHeavyAttack())
         {
             other.gameObject.GetComponent<EnemyBehaviours>().GetHittedFromNPC(Random.Range(minAttackDamage, maxAttackDamage));
         }
