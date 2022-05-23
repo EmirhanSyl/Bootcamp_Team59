@@ -113,14 +113,19 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
- 
 
 
-![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png)
+
+![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png) 
+
 ![sprin içint4](https://user-images.githubusercontent.com/80157890/167312604-5489f213-1fb0-42f6-a40c-b4351c060bef.png)
+
 ![sprint için2](https://user-images.githubusercontent.com/80157890/167312610-4dd7ea6a-bbe1-49db-b4cd-70c814735fce.png)
+
 ![sprint için1](https://user-images.githubusercontent.com/80157890/167312623-7def8562-6ed1-4b08-9353-fff34ec13de0.png)
+
 ![Ekran görüntüsü 2022-05-08 223235](https://user-images.githubusercontent.com/80157890/167312677-31ab9383-bd13-44ba-992c-1264d90c73ba.png)
+
 ![Ekran görüntüsü 2022-05-08 223211](https://user-images.githubusercontent.com/80157890/167312684-76a707c8-21de-46b2-946e-ff7c19e7f76d.png)
 
 
@@ -194,6 +199,9 @@ https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/ESHozjs2Yy9K
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+
+https://docs.google.com/document/d/1hVwp8JmWcrhRn366tRefCOttbfU-fItQERhc9-GKyY4/edit?usp=sharing 
+
 
 ![image](https://user-images.githubusercontent.com/80157890/169797930-1727ee43-ae6f-461d-890f-d81aee6e33dc.png)
 
