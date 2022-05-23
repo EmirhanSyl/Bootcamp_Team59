@@ -184,10 +184,23 @@ https://miro.com/app/board/uXjVOzJ7le4=/?share_link_id=947624934222
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-- 
+
+![image](https://user-images.githubusercontent.com/80157890/169797930-1727ee43-ae6f-461d-890f-d81aee6e33dc.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169797982-dd34f494-c72b-4370-8e2e-f82bbc22ce90.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798043-fcc2fa26-c00e-43d0-bfcf-5158d9cbbe09.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798134-38320338-5766-4298-8508-124f0270622d.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798233-9ea7d87d-65a7-46b1-bb48-e3193d35783a.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798315-63a1beda-833c-4f4a-9ec8-3adf5a0de05f.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798410-8fb1bd00-d70d-40c1-8dac-263405c841cb.png)
 
 
-
+https://user-images.githubusercontent.com/80157890/169798918-964dbc04-8c9c-49cd-b705-f64c352bcfb8.mp4
 
 
 - **Sprint Review**: 
