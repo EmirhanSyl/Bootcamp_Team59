@@ -145,10 +145,22 @@ Map dizaynı bölümüne devam edilecek . Bunun için ortak bir terrarin üzerin
 
 PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
 
-USER STORY URL :
+USER STORY URL : https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=36769018495 
 
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+![image](https://user-images.githubusercontent.com/80157890/169799661-b34603dc-1a60-4d88-ab10-26756081a2a7.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800037-447b8109-1487-4b26-a376-ed031889c45d.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800147-1e04a02a-0f7f-4eac-885a-4c137d19a496.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800213-b15b1927-6f32-43b8-816c-c53e67b9b9cb.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800321-c0d54f32-2e8d-461d-b256-19790cd31df1.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800424-01e4c552-d52d-419b-9c33-02f99d41bad9.png)
+
+- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog içersinde  story'lere  tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 130 Puan
 
