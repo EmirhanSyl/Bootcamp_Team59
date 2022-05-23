@@ -1945,9 +1945,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.2810421
-  m_Height: 4.5714617
+  m_Height: 5.4064074
   m_Direction: 1
-  m_Center: {x: 0.019322336, y: 2.2937632, z: -0.038046837}
+  m_Center: {x: 0.019322336, y: 2.711236, z: -0.038046837}
 --- !u!95 &4378247107504912583
 Animator:
   serializedVersion: 3
@@ -2027,6 +2027,7 @@ MonoBehaviour:
   - Collect3
   carryingCapacity: 10
   resourceCompletelyExploited: 0
+  hugeKnightNPC: 0
   enemyHealthBar: {fileID: 6726520963970960823}
   targetObject: {fileID: 0}
   targetVector: {x: 0, y: 0, z: 0}

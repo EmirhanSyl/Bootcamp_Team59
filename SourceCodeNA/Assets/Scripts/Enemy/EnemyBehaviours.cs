@@ -102,6 +102,10 @@ namespace UnityEngine.AI.MonsterBehavior
         private bool isGetheringResource;
         public bool resourceCompletelyExploited;
 
+        //HugeKnight
+        [SerializeField] private bool hugeKnightNPC;
+        private bool firstAttack = true;
+        private bool inHeavyAttack;
 
         private GameObject player;
         private Collider[] enemyColls;
@@ -201,11 +205,10 @@ namespace UnityEngine.AI.MonsterBehavior
             if (!isDead)
             {
                 LockToTheTarget();
-                //transform.LookAt(targetVector);
-                //var rotation = Quaternion.LookRotation(targetVector - transform.position, Vector3.up);
-                //rotation.y = 0;
-                //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotatioSpeed * Time.deltaTime);
-                transform.DOLookAt(new Vector3(targetVector.x, transform.position.y, targetVector.z), 0.5f);
+                if (!hugeKnightNPC || (hugeKnightNPC && !inHeavyAttack))
+                {
+                    transform.DOLookAt(new Vector3(targetVector.x, transform.position.y, targetVector.z), 0.5f);
+                }
                 if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
                 {
                     EnemyMovement();
@@ -308,6 +311,14 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
                 enemyHealthBar.gameObject.SetActive(true);
                 isPlayerInAttackRange = false;
+
+                if (hugeKnightNPC && firstAttack)
+                {
+                    animator.SetTrigger("HeavyAttack");
+                    transform.DOLookAt(targetObject.transform.position, 0.2f);
+                    transform.DOMove(Vector3.MoveTowards(targetObject.transform.position, transform.position, 0.95f), 1.7f);
+                    firstAttack = false;
+                }
             }
             else if(distanceToTarget < attackRange)
             {
@@ -352,8 +363,9 @@ namespace UnityEngine.AI.MonsterBehavior
                         RobotWorker();
                         break;
                 }
-            }
 
+                firstAttack = true;
+            }
         }
 
         void EnemyAttack()
@@ -594,7 +606,9 @@ namespace UnityEngine.AI.MonsterBehavior
 
                 if (hittedByPlayer)
                 {
-                    enemyHealth -= Random.Range(25f, 50f);
+                    float currentDamageAmount = Random.Range(25f, 50f);
+                    enemyHealth -= currentDamageAmount;
+                    ManaManager.manaAmount += currentDamageAmount;
                     hittedByPlayer = false;
                 }
 
@@ -768,8 +782,10 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             if (other.gameObject.CompareTag("PlayerWeapon") && characterMovement.isAttack && other.gameObject.GetComponent<WeaponController>().beAbleToAttack && !friendWithPlayer)
             {                
-                OnPlayerHit(this);
+                //OnPlayerHit(this);
                 GetHittedFromNPC(characterMovement.WeaponDamage());
+                ManaManager.manaAmount += characterMovement.WeaponDamage();
+
                 if (other.gameObject.GetComponent<WeaponController>() != null)
                 {
                     weaponController = other.gameObject.GetComponent<WeaponController>();
@@ -828,6 +844,14 @@ namespace UnityEngine.AI.MonsterBehavior
         {
             dodgenAnimIsPlaying = false;
         }
+        public void HeavyAttackStarted()
+        {
+            inHeavyAttack = true;
+        }
+        public void HeavyAttackFinished()
+        {
+            inHeavyAttack = false;
+        }
 
         #region Return Public Bools
         public bool IsAttackable()
@@ -865,6 +889,10 @@ namespace UnityEngine.AI.MonsterBehavior
         public bool IsFriend()
         {
             return friendWithPlayer;
+        }
+        public bool InHeavyAttack()
+        {
+            return inHeavyAttack;
         }
         public bool IsDead()
         {
