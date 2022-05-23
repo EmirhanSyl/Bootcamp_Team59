@@ -113,14 +113,19 @@ Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : https:
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
- 
 
 
-![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png)
+
+![sprint için3](https://user-images.githubusercontent.com/80157890/167312597-2f8e971f-233e-4083-a10c-0dcc54c34b16.png) 
+
 ![sprin içint4](https://user-images.githubusercontent.com/80157890/167312604-5489f213-1fb0-42f6-a40c-b4351c060bef.png)
+
 ![sprint için2](https://user-images.githubusercontent.com/80157890/167312610-4dd7ea6a-bbe1-49db-b4cd-70c814735fce.png)
+
 ![sprint için1](https://user-images.githubusercontent.com/80157890/167312623-7def8562-6ed1-4b08-9353-fff34ec13de0.png)
+
 ![Ekran görüntüsü 2022-05-08 223235](https://user-images.githubusercontent.com/80157890/167312677-31ab9383-bd13-44ba-992c-1264d90c73ba.png)
+
 ![Ekran görüntüsü 2022-05-08 223211](https://user-images.githubusercontent.com/80157890/167312684-76a707c8-21de-46b2-946e-ff7c19e7f76d.png)
 
 
@@ -145,10 +150,22 @@ Map dizaynı bölümüne devam edilecek . Bunun için ortak bir terrarin üzerin
 
 PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
 
-USER STORY URL :
+USER STORY URL : https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=36769018495 
 
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+![image](https://user-images.githubusercontent.com/80157890/169799661-b34603dc-1a60-4d88-ab10-26756081a2a7.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800037-447b8109-1487-4b26-a376-ed031889c45d.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800147-1e04a02a-0f7f-4eac-885a-4c137d19a496.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800213-b15b1927-6f32-43b8-816c-c53e67b9b9cb.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800321-c0d54f32-2e8d-461d-b256-19790cd31df1.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169800424-01e4c552-d52d-419b-9c33-02f99d41bad9.png)
+
+- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog içersinde  story'lere  tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 130 Puan
 
@@ -175,19 +192,33 @@ https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=411349470758
 
 Burndawn Chart Sprint 2 İçin : 
 
+![image](https://user-images.githubusercontent.com/80157890/169811162-3d46a09a-43e4-4fda-9399-69c663561ac4.png)
 
-![image](https://user-images.githubusercontent.com/80157890/169471920-873b4869-b3ab-487a-a2c9-d642f5d0905f.png)
-
-
-https://miro.com/app/board/uXjVOzJ7le4=/?share_link_id=947624934222
+https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/ESHozjs2Yy9KinpIZqdufRoB8Vwf5gI9ssl21EjwXLPpnQ?e=TiK6pS
 
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-- 
+
+https://docs.google.com/document/d/1hVwp8JmWcrhRn366tRefCOttbfU-fItQERhc9-GKyY4/edit?usp=sharing 
 
 
+![image](https://user-images.githubusercontent.com/80157890/169797930-1727ee43-ae6f-461d-890f-d81aee6e33dc.png)
 
+![image](https://user-images.githubusercontent.com/80157890/169797982-dd34f494-c72b-4370-8e2e-f82bbc22ce90.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798043-fcc2fa26-c00e-43d0-bfcf-5158d9cbbe09.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798134-38320338-5766-4298-8508-124f0270622d.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798233-9ea7d87d-65a7-46b1-bb48-e3193d35783a.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798315-63a1beda-833c-4f4a-9ec8-3adf5a0de05f.png)
+
+![image](https://user-images.githubusercontent.com/80157890/169798410-8fb1bd00-d70d-40c1-8dac-263405c841cb.png)
+
+
+https://user-images.githubusercontent.com/80157890/169798918-964dbc04-8c9c-49cd-b705-f64c352bcfb8.mp4
 
 
 - **Sprint Review**: 
