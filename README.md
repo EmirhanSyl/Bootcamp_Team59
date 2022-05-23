@@ -187,11 +187,9 @@ https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=411349470758
 
 Burndawn Chart Sprint 2 İçin : 
 
+![image](https://user-images.githubusercontent.com/80157890/169811162-3d46a09a-43e4-4fda-9399-69c663561ac4.png)
 
-![image](https://user-images.githubusercontent.com/80157890/169471920-873b4869-b3ab-487a-a2c9-d642f5d0905f.png)
-
-
-https://miro.com/app/board/uXjVOzJ7le4=/?share_link_id=947624934222
+https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/ESHozjs2Yy9KinpIZqdufRoB8Vwf5gI9ssl21EjwXLPpnQ?e=TiK6pS
 
 
 
