@@ -181,8 +181,10 @@ namespace UnityEngine.AI.MonsterBehavior
                 groupController = GetComponentInParent<NPCGroupManager>();
                 enemyLayers = groupController.enemyMask;
             }
-
-            enemyHealthBar.SetMaxHealth(enemyHealth);
+            if (enemyHealthBar.gameObject.activeSelf)
+            {
+                enemyHealthBar.SetMaxHealth(enemyHealth);
+            }
         }
 
         void Update()
@@ -806,10 +808,6 @@ namespace UnityEngine.AI.MonsterBehavior
                 poisenedAlready = true;
             }
             else if(other.gameObject.CompareTag("ElectricMagic") && !friendWithPlayer)
-            {
-
-            }
-            else if (other.gameObject.CompareTag("HealMagic") && friendWithPlayer)
             {
 
             }

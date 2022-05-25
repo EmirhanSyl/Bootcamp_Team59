@@ -19,6 +19,12 @@ TagManager:
   - Poison
   - ElectricMagic
   - HealMagic
+  - DesertManager
+  - ForestManager
+  - IceManager
+  - DesertBuilding
+  - IceBuilding
+  - ForestBuilding
   layers:
   - Default
   - TransparentFX
@@ -32,8 +38,8 @@ TagManager:
   - Forest
   - Ice
   - Clickable
-  - 
-  - 
+  - ForestBuildingLayer
+  - DesertBuildingLayer
   - 
   - 
   - 
