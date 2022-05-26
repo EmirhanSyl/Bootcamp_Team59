@@ -136,7 +136,7 @@ public class PlayerCombat : MonoBehaviour
             //Particle codes
             playingCombatAnim = false;
         }
-        
+        Camera.main.transform.DOShakePosition(0.5f, 1f);
     }
 
     void Dodge()
