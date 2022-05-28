@@ -33,5 +33,8 @@ public class NotPlayerController : MonoBehaviour
 
             }
         }
+
+        
+
     }
 }

@@ -47,8 +47,8 @@ public class BluePrintCanvas : MonoBehaviour
             Storage._wood -= _woodCost;
             Storage._stone -= _stoneCost;
             Instantiate(_build[0]);
+            _isCenterPlaced++;
         }
-        _isCenterPlaced++;
     }
     public void InstantiateHouse()
     {
@@ -62,8 +62,8 @@ public class BluePrintCanvas : MonoBehaviour
             Storage._wood -= _woodCost;
             Storage._stone -= _stoneCost;
             Instantiate(_build[1]);
+            _isHousesPlaced++;
         }
-        _isHousesPlaced++;
     }
 
     public void InstantiateBarrack()
