@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float movementSpeedWhileAttack = 2.5f;
     [SerializeField] float deathDownSpeed = 0.5f;
 
+    [SerializeField] private float attackDuration;
     [SerializeField] private float minWeaponDamage;
     [SerializeField] private float maxWeaponDamage;
 
@@ -22,7 +23,8 @@ public class CharacterMovement : MonoBehaviour
 
     private float currentSpeed;
     private float speedParamOnAnimator;
-    private float attackDuration;
+    private float attackTimer;
+    private float camRotTimer;
     private float comboTimer;
     private float attackAnimIndex;
     private float timeWithoutAction;
@@ -73,11 +75,17 @@ public class CharacterMovement : MonoBehaviour
             StartCoroutine(Dead());
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (camRotTimer < 1)
         {
-            cameraPivot.transform.Rotate(cameraPivot.transform.rotation.x, cameraPivot.transform.rotation.y + 90, cameraPivot.transform.rotation.z, Space.World);
+            camRotTimer += Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && camRotTimer >= 1)
+        {
+            cameraPivot.transform.DORotate(cameraPivot.transform.eulerAngles + new Vector3(0, 90, 0), 0.5f);
+            //cameraPivot.transform.Rotate(cameraPivot.transform.rotation.x, cameraPivot.transform.rotation.y + 90, cameraPivot.transform.rotation.z, Space.World);
             IsoMovementHelper._isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, rot + 90, 0));
             rot += 90;
+            camRotTimer = 0;
         }
     }
 
@@ -131,11 +139,21 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isAttack && !PlayerHealth.isHitted)
         {
-            StartCoroutine(Attacking());
+            //StartCoroutine(Attacking());
+            animator.SetTrigger("Attack");
+            attackAnimIndex = (int)Mathf.Repeat(attackAnimIndex + 1, 2);
+            animator.SetFloat("AttackAnim", attackAnimIndex);
+            attackDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+            isAttack = true;
         }
         else if (isAttack)
         {
-               
+            attackTimer += Time.deltaTime;
+            if (attackTimer > attackDuration)
+            {
+                attackTimer = 0;
+                isAttack = false;
+            }
         }
     }
 

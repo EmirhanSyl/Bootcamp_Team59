@@ -175,7 +175,7 @@ USER STORY URL : https://miro.com/app/board/uXjVOzJuEKI=/?share_link_id=36769018
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats]
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats]
 
 Ekran Görüntüleri le İlgili Dosya : https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/Ec77p2rFuspMsqq56JcywJEBRjdXVoAK_2VlSDzPfi9vbw?e=mIpPGp
 
@@ -280,5 +280,66 @@ https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=124684485203
 ---
 
 # Sprint 3
+
+
+PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
+
+USER STORY URL : 
+
+
+
+
+- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog içersinde  story'lere  tıklandığında hikayelerin detayları okunabilir.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 130 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 130 puan  ile başlaması gerektiğine karar verildi.
+
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde öncelik ve önem sırasına göre seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak product backlog ve storyler parçalara ayrılmıştır  . Miro üzerinden görev dağılımı yapılırken işler "To Do" ," In Progress" , "Done" ve "Rejected " olarak ayrılmıştır . "To Do" kısmında her sprint için ayrı olarak iş ataması yapılmıştır . Bu kısımda görevler ilgili takım üyelerine atanmıştır . Belirlenen tarih içerisinde tamamlanması gereken işleri ifade eder . "In progress " kısmı atanan işin atanan takım üyesi tarafından yapıldığını ifade eder . Süreç hala devam ediyorduru ifade eder ." Done " kısmı atanan işin atanan kişi tarafından başarılı bir şekilde bittiğini gösterir . En sağ köşede yer alan "Rejected"  kısmı ise atanan işin zamanında teslim edilmediğini ya da eksik yapıldığını ifade eder . Bu gibi durumlarda retrospective toplantıları düzenlenerek balık kılçığı metodu ile ana problemi oluşturan yan problemler tespit edilir ve çözüm yolları aranır . Bu takımca fikir önerileri sunarız ve süreçte iyileştirme ve yeniden planlama üzerinde çalışırız . Bunun için yine Miro üzerinde bulunan hazır şablonlar üzerinden süreç yönetilir . "To Do"," In progress" , "Done" ve "Rejected" kısımları için ayrı rekler kullandık . Bunu yapmamızın sebebi her sürecin farklı olduğu ve iş yükünün süreç içerisinde değişmesidir . Görevleri atarken mavi ve kırmızı kutucukları kullanmayı tercih ettik . Mavi görevlerinin atandığı ve yapılacağını ya da yapıldığını ifade ederken kırmızı tamamlandığını ifade eder . Bu iki renk görevlerin ne durumda olduğunu anlamamızda daha net bir görsellik sunmuş oldu . 
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 3 Daily Scrum Chats]
+
+Ekran Görüntüleri ile İlgili Dosya : 
+Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : 
+
+**Sprint board update**: Sprint board screenshotları: 
+
+
+
+Burndawn Chart Sprint 3 İçin : 
+
+
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+
+
+
+
+- **Sprint Review**: 
+
+
+Alınan kararlar:
+
+
+
+- **Sprint Retrospective:**
+
+Üçüncü sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . 
+
+Toplantı Görüntüsü : 
+
+
+
+ 
+ 
+
+-**Diğer Notlar**:
+
+Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
+
+
 
 ---

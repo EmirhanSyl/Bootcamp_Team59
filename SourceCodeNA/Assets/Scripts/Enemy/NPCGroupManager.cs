@@ -14,7 +14,7 @@ public class NPCGroupManager : MonoBehaviour
     public LayerMask enemyMask;
 
     public Collider[] enemyHitColliders;
-    private EnemyBehaviours[] NPCGroup;
+    public EnemyBehaviours[] NPCGroup;
 
     private GameObject player;
 

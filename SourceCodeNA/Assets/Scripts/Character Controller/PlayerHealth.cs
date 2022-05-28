@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI.MonsterBehavior;
+using DG.Tweening;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     public float healthOnInspector = 100f;
 
     [SerializeField] private float noTakeDamageTime = 0.5f;
+    [SerializeField] private float shakeLenght = 1f;
+    [SerializeField] private float shakeStrenght = 3f;
 
     private float currentHealth;
 
@@ -37,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetTrigger("DamageTaken");
             currentHealth = health;
+            Camera.main.transform.DOShakePosition(shakeLenght, shakeStrenght);
         }
         else if (currentHealth <= 0)
         {
