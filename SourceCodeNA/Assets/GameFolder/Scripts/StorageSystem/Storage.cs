@@ -15,7 +15,7 @@ public class Storage : MonoBehaviour
 
     private void Update()
     {
-        _foodText.text = _food.ToString();
+
     }
 
     private void OnTriggerEnter(Collider other)
