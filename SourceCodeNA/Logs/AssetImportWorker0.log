@@ -15,11 +15,19 @@ C:/Users/genc/Documents/GitHub/Bootcamp_Team59/SourceCodeNA
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 49297
 Successfully changed project path to: C:/Users/genc/Documents/GitHub/Bootcamp_Team59/SourceCodeNA
 C:/Users/genc/Documents/GitHub/Bootcamp_Team59/SourceCodeNA
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 116.70 ms, found 5 plugins.
+=======
+61560
+Successfully changed project path to: E:/Unity Project/Bootcamp_Team59/SourceCodeNA
+E:/Unity Project/Bootcamp_Team59/SourceCodeNA
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 91.56 ms, found 5 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -32,6 +40,7 @@ Direct3D:
     VRAM:     4018 MB
     Driver:   30.0.15.1277
 Initialize mono
+<<<<<<< Updated upstream
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
@@ -48,31 +57,69 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (773ms)
 		BeginReloadAssembly (71ms)
+=======
+Mono path[0] = 'E:/Unity/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56188
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001365 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 88.99 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.596 seconds
+Domain Reload Profiling:
+	ReloadAssembly (596ms)
+		BeginReloadAssembly (53ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 		EndReloadAssembly (604ms)
 			LoadAssemblies (67ms)
+=======
+		EndReloadAssembly (478ms)
+			LoadAssemblies (52ms)
+>>>>>>> Stashed changes
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (179ms)
 			ReleaseScriptCaches (0ms)
+<<<<<<< Updated upstream
 			RebuildScriptCaches (35ms)
 			SetupLoadedEditorAssemblies (271ms)
+=======
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (212ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< Updated upstream
 				RefreshPlugins (114ms)
 				BeforeProcessingInitializeOnLoad (17ms)
 				ProcessInitializeOnLoadAttributes (100ms)
 				ProcessInitializeOnLoadMethodAttributes (34ms)
+=======
+				RefreshPlugins (89ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (76ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.009017 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -83,10 +130,24 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (2439ms)
 		BeginReloadAssembly (170ms)
+=======
+Registered in 0.005025 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 151.13 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.870 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1871ms)
+		BeginReloadAssembly (147ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (21ms)
 		EndReloadAssembly (2188ms)
 			LoadAssemblies (125ms)
@@ -95,9 +156,20 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (80ms)
 			SetupLoadedEditorAssemblies (1361ms)
+=======
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1665ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (368ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (1018ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< Updated upstream
 				RefreshPlugins (138ms)
 				BeforeProcessingInitializeOnLoad (137ms)
 				ProcessInitializeOnLoadAttributes (1052ms)
@@ -106,10 +178,21 @@ Domain Reload Profiling:
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
+=======
+				RefreshPlugins (151ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (752ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+>>>>>>> Stashed changes
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 1.00 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3940 Unused Serialized files (Serialized files now loaded: 0)
@@ -233,4 +316,1446 @@ Received Import Request.
 Start importing Assets/low poly medieval buildings/quarry.fbx using Guid(0933f6a03cb7a9949b12517e3254da12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc398f8e2d2683b489edb5da7e1da83') in 0.028592 seconds 
   Import took 0.035276 seconds .
 
+=======
+Refreshing native plugins compatible for Editor in 0.95 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.2 MB.
+System memory in use after: 262.4 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4406.
+Total: 4.271400 ms (FindLiveObjects: 0.276600 ms CreateObjectMapping: 0.160000 ms MarkObjects: 3.762100 ms  DeleteObjects: 0.071800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Soilder Prefabs
+  artifactKey: Guid(5cc3c9863257d564d8733e531a5aec8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Soilder Prefabs using Guid(5cc3c9863257d564d8733e531a5aec8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a0a49a96d4f24f04bff61ff2323c91') in 0.004699 seconds 
+  Import took 0.012296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.680496 seconds.
+  path: Assets/Scripts/Enemy/SiegeMachines
+  artifactKey: Guid(ffcc61907c3e22d44adc1c0b8b76a68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy/SiegeMachines using Guid(ffcc61907c3e22d44adc1c0b8b76a68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c94d4501ba98e639ff92533e04a088f') in 0.001451 seconds 
+  Import took 0.122089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.807895 seconds.
+  path: Assets/Soilder Prefabs/Ram.prefab
+  artifactKey: Guid(c0b77a2f899e3f5438243504bcb78832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Soilder Prefabs/Ram.prefab using Guid(c0b77a2f899e3f5438243504bcb78832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d916ee5ce1e6dcbe667e2c3c64ce39') in 0.255462 seconds 
+  Import took 0.262835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.705178 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_19.mat
+  artifactKey: Guid(f9263edf96ed4cd4c9c1449880e4cf18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_19.mat using Guid(f9263edf96ed4cd4c9c1449880e4cf18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c56f39380576ef18e58c39075b3b071') in 2.328367 seconds 
+  Import took 2.396558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040877 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_14.mat
+  artifactKey: Guid(eb937b567d992c24784b8caf4cc5e9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_14.mat using Guid(eb937b567d992c24784b8caf4cc5e9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00b4259b11b779c8dd840abefcdf4740') in 0.007821 seconds 
+  Import took 0.015241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.183724 seconds.
+  path: Assets/Environment props
+  artifactKey: Guid(d12739ea54fd32e44bcfeee6df54cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment props using Guid(d12739ea54fd32e44bcfeee6df54cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18896366c99da3e662dd90d9876de4dd') in 0.001208 seconds 
+  Import took 0.010223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.122722 seconds.
+  path: Assets/low poly medieval buildings/smith.fbx
+  artifactKey: Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/smith.fbx using Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf65f18713c37d14d3e87dacc0410d1') in 0.074930 seconds 
+  Import took 0.083825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.188633 seconds.
+  path: Assets/low poly medieval buildings/palisade.fbx
+  artifactKey: Guid(6b0df067d8acef346aae1d839098fcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/palisade.fbx using Guid(6b0df067d8acef346aae1d839098fcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2668f1810cc3e3b0485b735bb0e5054') in 0.013659 seconds 
+  Import took 0.021608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.086446 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_29.mat
+  artifactKey: Guid(5c519289c32eccf46851b63045256832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_29.mat using Guid(5c519289c32eccf46851b63045256832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '002e029e95e1bee7e544f0300df7cdc3') in 0.008599 seconds 
+  Import took 0.014312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073847 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 1.mat
+  artifactKey: Guid(65eeb0223adba1d4a92e27b3102af134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 1.mat using Guid(65eeb0223adba1d4a92e27b3102af134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac24cc922cb603b92a6b0b6b0c085c16') in 0.006878 seconds 
+  Import took 0.013227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056064 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 18.mat
+  artifactKey: Guid(afd1e67c612afc04ea74c9842d47b132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 18.mat using Guid(afd1e67c612afc04ea74c9842d47b132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a562b1826bc9ca22aead0bb6bfb53ff4') in 0.007049 seconds 
+  Import took 0.013730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.041140 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings 4.mat
+  artifactKey: Guid(0b77daf858fd82340a63a10358d3c917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings 4.mat using Guid(0b77daf858fd82340a63a10358d3c917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '676f7e2478e4b0911d51ce0602f50bc6') in 0.009950 seconds 
+  Import took 0.016369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.149107 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings 3.mat
+  artifactKey: Guid(f224933d5df9db44cacfe12406e7844d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings 3.mat using Guid(f224933d5df9db44cacfe12406e7844d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7869c0c0ee07883ee3bc4ae3be623a01') in 0.006982 seconds 
+  Import took 0.012965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024487 seconds.
+  path: Assets/medieval props/Pot_03.fbx
+  artifactKey: Guid(21517e4447a85734d819574276d9da44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Pot_03.fbx using Guid(21517e4447a85734d819574276d9da44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69c71505803a44915b4a87a0de9503f') in 0.015649 seconds 
+  Import took 0.021124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.376985 seconds.
+  path: Assets/low poly medieval buildings/tower_corner.fbx
+  artifactKey: Guid(5ac5831a4705b70489955062116ed0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/tower_corner.fbx using Guid(5ac5831a4705b70489955062116ed0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a888194a76241aee24d7aa5f478a50ad') in 0.011859 seconds 
+  Import took 0.017746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.058351 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 9.mat
+  artifactKey: Guid(4b5446222b50e8342acc89f6abd7e423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 9.mat using Guid(4b5446222b50e8342acc89f6abd7e423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc885f7d18097ebd88a9413ff164f44') in 0.006696 seconds 
+  Import took 0.012152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020496 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 15.mat
+  artifactKey: Guid(b6d9a45a236530a4da76b1aa26228642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 15.mat using Guid(b6d9a45a236530a4da76b1aa26228642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '634b99e58d81def1c29082cc11903912') in 0.006891 seconds 
+  Import took 0.012426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.168465 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings 2.mat
+  artifactKey: Guid(907a5089ff472b74689e9899c607da5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings 2.mat using Guid(907a5089ff472b74689e9899c607da5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a14e55326c1beeb0dca0457658d047b') in 0.006401 seconds 
+  Import took 0.011883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014752 seconds.
+  path: Assets/low poly medieval buildings/Materials/Materials
+  artifactKey: Guid(965153c12bf8f81429e1be199683aa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/Materials using Guid(965153c12bf8f81429e1be199683aa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b4f814cea8909124fbe1d6b8cb3e318') in 0.001378 seconds 
+  Import took 0.007146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039841 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 1.mat
+  artifactKey: Guid(6d71e8e47e185d34fb5c6cec3e0836bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 1.mat using Guid(6d71e8e47e185d34fb5c6cec3e0836bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe42a48a1e1522427e2df28acfa6d353') in 0.006464 seconds 
+  Import took 0.012266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.054823 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_21.mat
+  artifactKey: Guid(63831086a1ba8a64ca03099fc07f3b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_21.mat using Guid(63831086a1ba8a64ca03099fc07f3b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca13a8cae283c5da60d2104c450354e') in 0.006466 seconds 
+  Import took 0.012392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.189081 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 7.mat
+  artifactKey: Guid(1e1387f5e6993ae40bff667a58f5ba28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 7.mat using Guid(1e1387f5e6993ae40bff667a58f5ba28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6a7e1ea166349e0cccbf1f790277c4') in 0.006765 seconds 
+  Import took 0.012593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070423 seconds.
+  path: Assets/medieval props/Scythe.fbx
+  artifactKey: Guid(3df85517ed310aa4eac20240923204d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Scythe.fbx using Guid(3df85517ed310aa4eac20240923204d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489116624927da628e7ab482f5f54ab4') in 0.014382 seconds 
+  Import took 0.020082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061075 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_6.mat
+  artifactKey: Guid(f22e84df2e5458b418314b8df43dc3af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_6.mat using Guid(f22e84df2e5458b418314b8df43dc3af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b2304fbcdd90eb9f735ea9a856336e') in 0.006652 seconds 
+  Import took 0.012260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.177516 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 3.mat
+  artifactKey: Guid(27a9c5624cdaeb24784d485d07eaf8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 3.mat using Guid(27a9c5624cdaeb24784d485d07eaf8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff1766a876d1331aa7560e5d5c819be') in 0.006454 seconds 
+  Import took 0.012238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034743 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_19.mat
+  artifactKey: Guid(9b001ce24b07e2844905a14a4a696c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_19.mat using Guid(9b001ce24b07e2844905a14a4a696c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84da0dd8f6bd49eda96de6ce5146211') in 0.006722 seconds 
+  Import took 0.012031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007879 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_18.mat
+  artifactKey: Guid(f32b5e7383facf241bf3e8a9d62361ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_18.mat using Guid(f32b5e7383facf241bf3e8a9d62361ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b58d548b7ec81e776d82caea21f836') in 0.006814 seconds 
+  Import took 0.013011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044625 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 5.mat
+  artifactKey: Guid(89941b44e9148414e8915f7ace92a507) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 5.mat using Guid(89941b44e9148414e8915f7ace92a507) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3819b1df8f318775db92a69e7b10c7') in 0.008449 seconds 
+  Import took 0.018484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037155 seconds.
+  path: Assets/medieval props/Pot_02.fbx
+  artifactKey: Guid(e6a9d10b7a0d133449069504cd4345bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Pot_02.fbx using Guid(e6a9d10b7a0d133449069504cd4345bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd613ae620b4a29dd7accbdd0d9cad7ab') in 0.014253 seconds 
+  Import took 0.019768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035062 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 27.mat
+  artifactKey: Guid(65e09c4a253f9a94d9002cc0eb886540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 27.mat using Guid(65e09c4a253f9a94d9002cc0eb886540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146461a18668b4ee7899c4925f79f3f4') in 0.006521 seconds 
+  Import took 0.012302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002946 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 7.mat
+  artifactKey: Guid(047a10441b56acb448306d2beb94bc9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 7.mat using Guid(047a10441b56acb448306d2beb94bc9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0db0cbe786bb4984d4d341eb350fd994') in 0.008346 seconds 
+  Import took 0.013629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051213 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/Catapult.controller
+  artifactKey: Guid(83b03d062d6c3e2419eecc8777e8849a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/Catapult.controller using Guid(83b03d062d6c3e2419eecc8777e8849a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88a1097941d5865bb4da60f49a00463') in 0.004611 seconds 
+  Import took 0.009723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015300 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 28.mat
+  artifactKey: Guid(034f45efc22a3cf42b014ecfd70b6954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 28.mat using Guid(034f45efc22a3cf42b014ecfd70b6954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd7cf414c3a75df711ba99e9de51e8ad') in 0.006656 seconds 
+  Import took 0.011854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031949 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 14.mat
+  artifactKey: Guid(fd182bce2787a634785725cb5a9da9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 14.mat using Guid(fd182bce2787a634785725cb5a9da9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376bc431fba589bf5331d406f4f214e8') in 0.006811 seconds 
+  Import took 0.012230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.049995 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 26.mat
+  artifactKey: Guid(6c0e1375b9b56f94c8ba59f448d6a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 26.mat using Guid(6c0e1375b9b56f94c8ba59f448d6a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a834fa3dacf7e8e27b976b7354a07ab') in 0.006597 seconds 
+  Import took 0.012278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005897 seconds.
+  path: Assets/medieval props/Signpost_01.fbx
+  artifactKey: Guid(3c30e3afc4f200842ad898cf8af2b6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Signpost_01.fbx using Guid(3c30e3afc4f200842ad898cf8af2b6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '796122cf2cd6ee540a1fcac1a5583cc4') in 0.014625 seconds 
+  Import took 0.020200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071722 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 11.mat
+  artifactKey: Guid(8c63338253d7fb84c8e31b3c1dc28afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 11.mat using Guid(8c63338253d7fb84c8e31b3c1dc28afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337358b2bce71703dd406d9b075f8065') in 0.006760 seconds 
+  Import took 0.012307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035225 seconds.
+  path: Assets/low poly medieval buildings/tower.fbx
+  artifactKey: Guid(1b1855b9ff55aff4e85433c21d07ca92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/tower.fbx using Guid(1b1855b9ff55aff4e85433c21d07ca92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6b60bf58fb027bc394f74de46a299f') in 0.012692 seconds 
+  Import took 0.018518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010382 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_12.mat
+  artifactKey: Guid(50abd2845828ef34991f83540e2815bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_12.mat using Guid(50abd2845828ef34991f83540e2815bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d2de29d289dee5644099f4affd49b78') in 0.006951 seconds 
+  Import took 0.012682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015754 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 16.mat
+  artifactKey: Guid(d1ca1c3e33f543440828d1ebea39505e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 16.mat using Guid(d1ca1c3e33f543440828d1ebea39505e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a3e4c08a505e5b38ca63f412fadfec4') in 0.006628 seconds 
+  Import took 0.012170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046046 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_18.mat
+  artifactKey: Guid(cedd05e4c2756f149a8fe71b1fb3d632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_18.mat using Guid(cedd05e4c2756f149a8fe71b1fb3d632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc125c742ced2581d3d6ba64fe17f75') in 0.006608 seconds 
+  Import took 0.012043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.372853 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 5.mat
+  artifactKey: Guid(d9b8d075c5698cd469520d4296e9a803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 5.mat using Guid(d9b8d075c5698cd469520d4296e9a803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caaf8d48b6158c4643c1db069b6832d0') in 0.006964 seconds 
+  Import took 0.013105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009220 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_6.mat
+  artifactKey: Guid(8dae34b55204fcd4793d1591207cfffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_6.mat using Guid(8dae34b55204fcd4793d1591207cfffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d05e68f0027c3ded6beaa519fc0fbf') in 0.006807 seconds 
+  Import took 0.012396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009360 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_17.mat
+  artifactKey: Guid(ee7e1c9bef266d04d8be97f2a9992754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_17.mat using Guid(ee7e1c9bef266d04d8be97f2a9992754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ce756796dff8f2efc934c9045ab4ac') in 0.006792 seconds 
+  Import took 0.012848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007507 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 6.mat
+  artifactKey: Guid(55c7d21ca8cd58c4780d176c9655630c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 6.mat using Guid(55c7d21ca8cd58c4780d176c9655630c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608d2391a2b08df46f3d55e6da830764') in 0.006633 seconds 
+  Import took 0.012861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010730 seconds.
+  path: Assets/low poly medieval buildings/Materials/ROOF.mat
+  artifactKey: Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/ROOF.mat using Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/ROOF.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '19d14163b7740c98fcc1bf9dc679c6d7') in 0.001728 seconds 
+  Import took 0.008771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.465128 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_16.mat
+  artifactKey: Guid(6951bdf008d88d74d8e0ceb39add9d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_16.mat using Guid(6951bdf008d88d74d8e0ceb39add9d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2575b3eab17508e4ac110aae76575259') in 0.007594 seconds 
+  Import took 0.014062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017283 seconds.
+  path: Assets/medieval props/æanopyl.fbx
+  artifactKey: Guid(a79036da12bdb554992b3954b8d4be4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/æanopyl.fbx using Guid(a79036da12bdb554992b3954b8d4be4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93db4a4d2ca2c0af0ce5ee660fc4279') in 0.014913 seconds 
+  Import took 0.020864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.241563 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_30.mat
+  artifactKey: Guid(c8b5c0589d45c32429ab47cd482cfb32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_30.mat using Guid(c8b5c0589d45c32429ab47cd482cfb32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12063709dda031510b0ab3aef92f40d0') in 0.006902 seconds 
+  Import took 0.013488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089221 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 12.mat
+  artifactKey: Guid(8e68bbd8ce2b75b4cb10987deed40ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 12.mat using Guid(8e68bbd8ce2b75b4cb10987deed40ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7208efac8a7d7dce1ae9457d0267911c') in 0.007187 seconds 
+  Import took 0.013104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.057571 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_20.mat
+  artifactKey: Guid(e4692cd052eb5be44a37ea017655e99a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_20.mat using Guid(e4692cd052eb5be44a37ea017655e99a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3039a6cb67cf6fc3e14e4a5b381150') in 0.009494 seconds 
+  Import took 0.017041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043373 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 2.mat
+  artifactKey: Guid(6b27c576371561d4c806d3d64d17790b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 2.mat using Guid(6b27c576371561d4c806d3d64d17790b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a928a01267ed5f592a2d679df150db3') in 0.006694 seconds 
+  Import took 0.012431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.058714 seconds.
+  path: Assets/Scripts/Enemy/SiegeMachines/BuildingMnager.cs
+  artifactKey: Guid(0ff5dd6f4f45b974d8858b82874c85a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy/SiegeMachines/BuildingMnager.cs using Guid(0ff5dd6f4f45b974d8858b82874c85a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2228dff510de4ec0348f1b5488d772d8') in 0.009098 seconds 
+  Import took 0.014798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063303 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult
+  artifactKey: Guid(c0f680937cd4a8f4ab4dbfc81817fc32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult using Guid(c0f680937cd4a8f4ab4dbfc81817fc32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ea49fcf92443c761a830c25d15c91e') in 0.001180 seconds 
+  Import took 0.006455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009094 seconds.
+  path: Assets/low poly medieval buildings/Materials/plaster.mat
+  artifactKey: Guid(b600b659bd31c8d4a8fa16114dd45911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/plaster.mat using Guid(b600b659bd31c8d4a8fa16114dd45911) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/plaster.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: 'cb374f268cd04426852d037e4f75e363') in 0.001462 seconds 
+  Import took 0.006954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002898 seconds.
+  path: Assets/low poly medieval buildings/scene.unity
+  artifactKey: Guid(6856377adf29c6c46ad8b0208af8e92b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/scene.unity using Guid(6856377adf29c6c46ad8b0208af8e92b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d7884c6226afe92799f7171d334981') in 0.001588 seconds 
+  Import took 0.006509 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014727 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 10.mat
+  artifactKey: Guid(6bc923c0a916ada40abd0013778db286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 10.mat using Guid(6bc923c0a916ada40abd0013778db286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526b1113860f96395f963e7944cedfe0') in 0.006894 seconds 
+  Import took 0.012459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029022 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_7.mat
+  artifactKey: Guid(dc027aa1192e13c43b959b9cff511a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_7.mat using Guid(dc027aa1192e13c43b959b9cff511a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '806ba8df664c09058e2e60c36f1eafbd') in 0.006567 seconds 
+  Import took 0.012162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014853 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_20.mat
+  artifactKey: Guid(7e31598e4fe41484daad862db54e3138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_20.mat using Guid(7e31598e4fe41484daad862db54e3138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c9ab75af739d653e828ecf92ac916e') in 0.006714 seconds 
+  Import took 0.012230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.099422 seconds.
+  path: Assets/Scripts/Character Controller/PlayerHealth.cs
+  artifactKey: Guid(5ab07fd4a7f90fe41b69b99bd9973840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Character Controller/PlayerHealth.cs using Guid(5ab07fd4a7f90fe41b69b99bd9973840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9f551225421aacb8d899d5437d0a5c9') in 0.001274 seconds 
+  Import took 0.007247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005233 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_5.mat
+  artifactKey: Guid(90b1f7f48931d3b49b45246a58a51ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_5.mat using Guid(90b1f7f48931d3b49b45246a58a51ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84ce7b84d0008c08270ab3d713c5f33') in 0.006600 seconds 
+  Import took 0.011969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042824 seconds.
+  path: Assets/AurynSky/Desert Pack/Materials/wood.mat
+  artifactKey: Guid(37323ff9e34397042a53f7ba0e5235d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Materials/wood.mat using Guid(37323ff9e34397042a53f7ba0e5235d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '037e61e655fd84d25fa4013eb87dbba2') in 0.008623 seconds 
+  Import took 0.014058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075067 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam.mat
+  artifactKey: Guid(0a3493a84faf7a64ba93f872075b55ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam.mat using Guid(0a3493a84faf7a64ba93f872075b55ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/beam.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '1677b1c2983c7041814a76558a389022') in 0.001424 seconds 
+  Import took 0.006746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019819 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_3.mat
+  artifactKey: Guid(c5a6617ed601f0048a39bb3378646cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_3.mat using Guid(c5a6617ed601f0048a39bb3378646cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f06ac2a139ffb5191e3d18466e184544') in 0.006696 seconds 
+  Import took 0.012333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009391 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 10.mat
+  artifactKey: Guid(1252623d7af77b140970d17dcd7faf97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 10.mat using Guid(1252623d7af77b140970d17dcd7faf97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c32bd71f62305f2433b8efc4e34af49') in 0.006472 seconds 
+  Import took 0.012048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.078150 seconds.
+  path: Assets/ShaderGraph/GlowShader.shadergraph
+  artifactKey: Guid(46bac6f27e530a446a435c666a2df9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderGraph/GlowShader.shadergraph using Guid(46bac6f27e530a446a435c666a2df9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbd66959272ff24d1f5bd1aa3440e402') in 0.003399 seconds 
+  Import took 0.008930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072310 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_5.mat
+  artifactKey: Guid(3654048d8bd2a944393879935ce5d76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_5.mat using Guid(3654048d8bd2a944393879935ce5d76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '182e231a55c1bd9adc798578826ffdd6') in 0.006635 seconds 
+  Import took 0.012425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048467 seconds.
+  path: Assets/Scripts/Enemy/SiegeMachines/SiegeMachines.cs
+  artifactKey: Guid(1b6a856cf9b6e3c4f8795e0bf187f2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy/SiegeMachines/SiegeMachines.cs using Guid(1b6a856cf9b6e3c4f8795e0bf187f2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a47e3af428ba544f9fd9aaebf9608c') in 0.001248 seconds 
+  Import took 0.006849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094023 seconds.
+  path: Assets/medieval props/Stump.fbx
+  artifactKey: Guid(01a292d1310d24141bda084f6f8a6fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Stump.fbx using Guid(01a292d1310d24141bda084f6f8a6fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e7b60a1e83857a596d2973752891ff') in 0.015179 seconds 
+  Import took 0.020954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091640 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 17.mat
+  artifactKey: Guid(da509c8e91647db41aa0b41eb4280523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 17.mat using Guid(da509c8e91647db41aa0b41eb4280523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd620f1b568597c727a4138c8d3a8e3b0') in 0.006790 seconds 
+  Import took 0.012126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003593 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_11.mat
+  artifactKey: Guid(c550e4a3f528c8844b95df4d831217c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_11.mat using Guid(c550e4a3f528c8844b95df4d831217c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb1cb2ac9661dd5d7a28cd0ec5ef11d6') in 0.006810 seconds 
+  Import took 0.012387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017090 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 17.mat
+  artifactKey: Guid(fe4e79e4155bbf443b2721f144c81671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 17.mat using Guid(fe4e79e4155bbf443b2721f144c81671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e0855bf5b4ee46f7d6856089fd59bc') in 0.006774 seconds 
+  Import took 0.012215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.077909 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 6.mat
+  artifactKey: Guid(1fb07d63adea2414980d51e9ecdc2e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 6.mat using Guid(1fb07d63adea2414980d51e9ecdc2e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53777f2c9468f5f0a03fe7e91d1f709e') in 0.007071 seconds 
+  Import took 0.013984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.124476 seconds.
+  path: Assets/low poly medieval buildings/Materials/wood 1.mat
+  artifactKey: Guid(8bb02460732fdc245a1e30837591cbf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/wood 1.mat using Guid(8bb02460732fdc245a1e30837591cbf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc95b222997e113160b85268a36db18d') in 0.009091 seconds 
+  Import took 0.019187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021539 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings.mat
+  artifactKey: Guid(851bab95ee12735428f69ec37b215bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings.mat using Guid(851bab95ee12735428f69ec37b215bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/buildings.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: 'a44003286913fc7a9823e1482f812590') in 0.001501 seconds 
+  Import took 0.006968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019068 seconds.
+  path: Assets/low poly medieval buildings/tower_round.fbx
+  artifactKey: Guid(b6055f26d5a29104581db22650507f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/tower_round.fbx using Guid(b6055f26d5a29104581db22650507f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87265bac531984b42316b1077cf3343') in 0.011437 seconds 
+  Import took 0.017398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026098 seconds.
+  path: Assets/low poly medieval buildings/wall.fbx
+  artifactKey: Guid(0a3041dcda597954782f48ac8a97bf33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/wall.fbx using Guid(0a3041dcda597954782f48ac8a97bf33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4c7b9bf61d3fc7103652355ce4db865') in 0.010511 seconds 
+  Import took 0.016214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007765 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 25.mat
+  artifactKey: Guid(d693e6fcf0b8ab144bc5b871f53b93dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 25.mat using Guid(d693e6fcf0b8ab144bc5b871f53b93dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c605f08979e645007048c607f61c377') in 0.006372 seconds 
+  Import took 0.011870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022027 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 21.mat
+  artifactKey: Guid(8f7e58f2a0b72754dbca88511381acd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 21.mat using Guid(8f7e58f2a0b72754dbca88511381acd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb0eaddbc7b8b185e4b85453d8ec735') in 0.006738 seconds 
+  Import took 0.013261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.033328 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch.mat
+  artifactKey: Guid(54c2ab198a2446d42801369cab5e5a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch.mat using Guid(54c2ab198a2446d42801369cab5e5a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/thatch.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '96499334fd8ffa3d4d38c56c7ba34969') in 0.001574 seconds 
+  Import took 0.006875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003438 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 3.mat
+  artifactKey: Guid(b809c16cf0d704641976065e79447618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 3.mat using Guid(b809c16cf0d704641976065e79447618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2de986908092595dbbee452cb66fa890') in 0.006619 seconds 
+  Import took 0.011810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.186239 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 5.mat
+  artifactKey: Guid(4eb05ce220a14a34999968aa78d593ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 5.mat using Guid(4eb05ce220a14a34999968aa78d593ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbaba095097c8dca475deaf6ecf5bc19') in 0.006435 seconds 
+  Import took 0.011977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016112 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_8.mat
+  artifactKey: Guid(7b9663ad9d3da254cb37834bc8d9b7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_8.mat using Guid(7b9663ad9d3da254cb37834bc8d9b7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e616b158af64f916dbc0204f5eb1b1') in 0.007230 seconds 
+  Import took 0.012482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007097 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Wall_clumb.prefab
+  artifactKey: Guid(a493dbe51f7dff9479d33117838b83c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Wall_clumb.prefab using Guid(a493dbe51f7dff9479d33117838b83c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9332c9bbaa04a898201a47ba85532c31') in 0.003810 seconds 
+  Import took 0.009823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060417 seconds.
+  path: Assets/low poly medieval buildings/stairs.fbx
+  artifactKey: Guid(3d53bdb06508e5545a059e0412b2eee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/stairs.fbx using Guid(3d53bdb06508e5545a059e0412b2eee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ab8cabdd1ff562b8a42bc2024cef6f') in 0.010981 seconds 
+  Import took 0.016548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003078 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Clumb_1.prefab
+  artifactKey: Guid(22d077e581c82c34ab3e4454eda84bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Clumb_1.prefab using Guid(22d077e581c82c34ab3e4454eda84bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e57691560ed131de5d1a49ef0af26a0') in 0.003771 seconds 
+  Import took 0.008773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004746 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_13.mat
+  artifactKey: Guid(46e14f9cc9eea054a820fbcd962a58a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_13.mat using Guid(46e14f9cc9eea054a820fbcd962a58a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8cdc8e609bdb9eb873351b5cbc8043') in 0.006665 seconds 
+  Import took 0.012044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017837 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_24.mat
+  artifactKey: Guid(81f50597249bf3a49a81588f98361ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_24.mat using Guid(81f50597249bf3a49a81588f98361ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd1f1e6a57e18464fac91e30f208646d') in 0.006673 seconds 
+  Import took 0.012088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.244500 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_22.mat
+  artifactKey: Guid(d8da6d55f3ee6f34eabd65acf18ec874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_22.mat using Guid(d8da6d55f3ee6f34eabd65acf18ec874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7a23692e9417bfa2a7227e33b7bd98') in 0.006619 seconds 
+  Import took 0.012156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039185 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_16.mat
+  artifactKey: Guid(0b3f41f18ef826041bc08cf4a4ea2849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_16.mat using Guid(0b3f41f18ef826041bc08cf4a4ea2849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a78a044174c2a9a2d61d17dd17b97a') in 0.006558 seconds 
+  Import took 0.012221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036922 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_15.mat
+  artifactKey: Guid(dfbe935bce36c13498a57962b433c299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_15.mat using Guid(dfbe935bce36c13498a57962b433c299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969f77e25ca84dd9c8e0f4d654c91eae') in 0.006706 seconds 
+  Import took 0.011910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015308 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 1.mat
+  artifactKey: Guid(7b75912667aa438489f0151c090e5224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 1.mat using Guid(7b75912667aa438489f0151c090e5224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cf91b0e3cda9847e694d051ac1f09d4') in 0.006220 seconds 
+  Import took 0.011592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042007 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 11.mat
+  artifactKey: Guid(fc82e7691134f3544b0e0c600823cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 11.mat using Guid(fc82e7691134f3544b0e0c600823cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edba4658060078ef2143989c99fdda52') in 0.006804 seconds 
+  Import took 0.012320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037954 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram
+  artifactKey: Guid(766ccdda027548242aaa42d8be022b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram using Guid(766ccdda027548242aaa42d8be022b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '950a6172eca3385f0eba60f5faa993ad') in 0.001492 seconds 
+  Import took 0.008306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.069630 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_2.mat
+  artifactKey: Guid(eb94cb058362c01429fcaa020bf92c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_2.mat using Guid(eb94cb058362c01429fcaa020bf92c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/roof_2.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '8beedd958ea3c2d019cdea6b9abf63d1') in 0.001476 seconds 
+  Import took 0.006663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018079 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet/Trebuchet .controller
+  artifactKey: Guid(65c67fd0877c9014b814f18f31cb4237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet/Trebuchet .controller using Guid(65c67fd0877c9014b814f18f31cb4237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e4a4405268304d1cc5a746202100cf') in 0.002300 seconds 
+  Import took 0.007734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015713 seconds.
+  path: Assets/low poly medieval buildings/slaughterhouse.fbx
+  artifactKey: Guid(bb8c0e8eb3d69064a8ae10b5e0d62d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/slaughterhouse.fbx using Guid(bb8c0e8eb3d69064a8ae10b5e0d62d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c0c0a5e48582a5acf80071c0e024f3') in 0.011738 seconds 
+  Import took 0.017483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018548 seconds.
+  path: Assets/medieval props
+  artifactKey: Guid(657d0046fc273fb4292ce123a50e9588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props using Guid(657d0046fc273fb4292ce123a50e9588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47111e085d73e28f11db80872503921') in 0.001470 seconds 
+  Import took 0.006808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012565 seconds.
+  path: Assets/Scripts/ColonyManage/ResourceInformations.cs
+  artifactKey: Guid(9ebb1a2a4d153034aaf342e91c31fc5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ColonyManage/ResourceInformations.cs using Guid(9ebb1a2a4d153034aaf342e91c31fc5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaa7e475b717b4bde5e76621b698789') in 0.001185 seconds 
+  Import took 0.006627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005850 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_9.mat
+  artifactKey: Guid(50d0de92a37325140ba88fc2d6132e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_9.mat using Guid(50d0de92a37325140ba88fc2d6132e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b10a5ce03963527cc36c23815b78af') in 0.006433 seconds 
+  Import took 0.012035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007167 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_33.mat
+  artifactKey: Guid(882703a3b28b6ac43a00a309b67be2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_33.mat using Guid(882703a3b28b6ac43a00a309b67be2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146b5ddd71fa7bd3fb5cf415c3bfd68b') in 0.006771 seconds 
+  Import took 0.012078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014653 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_13.mat
+  artifactKey: Guid(07a20d619a5bc7c4887252000296b8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_13.mat using Guid(07a20d619a5bc7c4887252000296b8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0052538fd303d612dee07b88e1aaafa') in 0.006889 seconds 
+  Import took 0.012556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.103035 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_27.mat
+  artifactKey: Guid(f4f05b77f5dd4754ca49d7416dd95bdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_27.mat using Guid(f4f05b77f5dd4754ca49d7416dd95bdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f199a887db8ba185882ec6fe46ea38') in 0.006629 seconds 
+  Import took 0.012540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017938 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_23.mat
+  artifactKey: Guid(10afef364cb563744b50abe20ed44a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_23.mat using Guid(10afef364cb563744b50abe20ed44a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8cfe4dde1680a6fb0698a76d7fb1303') in 0.006583 seconds 
+  Import took 0.012413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006025 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/GoForward_Ram.anim
+  artifactKey: Guid(9b23b8e2a6dd9b540b861b1294e44cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/GoForward_Ram.anim using Guid(9b23b8e2a6dd9b540b861b1294e44cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9800f1f043ca3aadf2d0a4eb26674c1') in 0.004084 seconds 
+  Import took 0.010841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.068745 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 22.mat
+  artifactKey: Guid(175377e1c4e891449be9fc7241bf85d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 22.mat using Guid(175377e1c4e891449be9fc7241bf85d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8997533081ec5ac4fac10494821989cc') in 0.006794 seconds 
+  Import took 0.012889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014513 seconds.
+  path: Assets/medieval props/Well.fbx
+  artifactKey: Guid(20d791d14eba1414080a843de87bf87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Well.fbx using Guid(20d791d14eba1414080a843de87bf87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf4b1e9c8547d8237f7489352a69fb8') in 0.014410 seconds 
+  Import took 0.020216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.033325 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_26.mat
+  artifactKey: Guid(370b6180d844bb045ad4c343ea5c6a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_26.mat using Guid(370b6180d844bb045ad4c343ea5c6a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffdac9566ca012a565d5778f1d5fe7ce') in 0.006978 seconds 
+  Import took 0.012424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097652 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 2.mat
+  artifactKey: Guid(8a7f0778e2370d440bb451407ea50da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 2.mat using Guid(8a7f0778e2370d440bb451407ea50da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c8e6a3ee3c5331cb3c6c7accf03210') in 0.006693 seconds 
+  Import took 0.012021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051428 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 4.mat
+  artifactKey: Guid(f47bda4f37f4d7345ac1be9ddf699339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 4.mat using Guid(f47bda4f37f4d7345ac1be9ddf699339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a0d5418e24fc1a54d13b4be8481ce5') in 0.006740 seconds 
+  Import took 0.012222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014777 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 2.mat
+  artifactKey: Guid(23543bf6044a51b45bc081ecfe57a50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 2.mat using Guid(23543bf6044a51b45bc081ecfe57a50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b0861f2226a7a65a953f6790cc3d4e4') in 0.006450 seconds 
+  Import took 0.011864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072937 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 12.mat
+  artifactKey: Guid(5c44816ae8f910e46a0c816cead40b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 12.mat using Guid(5c44816ae8f910e46a0c816cead40b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c7293f8f9a9eb0119dc2866694f89a') in 0.006948 seconds 
+  Import took 0.012478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019359 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 19.mat
+  artifactKey: Guid(9a9a8f6eed2ebc64098e9a759da5d26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 19.mat using Guid(9a9a8f6eed2ebc64098e9a759da5d26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db8ae7caa876343d867043542f20c80') in 0.006730 seconds 
+  Import took 0.012294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003708 seconds.
+  path: Assets/medieval props/Signpost_03.fbx
+  artifactKey: Guid(780614ff663feed41af0ea07ce2199a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Signpost_03.fbx using Guid(780614ff663feed41af0ea07ce2199a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d667d05b32d3874e36ace4f33dea067') in 0.014549 seconds 
+  Import took 0.020386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031539 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/Ram.controller
+  artifactKey: Guid(86e37cc27125e7149bf3bd5464c95769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/Ram.controller using Guid(86e37cc27125e7149bf3bd5464c95769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a745e07d6042908790b682a0be5c15b3') in 0.002570 seconds 
+  Import took 0.008225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023433 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/GoForward.anim
+  artifactKey: Guid(9d2990bf6ebe0944ea3de7f039c7f3b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/GoForward.anim using Guid(9d2990bf6ebe0944ea3de7f039c7f3b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bedc55c1ebec6a81d284fab335fae32b') in 0.002038 seconds 
+  Import took 0.007370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027313 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 18.mat
+  artifactKey: Guid(cea5d43584daf214998bdf7d81655f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 18.mat using Guid(cea5d43584daf214998bdf7d81655f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5e65a4aed68e311285d2ba8a1245d0') in 0.007029 seconds 
+  Import took 0.012753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028192 seconds.
+  path: Assets/low poly medieval buildings/sceneSettings.lighting
+  artifactKey: Guid(57eef1f45666ed5489caade6726d6374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/sceneSettings.lighting using Guid(57eef1f45666ed5489caade6726d6374) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '1a10cd292f5801daa2ec9b8083847cd4') in 0.003528 seconds 
+  Import took 0.008705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024294 seconds.
+  path: Assets/low poly medieval buildings
+  artifactKey: Guid(56d325330fdbdbb4e9c3361484cdbce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings using Guid(56d325330fdbdbb4e9c3361484cdbce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '524d5d0a04fd56e66598972273288ab2') in 0.001307 seconds 
+  Import took 0.006200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002731 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 4.mat
+  artifactKey: Guid(48cb0579732a58049b4c24d2deb41ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 4.mat using Guid(48cb0579732a58049b4c24d2deb41ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54bfcbc4d8a36e682ed4b2277b891d3c') in 0.009426 seconds 
+  Import took 0.014345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008364 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet/Fire_Trebuchet.anim
+  artifactKey: Guid(a20a151f240371741855a55c5e87a72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet/Fire_Trebuchet.anim using Guid(a20a151f240371741855a55c5e87a72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f8b9a0f3e86c89e1e9b3b946dbd6fc5') in 0.002196 seconds 
+  Import took 0.007230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011360 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_7.mat
+  artifactKey: Guid(42e33b6d9f20c204bb70007c37a8dcdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_7.mat using Guid(42e33b6d9f20c204bb70007c37a8dcdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a54d6c62bf3171d9401e137ade78b3b') in 0.006809 seconds 
+  Import took 0.012461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022397 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/Fire.anim
+  artifactKey: Guid(4663c692c5c8f424f97593a0fd0ceb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Catapult/Fire.anim using Guid(4663c692c5c8f424f97593a0fd0ceb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883e30ccc5c6bd640d9ba33c62decaad') in 0.002033 seconds 
+  Import took 0.007301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020782 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_32.mat
+  artifactKey: Guid(9202f4019b1dc4740b5e34c8ba566fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_32.mat using Guid(9202f4019b1dc4740b5e34c8ba566fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82690c8fe38f220cb7e078175e2622d5') in 0.006920 seconds 
+  Import took 0.012821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011360 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks.mat
+  artifactKey: Guid(9fcab1d50ca3f904ebaa5b8ae9829e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks.mat using Guid(9fcab1d50ca3f904ebaa5b8ae9829e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/bricks.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '27d9ad864d2a4d5bbdca7bdf1e2a53e3') in 0.001530 seconds 
+  Import took 0.007074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046279 seconds.
+  path: Assets/medieval props/Signpost_02.fbx
+  artifactKey: Guid(d24e61fd149ba2848812206174e7565f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Signpost_02.fbx using Guid(d24e61fd149ba2848812206174e7565f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f5dc5ea96a78968a2ad323ef14ad5f') in 0.014783 seconds 
+  Import took 0.020383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018860 seconds.
+  path: Assets/Scenes/Emirhan.unity
+  artifactKey: Guid(5e7ac9fe772308a4ab188e07c0d74f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Emirhan.unity using Guid(5e7ac9fe772308a4ab188e07c0d74f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f8f17c25065b6a39f837b97aae8480') in 0.001589 seconds 
+  Import took 0.006913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090022 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 8.mat
+  artifactKey: Guid(19bdaa34c29f6ff4395e27042a5a6158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 8.mat using Guid(19bdaa34c29f6ff4395e27042a5a6158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeab7ad7dab4166d454259e129351256') in 0.006792 seconds 
+  Import took 0.013152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004938 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_3.mat
+  artifactKey: Guid(b73f5ec2fcc399444b4d34a07b93490f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_3.mat using Guid(b73f5ec2fcc399444b4d34a07b93490f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/buildings_3.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '7eb9cbece969b8f3c3d681999aa2c5db') in 0.001592 seconds 
+  Import took 0.006877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036153 seconds.
+  path: Assets/low poly medieval buildings/Materials/Materials/beam_albedo.mat
+  artifactKey: Guid(e6c5669e26abb7b4dab575267e32354c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/Materials/beam_albedo.mat using Guid(e6c5669e26abb7b4dab575267e32354c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bee62ac8ef5c73b5ae663cff3d32bca') in 0.008200 seconds 
+  Import took 0.013856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024652 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_12.mat
+  artifactKey: Guid(d94806efb63b54a408eff10c69c7d1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_12.mat using Guid(d94806efb63b54a408eff10c69c7d1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c686d922f5938b23a9a9ec3cb0d904f') in 0.007517 seconds 
+  Import took 0.013129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011460 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 16.mat
+  artifactKey: Guid(05b9aca7a25ac7e49b68c0bcbb726917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 16.mat using Guid(05b9aca7a25ac7e49b68c0bcbb726917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d2278bf0ae72cb869c28714935f713') in 0.006750 seconds 
+  Import took 0.012396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031375 seconds.
+  path: Assets/medieval props/Shovel.fbx
+  artifactKey: Guid(39bfc88314083014a966a53b89e74eea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Shovel.fbx using Guid(39bfc88314083014a966a53b89e74eea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38b5334b4eaef7315cf6e8b61ed5045') in 0.014486 seconds 
+  Import took 0.020013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008275 seconds.
+  path: Assets/medieval props/Washboard.fbx
+  artifactKey: Guid(c06b64d54bdd4be4e832861353379a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Washboard.fbx using Guid(c06b64d54bdd4be4e832861353379a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1439327e27ba1a47383465373bd879b') in 0.015169 seconds 
+  Import took 0.022058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004048 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 13.mat
+  artifactKey: Guid(323fadddbbaad0c418518b962cf469c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 13.mat using Guid(323fadddbbaad0c418518b962cf469c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc6e30f7b0ade25d40a1c534a89f1f0') in 0.007845 seconds 
+  Import took 0.015599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063664 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 20.mat
+  artifactKey: Guid(c79781a511771ad46979bd52fb650e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 20.mat using Guid(c79781a511771ad46979bd52fb650e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cc803d93ba23a6ac77a0a0e6110cd08') in 0.006838 seconds 
+  Import took 0.012388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040030 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_31.mat
+  artifactKey: Guid(b4cf2f15c54b92e4eaaa1054c09ab550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_31.mat using Guid(b4cf2f15c54b92e4eaaa1054c09ab550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c233ce30f6cf6df9523aadefa039ac9') in 0.006279 seconds 
+  Import took 0.011831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004742 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_25.mat
+  artifactKey: Guid(c514177a7287cd1419da3b064f32ffb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_25.mat using Guid(c514177a7287cd1419da3b064f32ffb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b90ff776784d7caa21bf1fb313ea75') in 0.006636 seconds 
+  Import took 0.012308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061554 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 4.mat
+  artifactKey: Guid(9dc7c04e3491bae448a0583518d28847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 4.mat using Guid(9dc7c04e3491bae448a0583518d28847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b11b4e4500f4f0ce34cf98a3b5e85c') in 0.006576 seconds 
+  Import took 0.012288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018382 seconds.
+  path: Assets/low poly medieval buildings/Materials/plaster2.mat
+  artifactKey: Guid(4b0f4136bb2449e408adf68c6b9a04fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/plaster2.mat using Guid(4b0f4136bb2449e408adf68c6b9a04fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/plaster2.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: 'ee21d912292a080182d03839dbb8f624') in 0.001688 seconds 
+  Import took 0.007416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028895 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings 1.mat
+  artifactKey: Guid(e0da479863b45584aa60d6a379c117fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings 1.mat using Guid(e0da479863b45584aa60d6a379c117fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0969efd86b0dea97aa813ac8b8090e03') in 0.006832 seconds 
+  Import took 0.012516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030625 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/HitToTower_Ram.anim
+  artifactKey: Guid(83ed401546229d445a10a37e19d4e510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Ram/HitToTower_Ram.anim using Guid(83ed401546229d445a10a37e19d4e510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfd413180c7e807c4cf8151bf65f44f2') in 0.001868 seconds 
+  Import took 0.006809 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007640 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_8.mat
+  artifactKey: Guid(bb918c1384bd7ed42b7b55bd5f1d90a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_8.mat using Guid(bb918c1384bd7ed42b7b55bd5f1d90a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e8f95009c6783f3225e8f2ef7aa2b5f') in 0.006573 seconds 
+  Import took 0.012042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012672 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 14.mat
+  artifactKey: Guid(116e58602b27b504b94005f509119420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 14.mat using Guid(116e58602b27b504b94005f509119420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0cfa49d18f3b919305505547a31b58d') in 0.006933 seconds 
+  Import took 0.012735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051514 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_4.mat
+  artifactKey: Guid(799203b7b0ff34e458d71334cff8e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_4.mat using Guid(799203b7b0ff34e458d71334cff8e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffacdd735e9151f9df7547d89207a278') in 0.007456 seconds 
+  Import took 0.014156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012175 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_10.mat
+  artifactKey: Guid(b64525e37417adf45ae5e614c7883e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_10.mat using Guid(b64525e37417adf45ae5e614c7883e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f109d98583503fb1f40d10be24f3068') in 0.007382 seconds 
+  Import took 0.013623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.135905 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_17.mat
+  artifactKey: Guid(a5c76b4685cbae54693f388890949ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_17.mat using Guid(a5c76b4685cbae54693f388890949ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7cd9eb58d75ed51293a3a24ce1a940') in 0.006414 seconds 
+  Import took 0.011678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016487 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 23.mat
+  artifactKey: Guid(85c8ff7250202db44ae54403c03e35f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 23.mat using Guid(85c8ff7250202db44ae54403c03e35f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a03511ac56d2301d94b1679acf6343') in 0.006659 seconds 
+  Import took 0.012079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.231681 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_11.mat
+  artifactKey: Guid(9e8d284ec84301b4ba2cca5ade5bbda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_11.mat using Guid(9e8d284ec84301b4ba2cca5ade5bbda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053ff13bf0fa3461889f0e677ac81a66') in 0.006752 seconds 
+  Import took 0.012526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016748 seconds.
+  path: Assets/medieval props/Pot_01.fbx
+  artifactKey: Guid(b6181be52b1dc8c4ab5f9e580738c04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/Pot_01.fbx using Guid(b6181be52b1dc8c4ab5f9e580738c04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5584686a0a2ae08de4c78490d1b9dec4') in 0.015400 seconds 
+  Import took 0.021031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.464997 seconds.
+  path: Assets/low poly medieval buildings/Materials/wood.mat
+  artifactKey: Guid(c772e38b371afb048abe88c78ca74b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/wood.mat using Guid(c772e38b371afb048abe88c78ca74b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/wood.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: 'de3e0864a4c948b890fc1bf0df74e8af') in 0.001313 seconds 
+  Import took 0.007479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.057764 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_28.mat
+  artifactKey: Guid(3ced4eefe7e943845bca45a4933dc813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_28.mat using Guid(3ced4eefe7e943845bca45a4933dc813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40be152a2e490d400ddab0566d30d868') in 0.006651 seconds 
+  Import took 0.012298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038256 seconds.
+  path: Assets/low poly medieval buildings/sawmill.fbx
+  artifactKey: Guid(7173c2ccddc9b8b45b46f613abf5018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/sawmill.fbx using Guid(7173c2ccddc9b8b45b46f613abf5018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749350001a1265fcfa0c145547042f3e') in 0.012337 seconds 
+  Import took 0.017744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092668 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 6.mat
+  artifactKey: Guid(91eef5c2a9547b0449d19c46e733f50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 6.mat using Guid(91eef5c2a9547b0449d19c46e733f50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6cb310768e39abd40e49d7194aad18f') in 0.006954 seconds 
+  Import took 0.013511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037413 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_10.mat
+  artifactKey: Guid(23636c7e4dead8f4f96513988b9271a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_10.mat using Guid(23636c7e4dead8f4f96513988b9271a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357bb52b520102d081f01a3dd720a437') in 0.006679 seconds 
+  Import took 0.013196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010753 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_2.mat
+  artifactKey: Guid(5db5ca2c22ea2a442ab42aa1f4205eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_2.mat using Guid(5db5ca2c22ea2a442ab42aa1f4205eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/buildings_2.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '4c418bcf26d3bc6650d761c127e3ea34') in 0.001463 seconds 
+  Import took 0.007348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022554 seconds.
+  path: Assets/low poly medieval buildings/readme.txt
+  artifactKey: Guid(77e4b153d4fed5a4f952d169fa48234f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/readme.txt using Guid(77e4b153d4fed5a4f952d169fa48234f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '055e8f0024fb5167c25a91ea31cd6120') in 0.008662 seconds 
+  Import took 0.013886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029139 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 13.mat
+  artifactKey: Guid(60c0effadb779424fb11981c19209308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 13.mat using Guid(60c0effadb779424fb11981c19209308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d7b886bdbd13ad8a92150058a5b3e99') in 0.006661 seconds 
+  Import took 0.012544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.045656 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_15.mat
+  artifactKey: Guid(9ffda3be7b5613748bdf8f7e8c2a57e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_15.mat using Guid(9ffda3be7b5613748bdf8f7e8c2a57e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98ba5707f20632a5a11b362df98159a') in 0.009113 seconds 
+  Import took 0.016861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012673 seconds.
+  path: Assets/low poly medieval buildings/Materials/roof_4.mat
+  artifactKey: Guid(fea877bb1ae97cf47a833511b6404cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/roof_4.mat using Guid(fea877bb1ae97cf47a833511b6404cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7914d85343fac7ac7796e38b8bbf8a') in 0.006569 seconds 
+  Import took 0.011740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052908 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 8.mat
+  artifactKey: Guid(e45d5449c849356439509ff0e455e501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 8.mat using Guid(e45d5449c849356439509ff0e455e501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe2efb0d4202e63dc8fa2f5f687cdb87') in 0.006620 seconds 
+  Import took 0.011794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.105152 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_14.mat
+  artifactKey: Guid(a01498189b02a3d43b6235bb67fce574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_14.mat using Guid(a01498189b02a3d43b6235bb67fce574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30c81bb7b208a776bab9f5e962ceec8') in 0.007270 seconds 
+  Import took 0.012919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011915 seconds.
+  path: Assets/Scripts/Enemy/PlayerCombat.cs
+  artifactKey: Guid(05735af71ab75c04895719d222b48db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy/PlayerCombat.cs using Guid(05735af71ab75c04895719d222b48db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9920efeaba8a23b45213852b47368393') in 0.001193 seconds 
+  Import took 0.006445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021328 seconds.
+  path: Assets/low poly medieval buildings/Materials/bricks 15.mat
+  artifactKey: Guid(3b6edfc6ca89c2547a0cda556a3b547c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/bricks 15.mat using Guid(3b6edfc6ca89c2547a0cda556a3b547c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1711a68700b25a6d49294dd1a75c08') in 0.006536 seconds 
+  Import took 0.011698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004433 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations
+  artifactKey: Guid(166db2d7c32078743a3325d7ff3072fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations using Guid(166db2d7c32078743a3325d7ff3072fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8748a24320a22e2ffe3e048d6619cc84') in 0.001654 seconds 
+  Import took 0.007708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070794 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 24.mat
+  artifactKey: Guid(f946074908e46e940a3b2c43cce509c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 24.mat using Guid(f946074908e46e940a3b2c43cce509c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9d58e8ddb9055bb1aeca9d3f5b8831') in 0.006903 seconds 
+  Import took 0.012073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042988 seconds.
+  path: Assets/low poly medieval buildings/warehouse.fbx
+  artifactKey: Guid(686c3e7542d82a24cba72016aa7c9ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/warehouse.fbx using Guid(686c3e7542d82a24cba72016aa7c9ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0b063c3d7de3d842b0b0decf07ecd2') in 0.012256 seconds 
+  Import took 0.018054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009065 seconds.
+  path: Assets/Scripts/ColonyManage/Regions/Desert.asset
+  artifactKey: Guid(b00e1238d8548404ca2b9e88a6cbc2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ColonyManage/Regions/Desert.asset using Guid(b00e1238d8548404ca2b9e88a6cbc2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff534c7632b9741e09598ec20a75e5e2') in 0.003574 seconds 
+  Import took 0.008594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026329 seconds.
+  path: Assets/low poly medieval buildings/Materials/buildings_9.mat
+  artifactKey: Guid(1f06925e1b5567846b695bf5d6628ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/buildings_9.mat using Guid(1f06925e1b5567846b695bf5d6628ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7bb9455107fe25e00dfed357d2c4e1') in 0.006648 seconds 
+  Import took 0.012103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073202 seconds.
+  path: Assets/low poly medieval buildings/Materials/wood 2.mat
+  artifactKey: Guid(e27324f82e87a8748b4dfb029b1a4ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/wood 2.mat using Guid(e27324f82e87a8748b4dfb029b1a4ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c2a8e87400c4937a4da952795a6ec0') in 0.006694 seconds 
+  Import took 0.012694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014367 seconds.
+  path: Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet
+  artifactKey: Guid(64378f5e128c22047994b00a65cefb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Castle Siege Pack/Prefabs/Models/Siege Machines/Animations/Trebuchet using Guid(64378f5e128c22047994b00a65cefb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c7287b84cac5f6b906c40463cc84c8') in 0.001069 seconds 
+  Import took 0.006247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.110007 seconds.
+  path: Assets/low poly medieval buildings/Materials/beam 9.mat
+  artifactKey: Guid(20808e44a1d9ec249847253a68ab1d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/beam 9.mat using Guid(20808e44a1d9ec249847253a68ab1d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0281a080120ce026192bf76747e51f') in 0.006692 seconds 
+  Import took 0.012180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002895 seconds.
+  path: Assets/low poly medieval buildings/Materials/thatch 3.mat
+  artifactKey: Guid(dab9c71c3f4875b4ca0555a76288b0da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/thatch 3.mat using Guid(dab9c71c3f4875b4ca0555a76288b0da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e660f75082b1315aaf4285a7255f1a') in 0.006591 seconds 
+  Import took 0.011542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003095 seconds.
+  path: Assets/low poly medieval buildings/Materials/planks.mat
+  artifactKey: Guid(1efe31d4d21c6c84eacc7718bb26f45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/planks.mat using Guid(1efe31d4d21c6c84eacc7718bb26f45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/planks.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '67f0b24e6974e8fd3e74d2b4acb89820') in 0.001428 seconds 
+  Import took 0.006264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013375 seconds.
+  path: Assets/low poly medieval buildings/Materials/planks_2.mat
+  artifactKey: Guid(55006f9a271000a40b1d35d23a09ccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly medieval buildings/Materials/planks_2.mat using Guid(55006f9a271000a40b1d35d23a09ccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/low poly medieval buildings/Materials/planks_2.mat' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+ -> (artifact id: '53ce3b00ae6f832bf4c4280a6fc49da6') in 0.001577 seconds 
+  Import took 0.006550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021400 seconds.
+  path: Assets/medieval props/ælothesline.fbx
+  artifactKey: Guid(86577fb102b240b45a916e8a051f60f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/medieval props/ælothesline.fbx using Guid(86577fb102b240b45a916e8a051f60f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f793e590fab79c504abf895f28a5919') in 0.014995 seconds 
+  Import took 0.020063 seconds .
+
+>>>>>>> Stashed changes
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
