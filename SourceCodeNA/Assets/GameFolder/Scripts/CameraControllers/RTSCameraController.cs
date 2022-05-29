@@ -13,7 +13,8 @@ public class RTSCameraController : MonoBehaviour
     {
         _inputProvider = GetComponent<CinemachineInputProvider>();
         _virtualCamera = GetComponent<CinemachineVirtualCamera>();
-        _cameraTransform = _virtualCamera.VirtualCameraGameObject.transform;
+        //_cameraTransform = _virtualCamera.VirtualCameraGameObject.transform;
+        _cameraTransform = this.transform.parent.transform;
     }
 
     void Update()
@@ -28,17 +29,17 @@ public class RTSCameraController : MonoBehaviour
         }
     }
 
-    public Vector2 PanDirection(float x, float y)
+    public Vector3 PanDirection(float x, float y)
     {
-        Vector2 direction = Vector2.zero;
+        Vector3 direction = Vector3.zero;
 
         if (y >= Screen.height * 0.95f)
         {
-            direction.y += 1;
+            direction.z += 1;
         }
         else if (y <= Screen.height * 0.05f)
         {
-            direction.y -= 1;
+            direction.z -= 1;
         }
 
         if (x >= Screen.width * 0.95f)
@@ -55,7 +56,7 @@ public class RTSCameraController : MonoBehaviour
 
     public void PanScreen(float x, float y)
     {
-        Vector2 direction = PanDirection(x, y);
-        _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraTransform.position + (Vector3)direction * _panSpeed, Time.deltaTime);
+        Vector3 direction = PanDirection(x, y);
+        _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraTransform.position + direction * _panSpeed, Time.deltaTime);
     }
 }
