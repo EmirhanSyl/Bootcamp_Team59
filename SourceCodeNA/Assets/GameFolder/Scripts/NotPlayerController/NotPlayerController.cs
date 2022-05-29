@@ -21,11 +21,11 @@ public class NotPlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             UnitSelections.Instance.SelectAll();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             for (int i = 0; i < UnitSelections.Instance._unitSelectedList.Count; i++)
             {
@@ -33,8 +33,5 @@ public class NotPlayerController : MonoBehaviour
 
             }
         }
-
-        
-
     }
 }

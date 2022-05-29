@@ -8,10 +8,10 @@ public class Storage : MonoBehaviour
     [SerializeField] TextMeshProUGUI _foodText;
 
 
-    public static int _food;
-    public static int _stone;
-    public static int _wood;
-    public static int _soul;    
+    public static int _food = 100;
+    public static int _stone = 100;
+    public static int _wood = 100;
+    public static int _soul = 100;    
 
     private void Update()
     {

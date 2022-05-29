@@ -6,13 +6,13 @@ public class RTSCameraController : MonoBehaviour
     [SerializeField] float _panSpeed = 2f;
 
     private CinemachineInputProvider _inputProvider;
-    private CinemachineVirtualCamera _virtualCamera;
+    //private CinemachineVirtualCamera _virtualCamera;
     private Transform _cameraTransform;
 
     private void Awake()
     {
         _inputProvider = GetComponent<CinemachineInputProvider>();
-        _virtualCamera = GetComponent<CinemachineVirtualCamera>();
+        //_virtualCamera = GetComponent<CinemachineVirtualCamera>();
         //_cameraTransform = _virtualCamera.VirtualCameraGameObject.transform;
         _cameraTransform = this.transform.parent.transform;
     }
