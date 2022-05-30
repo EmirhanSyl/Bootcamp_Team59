@@ -548,8 +548,8 @@ GameObject:
   - component: {fileID: 8906800974739479562}
   - component: {fileID: 8906800974739479561}
   m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: ColonyCanvas
+  m_TagString: BuildingCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -787,7 +787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8906800975117586278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -860,6 +860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _build:
-  - {fileID: 5202722678978601320, guid: fa287fbbcf85ba5479a8b450ea52ba87, type: 3}
+  - {fileID: 1546119400204468209, guid: 9606961f87451ac4fa3d373e2cee8d05, type: 3}
   - {fileID: 1082016296248359818, guid: 3c109db6b014e6643b025c58981ab95a, type: 3}
   priceText: {fileID: 0}

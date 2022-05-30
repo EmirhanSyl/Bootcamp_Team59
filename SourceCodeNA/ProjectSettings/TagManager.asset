@@ -25,6 +25,7 @@ TagManager:
   - DesertBuilding
   - IceBuilding
   - ForestBuilding
+  - BuildingCanvas
   layers:
   - Default
   - TransparentFX
