@@ -1910,7 +1910,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rotatioSpeed: 50
-  controllingByGroupManager: 0
+  controllingByGroupManager: 1
   hittedByPlayer: 0
   friendWithPlayer: 0
   distanceToTarget: 0
