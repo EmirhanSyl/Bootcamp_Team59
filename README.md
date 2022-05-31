@@ -302,9 +302,21 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro'yu kullanarak pr
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 3 Daily Scrum Chats]
 
 Ekran Görüntüleri ile İlgili Dosya : 
+https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EYRPXxRK0MNBotA82fGaoLEBOijjIYx03mV2BiG0r_maPQ?e=QqvbXH
+
 Günlük Daily Scrumlar İle İlgili Günlük Konuşmaların İçeriği : 
+https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EbnVvQT1Ze9DsD_OfDbY5uUBE7n2N4ocn1wYkmplOQVVqw?e=O0tEc5
+
 
 **Sprint board update**: Sprint board screenshotları: 
+
+![image](https://user-images.githubusercontent.com/80157890/171125544-30a196c1-77bd-4973-94d1-49fe458e0998.png)
+
+
+
+https://miro.com/app/board/uXjVOyY-7Y0=/?share_link_id=268403764114
+
+
 
 
 
@@ -318,20 +330,25 @@ Burndawn Chart Sprint 3 İçin :
 
 
 
+
+
 - **Sprint Review**: 
 
 
-Alınan kararlar:
+Alınan kararlar: 
+
+Tüm maplerin oyuna aktarılması kısmı biraz uzun sürdü ve bazı aksaklıklar yaşandı . Mapleri pushlama kısmında github'dan datamızın % 100 'ünü kullandığımıza dair bir uyarı mesajı aldık . İlk aşamada yükleme başarısız oldu . Bu sorunu çözmek adına github'dan bir aylık depolama alanı satın aldık bu şekilde tüm mapi aktarabildik . Oyunun UI kısmları üçüncü sprint ile tamamlanmış oldu . Bu kısımların oyun ile uyumlu görünüp görünmeyeceği üzerinde bazı tereddütlerimiz vardı ama genel hatlarıyla uyumlu bir görüntü oluşturduğu kararına vardık . Zaman kısıtı nedeniyle oyuna eklemeyi planladığımız kısım olan diyalog sitemini eklememe kararı aldık . Bu kısmın eklenmesi halinde geri kalan ilerin tamamlanmasının mümkün olmamayacağı kararı ile bu kımı reddettik . İkinci sprint retrospective toplantısında zamanımız kalması halinde envanter sistemini oyuna dahil edebileceğimizi karalaştırmıştık fakat gidişata baktığımızda bunun pek de mümkün olmayacağını gördüğümüz için bu ısmında oyunda olamayacağını kararlaştırdık ve bu kısmı da reddettik . Ses efektleri eklenmesi ve firebase kısmını üçüncü sprinte bırakmıştık . Bu kısmda bu iki görev için developer arkadaşlar görev dağılımı yaptı ve bu kısmlar başarılı bir şekilde siteme dahil edildi . Sürecin başından oyunun bir bütün gibi durup duramayacağı konusunda tereddütlerimiz vardı şimdi geldiğimi noktada bu tereddütlerin bazılarının oyuna yansıdığını bazılarının ise oyuna yansımadığını gördük . Üçüncü sprintte tüm oyun için tasarlanan kısmların birleştirilmesi ve bu kısımları sitemlere entegrasonu üzerinde çalışıldı ve oyun bir bütün haline getiildi . Üçüncü sprint teslimi ile birlikte şimdi sırada acaba ilk 14' e kalabilir miyiz düşüncesi ve 8 Haziran oyun teslimi kısmı var heyecanla süreci bekliyoruz . 
 
 
 
 - **Sprint Retrospective:**
 
-Üçüncü sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . 
+Üçüncü sprintin sonlarına yaklaşırken durumu değerlendirmek ve sprint review kısmı için gerekli işlemlerin yapılması için retrospective toplantısı düzenlendi ve gerekli aksiyonlar alındı . Oyun bir bütün haline getirildi sistemlerin birbiri ile entegrasyonu sağlandı ve sorun çıkaran kısmlarda gerekli iyileştirmeler yapıldı .Bazı eklemeler yapılarak oyunumuz teslime hazır hale getirildi . Bzı kısmların olmasını isterdik fakat zaman kısıtı nedeniyle  bu mümkün olmadı fakat ilerleyen aşmalarda oyunu geliştirebileceğimin karaını aldık . Son sprint teslimi için neler eksik kısmını kontrol ettik . Scrum master arkadaşımıza gerekli iyileştirilmelerin yapılması adına geri bilidrimde bulunduk ve sürecin sonunda olduğumuzu bilerek son düzlükte neleri daha iyi yapabilirizi ya da şu da eklense güzel oluru konuştuğumuz ve gerekli aksiyonları aldığımız bir retrospective toplantısı düzenledik . 
 
 Toplantı Görüntüsü : 
 
 
+![image](https://user-images.githubusercontent.com/80157890/171126089-b5ee7fd6-f4af-4a13-a1c8-a074c3f469fc.png)
 
  
  
@@ -339,6 +356,18 @@ Toplantı Görüntüsü :
 -**Diğer Notlar**:
 
 Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
+
+https://miro.com/app/board/uXjVOw39A8o=/?share_link_id=864659999932
+
+
+
+
+
+** Tüm Süreci Değerlendirme ve Oyunun Başka Versiyonlarında Bulunmasını Planladığımız Kısımlar : 
+
+Oyun genel hatları ile planlanan gibi ilerlemiş olsa da eklemek istediğimiz ve oyun içerinde olamasını istediğimiz bazı kısımlar zaman kısıtı nedeniyle yetişemedi . Yaklaşık iki aylık bir süreç olan bootcamp kapsamında en baştan itibaren tasarlamak istediğimiz oyunda karar kıldığımız için süreç boyunca çok ciddi değişiklikler yapmadık . Bazı kısımları zaman kısıtı nedeniyle ekleyememiş olsak bile yapmış olduğumuz oyunun geliştirilmesi ile çok daha güzel bir hal alacağının farkına vardık . Tüm bu süreci göz önüne aldığımızda başta çok fazla tereddütümüz vardı . Acaba parçalar birleşince gerçek bir oyun hissi uyandıracak mı ya da düzgün bir şekilde çalışabilecek mi diye bir sürü soru zihnimizde beliriyorudu . Bu soru işaretlerinin bazıları bizlere süreç içerisinde gerçekten sorun olarak döndü . Örneğin tasarlamış olduğumuz maplerin pushlanması kısmı sorun çıkardı . Github' daki data kotamızı doldurduğumuza dair mesaj aldık . Yüklemeleri yapamadık . Bir an sürecin bu kadar sonuna gelmişken böyle bir durum ile karşılaşılması mralimizi bozduama hemen çözüm yolları aramaya başladıkve problemi çözdük . Takımdaki tüm arkadaşlar süreç boyunca sorumluluklarının bilince hareket etti ve bu şekilde rotamızın çok da dışına çıkmamış olduk . Oyunumuzda eklemek istediğimiz bası kısımları koyamadığımızı ifade etmiştik bunlardan bazılarından bahsedecek olursak diyalog sistemi olmasını istiyorduk , map tasarımında üç farklı bölge üzerinde oyunumuz devam edecekti ama şuan iki bölgelei bir map üzerinden oyunu tasarladık . Oyunumuzda aker çeşitliliği ve bu askerlerin bazı büyü güçlerinin çok daha çeşitli olmasını istiyorduk , her bölgenin kendine özel bir kaynağının olmasını ve bu kaynağın bulunması halinde oyunda bazı hareketlenmelerin olmasını isterdik gibi bazı sıralamalar yapabiliriz . Bunlar bootcamp süreci sonlanması halinde oyunun biz takım üyeleri ile birlikte ileriki zamanlarda geliştirilmesi ile mümkün olabileceğini biliyoruz . Biz bu süreci çok sevdik ve çok şey öğrendik . Sorunlar ile karşılaşınca hemen takımca çözüm yolları aramayı , toplantılar yapmayı, gruplar halinde çalışmayı , sprint telimi yapmayı gibi birçok rutini geride bırakmış oluyoruz ama bu sürecin bize katmış olduklarından ve tanıştığımız birbirinden farklı farklı arakadaşların bize kattıkları ile güzel bir süreci sonlandırdığımız ifade temek isteriz. 
+
+
 
 
 
