@@ -310,6 +310,9 @@ https://gtu-my.sharepoint.com/:w:/g/personal/h_erbey2019_gtu_edu_tr/EbnVvQT1Ze9D
 
 **Sprint board update**: Sprint board screenshotları: 
 
+![image](https://user-images.githubusercontent.com/80157890/171125544-30a196c1-77bd-4973-94d1-49fe458e0998.png)
+
+
 
 https://miro.com/app/board/uXjVOyY-7Y0=/?share_link_id=268403764114
 
@@ -345,6 +348,7 @@ Tüm maplerin oyuna aktarılması kısmı biraz uzun sürdü ve bazı aksaklıkl
 Toplantı Görüntüsü : 
 
 
+![image](https://user-images.githubusercontent.com/80157890/171126089-b5ee7fd6-f4af-4a13-a1c8-a074c3f469fc.png)
 
  
  
