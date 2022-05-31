@@ -357,6 +357,10 @@ Toplantı Görüntüsü :
 
 Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
 
+https://miro.com/app/board/uXjVOw39A8o=/?share_link_id=864659999932
+
+
+
 
 
 ** Tüm Süreci Değerlendirme ve Oyunun Başka Versiyonlarında Bulunmasını Planladığımız Kısımlar : 
