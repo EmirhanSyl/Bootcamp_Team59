@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _villiagers: []
   _gathererVilliagers: []
-  _resource: {fileID: 4036240951885790975}
+  _resource: {fileID: 0}
   _popupCanvas: {fileID: 1711128370957321523}
   _popupResourcePanel: {fileID: 1711128370602864801}
 --- !u!65 &1711128369973775120

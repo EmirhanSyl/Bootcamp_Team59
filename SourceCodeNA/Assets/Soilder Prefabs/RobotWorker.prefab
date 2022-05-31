@@ -2026,8 +2026,6 @@ MonoBehaviour:
   - Collect2
   - Collect3
   carryingCapacity: 10
-  collectDuration: 4
-  collectAmount: 5
   resourceCompletelyExploited: 0
   hugeKnightNPC: 0
   enemyHealthBar: {fileID: 6726520963970960823}

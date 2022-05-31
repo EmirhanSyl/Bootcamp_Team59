@@ -153,7 +153,7 @@ public class RegionManager : MonoBehaviour
         NPCGroupManager groupManagerScript = instantiatedGroupManager.GetComponent<NPCGroupManager>();
         groupManagerScript.groupRegionDropdown = regionStats.RegionSelection;
         groupManagerScript.enemyMask = regionStats.EnemyRegions;
-        groupManagerScript.groupTargetResource = targetResource;
+        groupManagerScript.groupTargeResource = targetResource;
         groupManagerScript.regionManager = this;
         groupManagerScript.castleLocation = castleLocation;
 

@@ -96,11 +96,8 @@ namespace UnityEngine.AI.MonsterBehavior
         //Robot Worker
         [SerializeField] private string[] collectAnimatonsList;
         [SerializeField] private float carryingCapacity;
-        [SerializeField] private float collectDuration;
-        [SerializeField] private float collectAmount;
 
         private float collectedResource;
-        private float collectTimer;
         private int collectAnimationIndex;
         private bool isGetheringResource;
         public bool resourceCompletelyExploited;
@@ -209,11 +206,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
             if (!isDead)
             {
-                if (enemyStateTypeDropdown != EnemyStateType.RobotWorker)
-                {
-                    LockToTheTarget();
-                }
-
+                LockToTheTarget();
                 if (!hugeKnightNPC || (hugeKnightNPC && !inHeavyAttack))
                 {
                     transform.DOLookAt(new Vector3(targetVector.x, transform.position.y, targetVector.z), 0.5f);
@@ -356,34 +349,10 @@ namespace UnityEngine.AI.MonsterBehavior
                 enemyHealthBar.gameObject.SetActive(false);
                 if (controllingByGroupManager && groupController.questDone)
                 {
-                    targetObject = groupController.storage;
+                    targetObject = groupController.castleLocation;
                     targetVector = targetObject.transform.position;
                     return;
                 }
-                else if (controllingByGroupManager && groupController.troopCalledBack)
-                {
-                    targetObject = groupController.militaryBase;
-                    targetVector = targetObject.transform.position;
-                    return;
-                }
-                else if (controllingByGroupManager && groupController.attackersOnCastleBorder)
-                {
-                    targetObject = groupController.attackerNPC;
-                    targetVector = targetObject.transform.position;
-                    return;
-                }
-                else if (controllingByGroupManager && groupController.troopCalledByPlayer)
-                {
-                    targetObject = player;
-                    targetVector = targetObject.transform.position;
-                    return;
-                }
-                else if (controllingByGroupManager && groupController.troopTypeDropdown != NPCGroupManager.TroopType.GuardianTroop && (!groupController.troopCalledByPlayer || !groupController.attackersOnCastleBorder))
-                {
-                    targetObject = groupController.militaryBase;
-                    targetVector = targetObject.transform.position;
-                }
-
                 switch ((int)enemyStateTypeDropdown)
                 {
                     case 0:
@@ -396,7 +365,7 @@ namespace UnityEngine.AI.MonsterBehavior
                         RobotWorker();
                         break;
                 }
-                
+
                 firstAttack = true;
             }
         }
@@ -559,16 +528,6 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void RobotWorker()
         {
-            if (!gameObject.CompareTag("Villiager"))
-            {
-                collectTimer += Time.deltaTime;
-                if (collectTimer > collectDuration)
-                {
-                    collectedResource += collectAmount;
-                    collectTimer = 0;
-                }
-            }
-
             if (collectedResource >= carryingCapacity || resourceCompletelyExploited)
             {
                 groupController.questDone = true;
