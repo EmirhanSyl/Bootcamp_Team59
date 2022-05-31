@@ -5,7 +5,6 @@ using UnityEngine;
 public class ColonyManager : MonoBehaviour
 {
     int _population;
-    int _time;
     GameObject[] _villiagers;
 
 

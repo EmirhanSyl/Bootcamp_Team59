@@ -18,6 +18,7 @@ public class OpenBuildingPanelScript : MonoBehaviour
             _buildingCanvas.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
