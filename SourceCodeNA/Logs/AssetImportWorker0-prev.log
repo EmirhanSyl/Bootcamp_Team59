@@ -15,11 +15,11 @@ E:/Program Files/UnityHub/Projects/Bootcamp_Team59/SourceCodeNA
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65047
+50701
 Successfully changed project path to: E:/Program Files/UnityHub/Projects/Bootcamp_Team59/SourceCodeNA
 E:/Program Files/UnityHub/Projects/Bootcamp_Team59/SourceCodeNA
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 86.28 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 86.55 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -30,42 +30,42 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
     Vendor:   
     VRAM:     3962 MB
-    Driver:   30.0.15.1259
+    Driver:   30.0.15.1295
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56232
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001703 seconds.
+Registered in 0.001690 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 80.92 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 98.09 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.551 seconds
+- Completed reload, in  0.580 seconds
 Domain Reload Profiling:
-	ReloadAssembly (551ms)
+	ReloadAssembly (581ms)
 		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (439ms)
+		EndReloadAssembly (465ms)
 			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (130ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (193ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (212ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (81ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (71ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (73ms)
 				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -73,51 +73,51 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003776 seconds.
+Registered in 0.003827 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 87.26 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 83.60 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.638 seconds
+- Completed reload, in  1.815 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1638ms)
-		BeginReloadAssembly (124ms)
+	ReloadAssembly (1815ms)
+		BeginReloadAssembly (125ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1462ms)
+		EndReloadAssembly (1636ms)
 			LoadAssemblies (81ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (308ms)
+			SetupTypeCache (318ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (900ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (1068ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (87ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (700ms)
+				RefreshPlugins (84ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (872ms)
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.89 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3945 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 176.7 MB.
 System memory in use after: 176.9 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4387.
-Total: 3.640100 ms (FindLiveObjects: 0.243800 ms CreateObjectMapping: 0.158500 ms MarkObjects: 3.125600 ms  DeleteObjects: 0.111400 ms)
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4388.
+Total: 4.874100 ms (FindLiveObjects: 0.284000 ms CreateObjectMapping: 0.184700 ms MarkObjects: 4.279200 ms  DeleteObjects: 0.125300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,97 +131,1201 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Ground02.prefab
-  artifactKey: Guid(e9a78598122521c4f8d2ad4515cc1bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Ground02.prefab using Guid(e9a78598122521c4f8d2ad4515cc1bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c30bb2881ae063fe3938430197265838') in 1.039380 seconds 
-  Import took 1.118516 seconds .
+  path: Assets/Scripts/ResourceManagement/ResourcesCosts.asset
+  artifactKey: Guid(3b6ceee45f7abe84f9678df8f5931044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ResourceManagement/ResourcesCosts.asset using Guid(3b6ceee45f7abe84f9678df8f5931044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e353bac0c1b780c629868483de045e96') in 0.044557 seconds 
+  Import took 0.050289 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Scenes/Ground 1.prefab
-  artifactKey: Guid(b535f4912f0e7524ca2f70e6377a2ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Ground 1.prefab using Guid(b535f4912f0e7524ca2f70e6377a2ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf4b7106a56896354fc7cb3b133a4b17') in 0.778220 seconds 
-  Import took 0.861892 seconds .
+  Time since last request: 24.729081 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/building_base_a.FBX
+  artifactKey: Guid(d0df16f92c0bef94a80314539b15eab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/building_base_a.FBX using Guid(d0df16f92c0bef94a80314539b15eab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb745ae4886ff470e74785da49f4b9c') in 0.210937 seconds 
+  Import took 0.217661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_octagon.FBX
+  artifactKey: Guid(d7668ad5f64a7ed4683c61ca91f3a439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_octagon.FBX using Guid(d7668ad5f64a7ed4683c61ca91f3a439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6793636e4e02f82bea03bed7251d07b') in 0.027013 seconds 
+  Import took 0.032231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_c.FBX
+  artifactKey: Guid(9906240cad1ee95419939f4697357d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_c.FBX using Guid(9906240cad1ee95419939f4697357d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63deced13d7ffead9a41b926072dfa09') in 0.032012 seconds 
+  Import took 0.037475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_b.FBX
+  artifactKey: Guid(fd526b87fb5327147ad3b26bb04ec63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_b.FBX using Guid(fd526b87fb5327147ad3b26bb04ec63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fe66f18a1fa48cfb6a2e88ffe32c26') in 0.027749 seconds 
+  Import took 0.032670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_5m.FBX
+  artifactKey: Guid(c6f3987abbd0feb46968e26bb27a6835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_5m.FBX using Guid(c6f3987abbd0feb46968e26bb27a6835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1428c2192256e09a1c51255f795971') in 0.027190 seconds 
+  Import took 0.033305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_corner_b.FBX
+  artifactKey: Guid(23f7df39782ef59468f371bfa6e726d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_corner_b.FBX using Guid(23f7df39782ef59468f371bfa6e726d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd61f336f25cdb3956df4037150f38675') in 0.031380 seconds 
+  Import took 0.036636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_c.FBX
+  artifactKey: Guid(491c667875992c140836eff872599d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_c.FBX using Guid(491c667875992c140836eff872599d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e279235e211e7d687cfe84a4d3670d') in 0.026912 seconds 
+  Import took 0.031916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_incline_uper.FBX
+  artifactKey: Guid(28952de306378314aaa188484ad62067) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_incline_uper.FBX using Guid(28952de306378314aaa188484ad62067) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17fbc9171f2a561e65ea7e85cac49e9') in 0.027999 seconds 
+  Import took 0.032917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_d.FBX
+  artifactKey: Guid(05741e75f73f6774eadbab56684e71a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_d.FBX using Guid(05741e75f73f6774eadbab56684e71a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63071fee520e1525050349869d996cd3') in 0.031212 seconds 
+  Import took 0.036844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_gate_b.FBX
+  artifactKey: Guid(261ac25f752551549bff78e81d317cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_gate_b.FBX using Guid(261ac25f752551549bff78e81d317cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3f3c3a6c10a6e9195cf83a85484046c') in 0.019747 seconds 
+  Import took 0.025218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_round.FBX
+  artifactKey: Guid(3aa8fc45fd385be41b6a3ced702258b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_round.FBX using Guid(3aa8fc45fd385be41b6a3ced702258b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d6de2139e42b951c4548a074ec6ce50') in 0.020907 seconds 
+  Import took 0.026621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_main.FBX
+  artifactKey: Guid(24f209a0059ca684a8147ab8b4f991b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_main.FBX using Guid(24f209a0059ca684a8147ab8b4f991b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11280a12f03be61a51142926d1e4184c') in 0.024009 seconds 
+  Import took 0.031736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_b.FBX
+  artifactKey: Guid(017664d81dfbde34aadace96c203da91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_b.FBX using Guid(017664d81dfbde34aadace96c203da91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f912867e99997c7b21e7a30c8919569f') in 0.024399 seconds 
+  Import took 0.030749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_incline_lower.FBX
+  artifactKey: Guid(0204f868ad22d9f45a5b4b577e99d1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_incline_lower.FBX using Guid(0204f868ad22d9f45a5b4b577e99d1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f681e8d6c01a03e83da51c525811b0e') in 0.018853 seconds 
+  Import took 0.024458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_gate.FBX
+  artifactKey: Guid(53f5c35ca2434cf4ba2f1bc5b0a8384f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_gate.FBX using Guid(53f5c35ca2434cf4ba2f1bc5b0a8384f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7382791d7c773ff7aef9db84ce728e0b') in 0.020180 seconds 
+  Import took 0.025517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_10m.FBX
+  artifactKey: Guid(ad481c03603e6da49b1556aaec196664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_10m.FBX using Guid(ad481c03603e6da49b1556aaec196664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d50ab78204712d27f55abdb082f9351') in 0.019916 seconds 
+  Import took 0.025170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_2,5m.FBX
+  artifactKey: Guid(b2127b9d6c51ab04bbc99c49ad0bb883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_2,5m.FBX using Guid(b2127b9d6c51ab04bbc99c49ad0bb883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a256f681ed5307ddea342a5dbda4c5') in 0.017992 seconds 
+  Import took 0.023304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_15m.FBX
+  artifactKey: Guid(d80e2cb9a00dc204c9d38efaca9285c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_15m.FBX using Guid(d80e2cb9a00dc204c9d38efaca9285c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e481cad71a326540c7226d4784dcf74') in 0.019383 seconds 
+  Import took 0.024759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_gate_a.FBX
+  artifactKey: Guid(ee05a5bc585b53f459ae5c3a598aa081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_gate_a.FBX using Guid(ee05a5bc585b53f459ae5c3a598aa081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '191a6cf83d6a61d9c4b738447127acbc') in 0.020724 seconds 
+  Import took 0.025657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_rectangular.FBX
+  artifactKey: Guid(c5d5cab5fabe2444796202d232b7c886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_tower_rectangular.FBX using Guid(c5d5cab5fabe2444796202d232b7c886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84bcc4a5bb5a36e8c179fe3432668e0') in 0.019789 seconds 
+  Import took 0.025187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_bridge.FBX
+  artifactKey: Guid(3bb9d063a89b65548ad1df3aa1919330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_bridge.FBX using Guid(3bb9d063a89b65548ad1df3aa1919330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd5f44847749051b30454458b3770db') in 0.019198 seconds 
+  Import took 0.025185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_corner.FBX
+  artifactKey: Guid(126fc8376f6b0674f92caf0a07bae1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_corner.FBX using Guid(126fc8376f6b0674f92caf0a07bae1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '403ccf7e7d67f6a3792be1683d2d002a') in 0.019692 seconds 
+  Import took 0.025026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_corner_a.FBX
+  artifactKey: Guid(db20f96f575428e41b67d94a2a1c0fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_corner_a.FBX using Guid(db20f96f575428e41b67d94a2a1c0fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50c1bbec1003c6fd76a488d838981dfa') in 0.017282 seconds 
+  Import took 0.022562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/building_base_b.FBX
+  artifactKey: Guid(9230cbcd68250e145be36c2ffc7eedc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/building_base_b.FBX using Guid(9230cbcd68250e145be36c2ffc7eedc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe4f6e512a4bf98ca388ca630a9f2de') in 0.019417 seconds 
+  Import took 0.025791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_portcullis.FBX
+  artifactKey: Guid(5b1a3fcb4c46b8146b202121f665d06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_portcullis.FBX using Guid(5b1a3fcb4c46b8146b202121f665d06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a925973661eaa665c10816c42913b2c') in 0.019784 seconds 
+  Import took 0.026453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_a.FBX
+  artifactKey: Guid(6576829602d7ea2459ca17fe0547fd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/church_a.FBX using Guid(6576829602d7ea2459ca17fe0547fd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2502eacea5a5f77b150d89344416dc8') in 0.021922 seconds 
+  Import took 0.027552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_a.FBX
+  artifactKey: Guid(84c43d8cd151cb2459d4f84425c40bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_tower_a.FBX using Guid(84c43d8cd151cb2459d4f84425c40bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936a0131fb11d9a3d0cf7225ba164d34') in 0.019761 seconds 
+  Import took 0.024968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_base_a.FBX
+  artifactKey: Guid(743ba2539e9203b4f82a9e024450c48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/citadel_base_a.FBX using Guid(743ba2539e9203b4f82a9e024450c48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504492d8d3b7889df48cb7555b34bf8d') in 0.020675 seconds 
+  Import took 0.025559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_door_1.FBX
+  artifactKey: Guid(71a99689b3357f847a20ce395f70afef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_door_1.FBX using Guid(71a99689b3357f847a20ce395f70afef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031cad52399368327fb6229654149c69') in 0.020028 seconds 
+  Import took 0.026355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_5m_h21m.FBX
+  artifactKey: Guid(a9040f687666f174cbcf96375234bb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/castle_wall_5m_h21m.FBX using Guid(a9040f687666f174cbcf96375234bb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2162d0b73dd0ec474281f9f543bd7afc') in 0.020567 seconds 
+  Import took 0.026271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.056397 seconds.
+  path: Assets/Low Poly Pack - Environment Lite/Models/Bridges/Bridge_1_4.fbx
+  artifactKey: Guid(98012eb183305a941aa5cc13b90386cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Pack - Environment Lite/Models/Bridges/Bridge_1_4.fbx using Guid(98012eb183305a941aa5cc13b90386cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f79a65f8279e37e79aba7a5c2a4c15') in 0.050057 seconds 
+  Import took 0.057029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Low Poly Pack - Environment Lite/Models/Bridges/Bridge_4_2.fbx
+  artifactKey: Guid(5df7984ec7d115e489379d6c5f095d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Pack - Environment Lite/Models/Bridges/Bridge_4_2.fbx using Guid(5df7984ec7d115e489379d6c5f095d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9bea15d9905f2cbf26fee08c8fe279') in 0.038225 seconds 
+  Import took 0.043020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.301204 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Fire.prefab
+  artifactKey: Guid(f584b4d5076829f4799f9d4dcf6de929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Fire.prefab using Guid(f584b4d5076829f4799f9d4dcf6de929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8dede35c4948d807287db523fe4eaa') in 0.069532 seconds 
+  Import took 0.076606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBlock01.prefab
+  artifactKey: Guid(89843090f5c38c24c9500fe9490ba5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBlock01.prefab using Guid(89843090f5c38c24c9500fe9490ba5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a26a7279b6447968b4960d63a46e5b') in 0.016841 seconds 
+  Import took 0.022021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGroundDirt.prefab
+  artifactKey: Guid(13f1670c2e187874784d0f667f9057f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGroundDirt.prefab using Guid(13f1670c2e187874784d0f667f9057f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfccde2d9849d49a6e891e5833ef508e') in 0.015583 seconds 
+  Import took 0.020731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGround02.prefab
+  artifactKey: Guid(5cbae0602ce9acf41a98fda3a353569a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGround02.prefab using Guid(5cbae0602ce9acf41a98fda3a353569a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36bdb8427617875681302f929a3ca0b0') in 0.015610 seconds 
+  Import took 0.020787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBlock02.prefab
+  artifactKey: Guid(3f28852fcfaa2fc4a9956ddd15ba61f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBlock02.prefab using Guid(3f28852fcfaa2fc4a9956ddd15ba61f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9e1949dae0b273ffc65dc6479ed1f77') in 0.019480 seconds 
+  Import took 0.025263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBridgeRegular.prefab
+  artifactKey: Guid(38fa18ea33367784c891567389fdfb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBridgeRegular.prefab using Guid(38fa18ea33367784c891567389fdfb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4947ea67179a1b85b82fa6e55748541a') in 0.019408 seconds 
+  Import took 0.025471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestCrate.prefab
+  artifactKey: Guid(1b5d1a6deebd81e4bba2448d18378844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestCrate.prefab using Guid(1b5d1a6deebd81e4bba2448d18378844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4de86faeee2a2de31ddde036d8adb99') in 0.018497 seconds 
+  Import took 0.024669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterFall.prefab
+  artifactKey: Guid(a27d6e7d56bdc84479be345a168e6c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterFall.prefab using Guid(a27d6e7d56bdc84479be345a168e6c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c12c4720a5190d3be10dc39b482867d') in 0.015296 seconds 
+  Import took 0.020977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGrass02.prefab
+  artifactKey: Guid(4c9f6adf60a275840b716082e3482212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGrass02.prefab using Guid(4c9f6adf60a275840b716082e3482212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '065c6674ce58ab2f090e00f2c7de2c10') in 0.020422 seconds 
+  Import took 0.027709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterQuadPixies.prefab
+  artifactKey: Guid(01551af6657ebea4ba670ee7b8c26600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterQuadPixies.prefab using Guid(01551af6657ebea4ba670ee7b8c26600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bce4d837971f89c0c645b476b6e7ada') in 0.024182 seconds 
+  Import took 0.029888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineShort.prefab
+  artifactKey: Guid(45fe3ec28eac2064d985117cf812ef9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineShort.prefab using Guid(45fe3ec28eac2064d985117cf812ef9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52fe05fe44f6db2c7749e5a4baf44dea') in 0.019111 seconds 
+  Import took 0.024540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBridgeWide.prefab
+  artifactKey: Guid(ba7e7b47e14ac404fbe09194158fbf80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBridgeWide.prefab using Guid(ba7e7b47e14ac404fbe09194158fbf80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11b1c6a819d94687c37768bde0f8644') in 0.019264 seconds 
+  Import took 0.025259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGround01.prefab
+  artifactKey: Guid(1d9cc67243350f643b8c562ed0503c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGround01.prefab using Guid(1d9cc67243350f643b8c562ed0503c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0890eed506cff0c30f32bbc1fda78e') in 0.019015 seconds 
+  Import took 0.024546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterPixiesSolo.prefab
+  artifactKey: Guid(4d1a1b8720d1bc3438a87ab19ed6593a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterPixiesSolo.prefab using Guid(4d1a1b8720d1bc3438a87ab19ed6593a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe2c51859bc3827fa99aa2d3f64a253') in 0.014194 seconds 
+  Import took 0.020487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterQuadSolo.prefab
+  artifactKey: Guid(45a2654ed7e50b945bbbf5ab0a76e645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/WaterQuadSolo.prefab using Guid(45a2654ed7e50b945bbbf5ab0a76e645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbdee61f8c4a97c5cb57e5aff2ba3862') in 0.013107 seconds 
+  Import took 0.019319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeDTall.prefab
+  artifactKey: Guid(eb322b3f7ad50984197dced1b53b11ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeDTall.prefab using Guid(eb322b3f7ad50984197dced1b53b11ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '075a0523f7927cb8891316cd1998dee7') in 0.018769 seconds 
+  Import took 0.024608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBarrel.prefab
+  artifactKey: Guid(31d3a77f906791342bc79acdc84f5218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestBarrel.prefab using Guid(31d3a77f906791342bc79acdc84f5218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39873b01e2e5f228fb651b8dfdaad439') in 0.019148 seconds 
+  Import took 0.025336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGrass01.prefab
+  artifactKey: Guid(6c919ec1c1e88a94c95afc28b198b9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestGrass01.prefab using Guid(6c919ec1c1e88a94c95afc28b198b9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d91994a3e5f98ecca1acf095cf7d81') in 0.018959 seconds 
+  Import took 0.024285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/RiverQuadCombined.prefab
+  artifactKey: Guid(7fe364418169a2e4f9dd663ecb4d5311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/RiverQuadCombined.prefab using Guid(7fe364418169a2e4f9dd663ecb4d5311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4b8d6feb90d5864782b44a8bda46c9') in 0.022690 seconds 
+  Import took 0.029206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Smoke.prefab
+  artifactKey: Guid(bc42e33df8ad9d14cba646735d12f85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Smoke.prefab using Guid(bc42e33df8ad9d14cba646735d12f85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c0568f26d28701c5b4579221ab13c7') in 0.014430 seconds 
+  Import took 0.019589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/RiverQuadSolo.prefab
+  artifactKey: Guid(358cf835a1cf6dc44be7c394778cb1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/RiverQuadSolo.prefab using Guid(358cf835a1cf6dc44be7c394778cb1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f6896a8414fec7372403d0dcf7d9fd') in 0.013562 seconds 
+  Import took 0.020800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeDShort.prefab
+  artifactKey: Guid(018e38b65bc9fb048a9c4271cdad70c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeDShort.prefab using Guid(018e38b65bc9fb048a9c4271cdad70c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc3f03ca70394a8245de2c26fe4d40b') in 0.018575 seconds 
+  Import took 0.024961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineShort2.prefab
+  artifactKey: Guid(7ad57e94574375240b181f8584be81c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineShort2.prefab using Guid(7ad57e94574375240b181f8584be81c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de77a1e8ed766e7d3c2ea097929954dd') in 0.015960 seconds 
+  Import took 0.021997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestCastleWindow.prefab
+  artifactKey: Guid(fb44b6ca36ace2c46b5dd7d4bf32e371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestCastleWindow.prefab using Guid(fb44b6ca36ace2c46b5dd7d4bf32e371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '099f1e0214884340a358359b6e9a0a24') in 0.018665 seconds 
+  Import took 0.025273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeAppleTall.prefab
+  artifactKey: Guid(7747cd3716304194fb26aa4e29900eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreeAppleTall.prefab using Guid(7747cd3716304194fb26aa4e29900eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24110c6c025ff2c62580028d46c1719d') in 0.019550 seconds 
+  Import took 0.025711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineTall2.prefab
+  artifactKey: Guid(bb8b831afcc06c64f9df984b2ccb8642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineTall2.prefab using Guid(bb8b831afcc06c64f9df984b2ccb8642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd510484a8b056d8afc81e9f9436f74') in 0.018557 seconds 
+  Import took 0.023922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineTall.prefab
+  artifactKey: Guid(e150e8680dcf9784a89843e55668ad0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestTreePineTall.prefab using Guid(e150e8680dcf9784a89843e55668ad0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ce411c32f856d2d2f71fb54ce92ec6') in 0.014946 seconds 
+  Import took 0.020821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestLadder.prefab
+  artifactKey: Guid(8d102e899c856934a9f58af9c7508d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/ForestLadder.prefab using Guid(8d102e899c856934a9f58af9c7508d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2019f68273f186c12c72b2907360e083') in 0.019072 seconds 
+  Import took 0.025638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.203742 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestBanner_Blue.prefab
+  artifactKey: Guid(0073cc7a3535b5648b67fc6df3289f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestBanner_Blue.prefab using Guid(0073cc7a3535b5648b67fc6df3289f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8017fd6d4204d88e7571408a16cc0093') in 0.062850 seconds 
+  Import took 0.069441 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000305 seconds.
-  path: Assets/Soilder Prefabs/Enemy (7).prefab
-  artifactKey: Guid(2ffc9bca980299c46bea7977b997fa41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Soilder Prefabs/Enemy (7).prefab using Guid(2ffc9bca980299c46bea7977b997fa41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1276ecb54c58c68322f3ffbd3602acd9') in 0.231354 seconds 
-  Import took 0.240011 seconds .
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastle_Blue.prefab
+  artifactKey: Guid(72b5f3ccc49ab5c4fa326915f1aabbd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastle_Blue.prefab using Guid(72b5f3ccc49ab5c4fa326915f1aabbd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af376ebbdf96797bffd54552bfcdfa00') in 0.043695 seconds 
+  Import took 0.049993 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.628225 seconds.
-  path: Assets/Scenes/Emirhan.unity
-  artifactKey: Guid(5e7ac9fe772308a4ab188e07c0d74f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Emirhan.unity using Guid(5e7ac9fe772308a4ab188e07c0d74f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ec76901a7ac5b074b6e2d3712deacd') in 0.004253 seconds 
-  Import took 0.010013 seconds .
+  Time since last request: 0.000273 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestBrazzierBlue.prefab
+  artifactKey: Guid(a29d452ee24577e46b40bd1b5396acc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestBrazzierBlue.prefab using Guid(a29d452ee24577e46b40bd1b5396acc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b0f4b9b21ae358261ea3732b6480b7') in 0.022715 seconds 
+  Import took 0.027990 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.014011 seconds.
-  path: Assets/Scenes/ForColony.unity
-  artifactKey: Guid(2c5fdb4e36dd9cf45a82a21fdd3153f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ForColony.unity using Guid(2c5fdb4e36dd9cf45a82a21fdd3153f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc2c258d32a56e22b657dec5718c810') in 0.006577 seconds 
-  Import took 0.013512 seconds .
+  Time since last request: 0.000262 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCatapult_Blue.prefab
+  artifactKey: Guid(43739d3c57ae2ba4cbe919f44dba1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCatapult_Blue.prefab using Guid(43739d3c57ae2ba4cbe919f44dba1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3574a0091e22415d766cae7b68df9b09') in 0.029832 seconds 
+  Import took 0.036120 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003667 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.136 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1136ms)
-		BeginReloadAssembly (121ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (966ms)
-			LoadAssemblies (76ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (288ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (429ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (322ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.90 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3778 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 226.0 MB.
-System memory in use after: 226.3 MB.
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorL_Blue.prefab
+  artifactKey: Guid(dcbdac72f171da241abd88df31a61142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorL_Blue.prefab using Guid(dcbdac72f171da241abd88df31a61142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eecfebe0bce62c5360c9d467a2263ff2') in 0.015011 seconds 
+  Import took 0.020205 seconds .
 
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 4435.
-Total: 3.665300 ms (FindLiveObjects: 0.245100 ms CreateObjectMapping: 0.163000 ms MarkObjects: 3.236500 ms  DeleteObjects: 0.017200 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestTower_Blue.prefab
+  artifactKey: Guid(1cace56ba420dd64c9171c422c8e9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestTower_Blue.prefab using Guid(1cace56ba420dd64c9171c422c8e9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730b8add96cd010aceda08b369e25c85') in 0.024254 seconds 
+  Import took 0.031346 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorR_Blue.prefab
+  artifactKey: Guid(5032a611cb4fea140b303ed588caeb66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorR_Blue.prefab using Guid(5032a611cb4fea140b303ed588caeb66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff6043ec8dd24a9d53d937b97538625') in 0.017349 seconds 
+  Import took 0.023581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestFlag_Blue.prefab
+  artifactKey: Guid(75836cac8af52414c85343289a17535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Blue/ForestFlag_Blue.prefab using Guid(75836cac8af52414c85343289a17535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1726ca9bcc45a10b1ad79b6e9dac8310') in 0.016486 seconds 
+  Import took 0.022831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.596334 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestBanner_Red.prefab
+  artifactKey: Guid(6ed1034f9492a344ebd1650ecbc20030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestBanner_Red.prefab using Guid(6ed1034f9492a344ebd1650ecbc20030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f01411e84179cec62968150df221046') in 0.034563 seconds 
+  Import took 0.041338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastleDoorL_Red.prefab
+  artifactKey: Guid(c44928e7737eb974695c038f3bff9fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastleDoorL_Red.prefab using Guid(c44928e7737eb974695c038f3bff9fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87e6ac7301349b6a50dc3deb8302ab6') in 0.017472 seconds 
+  Import took 0.023847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestFlag_Red.prefab
+  artifactKey: Guid(86646208869fa9149bdeb0379efee8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestFlag_Red.prefab using Guid(86646208869fa9149bdeb0379efee8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d88abfaa46d74f0ccde24ffe5db4871') in 0.016910 seconds 
+  Import took 0.022700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestBrazzierRed.prefab
+  artifactKey: Guid(b8cd47ec0ed55ef4a81e264386f6aee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestBrazzierRed.prefab using Guid(b8cd47ec0ed55ef4a81e264386f6aee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b439d84e2d8eb34705877deccf550f') in 0.017273 seconds 
+  Import took 0.025153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastle_Red.prefab
+  artifactKey: Guid(fb6e45a6010fdae4b91b4ccbac21425e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastle_Red.prefab using Guid(fb6e45a6010fdae4b91b4ccbac21425e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d5fe6153a6823ad4237678657d8aeb') in 0.022690 seconds 
+  Import took 0.029097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestTower_Red.prefab
+  artifactKey: Guid(e7775214e5f7b1f469df26ce7b30e009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestTower_Red.prefab using Guid(e7775214e5f7b1f469df26ce7b30e009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923cf9fb9cbbfe47b450a3f95f27fbff') in 0.020148 seconds 
+  Import took 0.026507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCatapult_Red.prefab
+  artifactKey: Guid(1c646272db9f13f40a1cc8d87b080552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCatapult_Red.prefab using Guid(1c646272db9f13f40a1cc8d87b080552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c608cf0e56b6c9795f4f4cb16d20f7') in 0.022426 seconds 
+  Import took 0.028780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastleDoorR_Red.prefab
+  artifactKey: Guid(8460a569480840d449cb9dd635c1b06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky Forest Pack/Forest Pack/Prefabs/Prefabs_Red/ForestCastleDoorR_Red.prefab using Guid(8460a569480840d449cb9dd635c1b06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9f9aa53004c2194a1ea8bc3722b117') in 0.015015 seconds 
+  Import took 0.020870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.853185 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertGround01.prefab
+  artifactKey: Guid(6a55b6648736bc442a19fda4d25e9da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertGround01.prefab using Guid(6a55b6648736bc442a19fda4d25e9da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3eeae8bdcb8cdf15b1629c6101f71b2') in 0.026110 seconds 
+  Import took 0.031997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertGround02.prefab
+  artifactKey: Guid(a6c03c328dc9625488915090169ca61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertGround02.prefab using Guid(a6c03c328dc9625488915090169ca61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62c7025033818998e4455df58ddda221') in 0.018661 seconds 
+  Import took 0.025462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.235185 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBannerHolder_Red.prefab
+  artifactKey: Guid(3ec7f26ddb4632f4596e058518efc89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBannerHolder_Red.prefab using Guid(3ec7f26ddb4632f4596e058518efc89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12aac44577339e533737121d6c0051b0') in 0.044041 seconds 
+  Import took 0.050827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertCastle_Red.prefab
+  artifactKey: Guid(4fbe211c78217ba4787eeda865ce00e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertCastle_Red.prefab using Guid(4fbe211c78217ba4787eeda865ce00e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '836bc9b5c18d0ec113ec15b10a4f16ff') in 0.039982 seconds 
+  Import took 0.045109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertTower_Red.prefab
+  artifactKey: Guid(1e33baa745acb3240be70da0df7523c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertTower_Red.prefab using Guid(1e33baa745acb3240be70da0df7523c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c54e68175eff27246e68142f6b1fc1') in 0.035054 seconds 
+  Import took 0.040912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertDoorRight_Red.prefab
+  artifactKey: Guid(dce79b6a9f4be444dbdd7c0045c6f2fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertDoorRight_Red.prefab using Guid(dce79b6a9f4be444dbdd7c0045c6f2fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4d101d8fafb9c0a329bfab291274993') in 0.014748 seconds 
+  Import took 0.020115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertDoorLeft_Red.prefab
+  artifactKey: Guid(20654175d21ca44419d11ba4dda0c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertDoorLeft_Red.prefab using Guid(20654175d21ca44419d11ba4dda0c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2cdc4cec899806c5b29452d0706848') in 0.016439 seconds 
+  Import took 0.022284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertFlag_Red.prefab
+  artifactKey: Guid(ccac12a2e6b66794abbf6271a4045ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertFlag_Red.prefab using Guid(ccac12a2e6b66794abbf6271a4045ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66199a827f13feee18720b5f0b61eaa7') in 0.015886 seconds 
+  Import took 0.023088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBrazzier_Red.prefab
+  artifactKey: Guid(6ff5b40e1b370ce45aa41f0f2596643a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBrazzier_Red.prefab using Guid(6ff5b40e1b370ce45aa41f0f2596643a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526ba0ac8e0dc69792949e0a4b2719e4') in 0.030295 seconds 
+  Import took 0.036325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.377318 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BrazBlue.prefab
+  artifactKey: Guid(a5a9ac49e2becd846ba2051cd984b584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BrazBlue.prefab using Guid(a5a9ac49e2becd846ba2051cd984b584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08cc43bd98ff8e5020c31afe72317b4') in 0.037245 seconds 
+  Import took 0.042972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/CastleBlueD.prefab
+  artifactKey: Guid(340abaf0ec65aa642afbe22e18b0e31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/CastleBlueD.prefab using Guid(340abaf0ec65aa642afbe22e18b0e31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7021e30fbc942e61c38476f24f0267d') in 0.265271 seconds 
+  Import took 0.270641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/Pillar01Blue.prefab
+  artifactKey: Guid(a6203d28eee940e46805d17adbb401e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/Pillar01Blue.prefab using Guid(a6203d28eee940e46805d17adbb401e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ee87cfad975861df548bc9c207c2de') in 0.024483 seconds 
+  Import took 0.030950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.316175 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockS02D.prefab
+  artifactKey: Guid(da069710315859f45b006a49bab26fe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockS02D.prefab using Guid(da069710315859f45b006a49bab26fe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77155ee347c49eb67332d643e538fad') in 0.017863 seconds 
+  Import took 0.024682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockSpike01D.prefab
+  artifactKey: Guid(cdf0efc2fc33b6f4588aeb36dfc0dfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockSpike01D.prefab using Guid(cdf0efc2fc33b6f4588aeb36dfc0dfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627521428c689d698e7c993750123d25') in 0.016501 seconds 
+  Import took 0.021757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/CageD.prefab
+  artifactKey: Guid(ee1aeba65983cc34788500f726965fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/CageD.prefab using Guid(ee1aeba65983cc34788500f726965fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e73b42cf0efe69ec3eff55ba944aa67e') in 0.017522 seconds 
+  Import took 0.022953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainTopD.prefab
+  artifactKey: Guid(31d9cdb6fbade944b84a4a3fb237d7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainTopD.prefab using Guid(31d9cdb6fbade944b84a4a3fb237d7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea30708786ab947f5b55ea435f3d25b') in 0.016274 seconds 
+  Import took 0.022492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerD.prefab
+  artifactKey: Guid(c428cce7819544e43825d891347548d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerD.prefab using Guid(c428cce7819544e43825d891347548d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e304268b0cda5546c751c92b68d3cb27') in 0.018547 seconds 
+  Import took 0.023969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Window.prefab
+  artifactKey: Guid(1e79dbc17f432da4bbadfe8f90200c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Window.prefab using Guid(1e79dbc17f432da4bbadfe8f90200c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83ee1c57fb0a8acbf47ddc52cfce0e56') in 0.014280 seconds 
+  Import took 0.020934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Castle.prefab
+  artifactKey: Guid(88fd4eb49c31e344aace35150007757c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Castle.prefab using Guid(88fd4eb49c31e344aace35150007757c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d433e38aaa1220397709e649ca7e0d') in 0.016260 seconds 
+  Import took 0.022144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Floor01D.prefab
+  artifactKey: Guid(e158d3f5328e1fe4196ecc5d8eebcee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Floor01D.prefab using Guid(e158d3f5328e1fe4196ecc5d8eebcee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd31b7522a5e3ff800a138237c21acd') in 0.019479 seconds 
+  Import took 0.025248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerWindows.prefab
+  artifactKey: Guid(a735d73378e828641b3e7441c8fcfa09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerWindows.prefab using Guid(a735d73378e828641b3e7441c8fcfa09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a909357dc58472efee40a96d02f37610') in 0.014904 seconds 
+  Import took 0.021031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/SmokeD.prefab
+  artifactKey: Guid(170b52e0ef9a9f744985ad20e1ae2b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/SmokeD.prefab using Guid(170b52e0ef9a9f744985ad20e1ae2b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23245939d742c47ac611a7da7c6e6394') in 0.014482 seconds 
+  Import took 0.020120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/SkullOpenD.prefab
+  artifactKey: Guid(ff9a53b324f9aa54a88bbffc8aa95b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/SkullOpenD.prefab using Guid(ff9a53b324f9aa54a88bbffc8aa95b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f89d1f03f96ee612b3fc19f92bb6fc8') in 0.021459 seconds 
+  Import took 0.027533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/CoinD.prefab
+  artifactKey: Guid(de24e9dac65bddc40bc8f81e2245a72c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/CoinD.prefab using Guid(de24e9dac65bddc40bc8f81e2245a72c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6012e2a699e29bba6b3cf92679597b0c') in 0.019104 seconds 
+  Import took 0.025321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Floor02D.prefab
+  artifactKey: Guid(505ad28b849b40247ac593fc3686dd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Floor02D.prefab using Guid(505ad28b849b40247ac593fc3686dd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9d61ba734dfa3b9313c9964070943c') in 0.019346 seconds 
+  Import took 0.027380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/FireD.prefab
+  artifactKey: Guid(ac4da5b092d0c154cbf0cf26e7506c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/FireD.prefab using Guid(ac4da5b092d0c154cbf0cf26e7506c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b86a3b8772d596cd7ee758377f27949e') in 0.014132 seconds 
+  Import took 0.019877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestCompleteD.prefab
+  artifactKey: Guid(a503d6f3d2ee47148a09639f019b31c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestCompleteD.prefab using Guid(a503d6f3d2ee47148a09639f019b31c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866ff9e719de90d003bc19c28b0e33ba') in 0.029850 seconds 
+  Import took 0.035865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainD.prefab
+  artifactKey: Guid(64825d6cefec54e4cb33751b82e00e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainD.prefab using Guid(64825d6cefec54e4cb33751b82e00e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292984180ade1a3b84456cc8484ad8c3') in 0.018966 seconds 
+  Import took 0.025287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/GrateTrapD.prefab
+  artifactKey: Guid(e93ca683b6c4378479c82039c346df54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/GrateTrapD.prefab using Guid(e93ca683b6c4378479c82039c346df54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31413be5e72794f7df88fb83c2e34169') in 0.017795 seconds 
+  Import took 0.023764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestBD.prefab
+  artifactKey: Guid(70b87e68ac8cccb4ca8e8c617b21ff9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestBD.prefab using Guid(70b87e68ac8cccb4ca8e8c617b21ff9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa806c227d222ab05d65b1759a7539ff') in 0.015068 seconds 
+  Import took 0.020934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestTD.prefab
+  artifactKey: Guid(4e9a09516d6185f4eb1ba53020dedffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChestTD.prefab using Guid(4e9a09516d6185f4eb1ba53020dedffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e26af6ae2635335c89ba5b61ab3898') in 0.015690 seconds 
+  Import took 0.022318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Skull0ClosedD.prefab
+  artifactKey: Guid(07428cfeb07f41144b70e1d7145d2ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Skull0ClosedD.prefab using Guid(07428cfeb07f41144b70e1d7145d2ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c41c3133c34f8e25d70705fc2738441') in 0.019823 seconds 
+  Import took 0.025167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockSpike02D.prefab
+  artifactKey: Guid(ebd40ddc8b7a7d04ca07ec48b1c54d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockSpike02D.prefab using Guid(ebd40ddc8b7a7d04ca07ec48b1c54d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db4fbad77d05f163d60b9c0c111db79') in 0.018916 seconds 
+  Import took 0.024687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/StatueD.prefab
+  artifactKey: Guid(6510b78b29817ba419712695865372be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/StatueD.prefab using Guid(6510b78b29817ba419712695865372be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad77b55af63ae8f9400635e77867595') in 0.019524 seconds 
+  Import took 0.025552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/CageCompleteD.prefab
+  artifactKey: Guid(3bfc6ea068c5de043b3245865ec6ed69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/CageCompleteD.prefab using Guid(3bfc6ea068c5de043b3245865ec6ed69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca01156466624886b5f30982198a363') in 0.020338 seconds 
+  Import took 0.026221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/WaterQuadD.prefab
+  artifactKey: Guid(d57e280f4c590714887f370307920c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/WaterQuadD.prefab using Guid(d57e280f4c590714887f370307920c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32df4eab4b91670455ac629cc7ff0abf') in 0.023707 seconds 
+  Import took 0.029748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/GrateD.prefab
+  artifactKey: Guid(8a61b0f9c401a88499c56369f7d4b194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/GrateD.prefab using Guid(8a61b0f9c401a88499c56369f7d4b194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f88b57a46a98b703a536df387a9e6b1f') in 0.017919 seconds 
+  Import took 0.023510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.717260 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/BrazRedD.prefab
+  artifactKey: Guid(d793708be4ee5be40af341a5bdfc90dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/BrazRedD.prefab using Guid(d793708be4ee5be40af341a5bdfc90dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c99b598fa6d9aa59bc4ab6b797cc13') in 0.017010 seconds 
+  Import took 0.023594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/CastleRedD.prefab
+  artifactKey: Guid(0007f0f806b653e4883017758b5175ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/CastleRedD.prefab using Guid(0007f0f806b653e4883017758b5175ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6a0ea1fd291079aab763db1c003727') in 0.022095 seconds 
+  Import took 0.029250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/Pillar01RedD.prefab
+  artifactKey: Guid(c88ac593385d6cd4999b920f228a573f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/Pillar01RedD.prefab using Guid(c88ac593385d6cd4999b920f228a573f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b27be12b404d1896635ed1c4d9b8369d') in 0.019518 seconds 
+  Import took 0.026551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.854397 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorLRedD.prefab
+  artifactKey: Guid(7d5af51378758d345a13010e6df7aa69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorLRedD.prefab using Guid(7d5af51378758d345a13010e6df7aa69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67aa460ab5b64ee84a7eb523edafcd82') in 0.018618 seconds 
+  Import took 0.025740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorMiddle.prefab
+  artifactKey: Guid(dbfba6a99eb6ed840bc98ad7cf91f501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorMiddle.prefab using Guid(dbfba6a99eb6ed840bc98ad7cf91f501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4763d401f2da2b5699511f70a1b1e106') in 0.017875 seconds 
+  Import took 0.023349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorRRedD.prefab
+  artifactKey: Guid(4e093d63ec0bef941a7bb53173169213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/RedPieces/DoorRRedD.prefab using Guid(4e093d63ec0bef941a7bb53173169213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07236b59558bbed7fd43f69431d7c396') in 0.014395 seconds 
+  Import took 0.021762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.610365 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpearD.prefab
+  artifactKey: Guid(52885593799113a428a7ed330ad57782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpearD.prefab using Guid(52885593799113a428a7ed330ad57782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df2e028aceb1c37a9bf0d9eea31eb2a3') in 0.018905 seconds 
+  Import took 0.025678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorLD.prefab
+  artifactKey: Guid(a5dcf289ffc9ef146a3e0fe6e522ffcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorLD.prefab using Guid(a5dcf289ffc9ef146a3e0fe6e522ffcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c671e94d79d61d3f28a1014b894c2da') in 0.021693 seconds 
+  Import took 0.029583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpikeTrapD.prefab
+  artifactKey: Guid(b58fdf950bf832348af4bfaa2fd9f743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpikeTrapD.prefab using Guid(b58fdf950bf832348af4bfaa2fd9f743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7329218fe45bf0375fe93fe16a6d926') in 0.025429 seconds 
+  Import took 0.031850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoor.prefab
+  artifactKey: Guid(a1644dd8880d0594d970514153034e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoor.prefab using Guid(a1644dd8880d0594d970514153034e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f2488c429a0cac8d4fe7716cb79096') in 0.027128 seconds 
+  Import took 0.033597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SwingTrapD.prefab
+  artifactKey: Guid(ea052a89f68cccb4bb2bac3cdd6ac57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SwingTrapD.prefab using Guid(ea052a89f68cccb4bb2bac3cdd6ac57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4442cd7c5e624b044bdda217928915cc') in 0.031112 seconds 
+  Import took 0.036880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorRD.prefab
+  artifactKey: Guid(7dcc9bd984107894e833a54743b41a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorRD.prefab using Guid(7dcc9bd984107894e833a54743b41a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b0351ffba36f21156df33df69bce98') in 0.015500 seconds 
+  Import took 0.021610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.657519 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorLBlue.prefab
+  artifactKey: Guid(a18162285d90d504392dd8ce42dd07c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorLBlue.prefab using Guid(a18162285d90d504392dd8ce42dd07c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1deb21cad8f9217277a5081851fdfec') in 0.018437 seconds 
+  Import took 0.025640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorMiddle.prefab
+  artifactKey: Guid(3dbf4097b6f1abf4b9589c289515e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorMiddle.prefab using Guid(3dbf4097b6f1abf4b9589c289515e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd21d78f07832c0c207f8b5603f9ff28') in 0.015704 seconds 
+  Import took 0.022090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorRBlue.prefab
+  artifactKey: Guid(096d234c71c80cf4e9fc57c2fad4a9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BluePieces/DoorRBlue.prefab using Guid(096d234c71c80cf4e9fc57c2fad4a9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7459a00e185bba47deaadd8adb4c315b') in 0.016060 seconds 
+  Import took 0.022650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.842185 seconds.
+  path: Assets/Character Assets/DogKnight/promotion.jpg
+  artifactKey: Guid(f27d7537e17799e47be587331b9ef52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/DogKnight/promotion.jpg using Guid(f27d7537e17799e47be587331b9ef52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d11e1c0425f680f47360e5cf79006c9') in 0.074734 seconds 
+  Import took 0.082299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.869535 seconds.
+  path: Assets/Character Assets/RPGHero/PromotionImage.jpg
+  artifactKey: Guid(5cb6c6af00f7e294baeda13ac52fb671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/RPGHero/PromotionImage.jpg using Guid(5cb6c6af00f7e294baeda13ac52fb671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c925a9455a080e9fea7b91e5b7678bea') in 0.037561 seconds 
+  Import took 0.045526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.586230 seconds.
+  path: Assets/Character Assets/Skeleton - Animated and Low Polygon/skeleton_animated.FBX
+  artifactKey: Guid(39d03f82786b57d41af8bd27bce84402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Skeleton - Animated and Low Polygon/skeleton_animated.FBX using Guid(39d03f82786b57d41af8bd27bce84402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eee1f0c33e4bb96cfbc5e11040438391') in 0.121258 seconds 
+  Import took 0.129891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Character Assets/Skeleton - Animated and Low Polygon/skeleton_static.FBX
+  artifactKey: Guid(c375a17f5f510d44c839b216989e242d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Skeleton - Animated and Low Polygon/skeleton_static.FBX using Guid(c375a17f5f510d44c839b216989e242d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a2570073adef7d4b2c3ebfdfc33cd7') in 0.049003 seconds 
+  Import took 0.054955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.302139 seconds.
+  path: Assets/Character Assets/Toon_RTS_demo/Toon_RTS_Units.jpg
+  artifactKey: Guid(f2b90d8923375fe40a966ca9dffbce90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Toon_RTS_demo/Toon_RTS_Units.jpg using Guid(f2b90d8923375fe40a966ca9dffbce90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa3863f6e8d3fb4fa0ec76659af2f15') in 0.036143 seconds 
+  Import took 0.043101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.343993 seconds.
+  path: Assets/Character Assets/Trail Material/fade-circle.png
+  artifactKey: Guid(980ad1224062f7949924663c972c99b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Trail Material/fade-circle.png using Guid(980ad1224062f7949924663c972c99b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0ec9594792b131be05a78b983540b2') in 0.028104 seconds 
+  Import took 0.035218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Character Assets/Trail Material/ParticleVertexColor.shadersubgraph
+  artifactKey: Guid(0468e1b4ae51d104db7891e4dc0b9c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Trail Material/ParticleVertexColor.shadersubgraph using Guid(0468e1b4ae51d104db7891e4dc0b9c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '251a2353ac1a7134ebc7f2d30ac50586') in 0.012470 seconds 
+  Import took 0.018539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Character Assets/Trail Material/SoftParticles.shadersubgraph
+  artifactKey: Guid(091523b206069ca4790aae562dc90ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Trail Material/SoftParticles.shadersubgraph using Guid(091523b206069ca4790aae562dc90ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c3cf3a298b6f25263af0b505bdac386') in 0.009427 seconds 
+  Import took 0.015252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Character Assets/Trail Material/Mat-Trail.mat
+  artifactKey: Guid(effc8e4f713145d42b8d6adf35e858f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Trail Material/Mat-Trail.mat using Guid(effc8e4f713145d42b8d6adf35e858f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176b3d18594086d83395287f0ba1fa40') in 0.193637 seconds 
+  Import took 0.200147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Character Assets/Trail Material/SmokeyTrail02.jpg
+  artifactKey: Guid(6af6de1404a9929459b5607441f1f415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character Assets/Trail Material/SmokeyTrail02.jpg using Guid(6af6de1404a9929459b5607441f1f415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ae07ce19b6e46b3287829599f0793c') in 0.021878 seconds 
+  Import took 0.027885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.866738 seconds.
+  path: Assets/GameFolder/Prefabs/ColonyResource/RealResources/FoodForTree.prefab
+  artifactKey: Guid(8db7d3c877b2ded4d81a277d433d80e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameFolder/Prefabs/ColonyResource/RealResources/FoodForTree.prefab using Guid(8db7d3c877b2ded4d81a277d433d80e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfed9c19e2e74d7bb2a2392c48056e0b') in 0.078849 seconds 
+  Import took 0.085901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/GameFolder/Prefabs/ColonyResource/RealResources/WoodForTree.prefab
+  artifactKey: Guid(7fa2b0a822811a94c9fd4b58311096a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameFolder/Prefabs/ColonyResource/RealResources/WoodForTree.prefab using Guid(7fa2b0a822811a94c9fd4b58311096a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ece519e6e0595143fd00c798f384f49') in 0.048453 seconds 
+  Import took 0.053869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.080185 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Branch 1.prefab
+  artifactKey: Guid(fa9faab0d3696534c8c0c5dc263af4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Branch 1.prefab using Guid(fa9faab0d3696534c8c0c5dc263af4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab27d54dad41b9dcfa2e64c8816136e') in 0.019391 seconds 
+  Import took 0.027028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bridge.prefab
+  artifactKey: Guid(1d1058df629c5c4408231811c948d198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bridge.prefab using Guid(1d1058df629c5c4408231811c948d198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be2e02d9cbfc7f1c26b0a80ce05929e') in 0.016237 seconds 
+  Import took 0.022956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Coin.prefab
+  artifactKey: Guid(a09eac4f92cd6af48ba81019c527810b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Coin.prefab using Guid(a09eac4f92cd6af48ba81019c527810b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed04e027ed5e41236ed522b8647086d') in 0.019989 seconds 
+  Import took 0.026711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Branch 2.prefab
+  artifactKey: Guid(60d6627e5fcd645459ca9a892e1f1a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Branch 2.prefab using Guid(60d6627e5fcd645459ca9a892e1f1a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '019b90036d6885533919571a95127657') in 0.015125 seconds 
+  Import took 0.021466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Grass.prefab
+  artifactKey: Guid(32b4c487e0aab85409b19e77ac880e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Grass.prefab using Guid(32b4c487e0aab85409b19e77ac880e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f86aea170350d3e0f9a54c50c9b654') in 0.023515 seconds 
+  Import took 0.030042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bush 1.prefab
+  artifactKey: Guid(2026d0eebc61d0d498d45028aa3f375d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bush 1.prefab using Guid(2026d0eebc61d0d498d45028aa3f375d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff22eb2d95328ffd1a27786c11623948') in 0.024197 seconds 
+  Import took 0.030501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Fence.prefab
+  artifactKey: Guid(e77e44f6234bf34469e022632c99062f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Fence.prefab using Guid(e77e44f6234bf34469e022632c99062f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d4d27d25527e174fd9e34e492d7f46') in 0.029316 seconds 
+  Import took 0.034725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bush 2.prefab
+  artifactKey: Guid(0b75adaa575133e43b432bdba63aa813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HYPEPOLY - Isometric Tiles Standart Lite/Prefabs/Material 1/Bush 2.prefab using Guid(0b75adaa575133e43b432bdba63aa813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98b1fe1fcaa92f3a7938c74a7358c935') in 0.026110 seconds 
+  Import took 0.031772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 195.741473 seconds.
+  path: Assets/GameFolder/Prefabs/ColonyResource/StoneMine.prefab
+  artifactKey: Guid(9e8154936e27b60439438b81d2c2ec88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameFolder/Prefabs/ColonyResource/StoneMine.prefab using Guid(9e8154936e27b60439438b81d2c2ec88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cee499c77d49d4ed430d22632f8df1b') in 0.027268 seconds 
+  Import took 0.034708 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

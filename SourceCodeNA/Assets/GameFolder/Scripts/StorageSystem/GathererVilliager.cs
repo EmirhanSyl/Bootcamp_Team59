@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI.MonsterBehavior;
 
 public class GathererVilliager : MonoBehaviour
 {
 
     string _tag;
-    NavMeshAgent _navMeshAgent;
+    //NavMeshAgent _navMeshAgent;
     GameObject _storage;
     GameObject _player;
 
@@ -16,7 +16,7 @@ public class GathererVilliager : MonoBehaviour
 
     private void Start()
     {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
+        //_navMeshAgent = GetComponent<NavMeshAgent>();
         _storage = GameObject.FindGameObjectWithTag("Storage");
         _player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -30,12 +30,13 @@ public class GathererVilliager : MonoBehaviour
     {
         if (_tag != "Villiager") //tag villiager de?ilse bi kaynak ta??yodur, depoya gitmelidir
         {
-            _navMeshAgent.SetDestination(_storage.transform.position);
+            //_navMeshAgent.SetDestination(_storage.transform.position);
+            GetComponent<EnemyBehaviours>().protectedResource = _storage;
         }
     }
 
-    public void GoToTheResource()
-    {
-        _navMeshAgent.SetDestination(_player.transform.position);
-    }
+    //public void GoToTheResource()
+    //{
+    //    _navMeshAgent.SetDestination(_player.transform.position);
+    //}
 }

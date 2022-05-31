@@ -8,18 +8,18 @@ public class NotPlayerController : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKey(KeyCode.X))
-        {
-            _villiagers = GameObject.FindGameObjectsWithTag("Villiager");
-            _gathererVilliagers = new GathererVilliager[_villiagers.Length];
+        //if (Input.GetKey(KeyCode.X))
+        //{
+        //    _villiagers = GameObject.FindGameObjectsWithTag("Villiager");
+        //    _gathererVilliagers = new GathererVilliager[_villiagers.Length];
 
-            for (int i = 0; i < _villiagers.Length; i++)
-            {
-                _gathererVilliagers[i] = _villiagers[i].GetComponent<GathererVilliager>();
+        //    for (int i = 0; i < _villiagers.Length; i++)
+        //    {
+        //        _gathererVilliagers[i] = _villiagers[i].GetComponent<GathererVilliager>();
 
-                _gathererVilliagers[i].GoToTheResource();
-            }
-        }
+        //        _gathererVilliagers[i].GoToTheResource();
+        //    }
+        //}
 
         if (Input.GetKeyDown(KeyCode.M))
         {
