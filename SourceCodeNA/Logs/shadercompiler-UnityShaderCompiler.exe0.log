@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
 Base path: 'C:/Program Files/Unity 2020.3.25f1/Editor/Data', plugins path 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/PlaybackEngines'
+=======
+Base path: 'E:/Unity/2020.3.25f1/Editor/Data', plugins path 'E:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines'
+>>>>>>> Stashed changes
 Cmd: initializeCompiler
 
