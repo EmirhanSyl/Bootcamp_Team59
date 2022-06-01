@@ -22,7 +22,8 @@ public class BluePrint : MonoBehaviour
         {
             transform.position = _hit.point;
         }
-
+        Debug.Log(_hit.point);
+        //Debug.DrawRay(ray);
         if (Input.GetMouseButton(0))
         {
             Instantiate(_realBuilding, transform.position, transform.rotation);
