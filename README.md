@@ -284,7 +284,22 @@ https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=124684485203
 
 PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
 
-USER STORY URL : 
+USER STORY URL : https://miro.com/app/board/uXjVOyY-7Y0=/?share_link_id=872612343201
+
+
+![image](https://user-images.githubusercontent.com/80157890/171419233-5c1a3aaa-7d99-462f-a53e-419ef9ce7e09.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419400-bdfed33e-e548-4018-8504-c89cdc6f9115.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419519-a5f36544-7235-41dc-89bc-f18a371c6e65.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419628-416f8eb9-ed06-4c28-b9c5-e521666498e4.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419776-719246b6-7dd2-4918-a696-cc2f08f8be49.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419882-6d088a98-ffb3-43fa-9f5a-5ab64c76c884.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171420057-a0f5430c-67f4-4323-bab3-bfa2f06e16d7.png)
 
 
 
