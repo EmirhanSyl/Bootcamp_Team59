@@ -587,6 +587,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotWorker Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
+      propertyPath: collectAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
+      propertyPath: collectDuration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4551065327616535415, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2

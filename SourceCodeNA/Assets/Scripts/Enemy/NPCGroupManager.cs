@@ -8,14 +8,26 @@ public class NPCGroupManager : MonoBehaviour
     public bool questDone;
     public EnemyBehaviours.Region groupRegionDropdown;
 
-    public GameObject groupTargeResource;
+    public enum TroopType {AttackerTroop, GuardianTroop, DefenderTroop };
+    public TroopType troopTypeDropdown;
+
+    public bool troopCalledByPlayer;
+    public bool troopHasQuest;
+    public bool attackersOnCastleBorder;
+    public bool troopCalledBack;
+
+    public GameObject groupTargetResource;
     public GameObject castleLocation;
+    public GameObject militaryBase;
+    public GameObject storage;
+    public GameObject attackerNPC;
     public RegionManager regionManager;
     public LayerMask enemyMask;
 
     public Collider[] enemyHitColliders;
     public EnemyBehaviours[] NPCGroup;
 
+    private GameObject troopTarget;
     private GameObject player;
 
     void Start()
@@ -27,9 +39,9 @@ public class NPCGroupManager : MonoBehaviour
 
             NPCGroup[i].regionDrowpdown = groupRegionDropdown;
             NPCGroup[i].controllingByGroupManager = true;
-            if (groupTargeResource != null)
+            if (groupTargetResource != null)
             {
-                NPCGroup[i].protectedResource = groupTargeResource;
+                NPCGroup[i].protectedResource = groupTargetResource;
             }
 
             if (NPCGroup[i].regionDrowpdown == EnemyBehaviours.Region.Forest)
@@ -61,7 +73,84 @@ public class NPCGroupManager : MonoBehaviour
             regionManager.troopCount++;
             Destroy(gameObject);
         }
+
+        switch (troopTypeDropdown)
+        {
+            case TroopType.AttackerTroop:
+                AttackerTroopBehaviors();
+                break;
+
+            case TroopType.GuardianTroop:
+                GuardianTroopBehaviors();
+                break;
+
+            case TroopType.DefenderTroop:
+                DefenderTroopBehaviors();
+                break;
+        }
+
+        if (troopCalledBack)
+        {
+            groupTargetResource = null;
+            troopCalledByPlayer = false;
+            troopHasQuest = false;
+            //attackersOnCastleBorder = false;
+        }
     }
+
+    void AttackerTroopBehaviors()
+    {
+        if (troopCalledByPlayer)
+        {
+            troopTarget = player;
+        }
+        else
+        {
+            troopTarget = militaryBase;
+        }
+    }
+    void GuardianTroopBehaviors()
+    {
+        if (groupTargetResource != null)
+        {
+            troopHasQuest = true;
+        }
+        else
+        {
+            troopHasQuest = false;
+        }
+
+        if (troopHasQuest)
+        {
+            if (questDone)
+            {
+                troopTarget = storage;
+                groupTargetResource = null;
+                return;
+            }
+            troopTarget = groupTargetResource;
+            for (int i = 0; i < NPCGroup.Length; i++)
+            {
+                NPCGroup[i].protectedResource = groupTargetResource;
+            }
+        }
+        //else
+        //{
+        //    troopTarget = militaryBase;
+        //}
+    }
+    void DefenderTroopBehaviors()
+    {
+        if (attackersOnCastleBorder)
+        {
+            troopTarget = attackerNPC;
+        }
+        else
+        {
+            troopTarget = militaryBase;
+        }
+    }
+
 
     public void SomebodyDied()
     {
@@ -77,9 +166,9 @@ public class NPCGroupManager : MonoBehaviour
 
             NPCGroup[i].regionDrowpdown = groupRegionDropdown;
             NPCGroup[i].controllingByGroupManager = true;
-            if (groupTargeResource != null)
+            if (groupTargetResource != null)
             {
-                NPCGroup[i].protectedResource = groupTargeResource;
+                NPCGroup[i].protectedResource = groupTargetResource;
             }
 
             if (NPCGroup[i].regionDrowpdown == EnemyBehaviours.Region.Forest)

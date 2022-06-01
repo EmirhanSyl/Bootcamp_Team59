@@ -47,6 +47,8 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop,
         carryingCapacity_Prop,
+        collectDuration_Prop,
+        collectAmount_Prop,
 
         hugeKnightNPC_Prop,
         enemyHealthBar_Prop,
@@ -97,6 +99,8 @@ public class EnemyBehaviourEditor : Editor
 
         collectAnimatonsList_Prop = serializedObject.FindProperty("collectAnimatonsList");
         carryingCapacity_Prop = serializedObject.FindProperty("carryingCapacity");
+        collectDuration_Prop = serializedObject.FindProperty("collectDuration");
+        collectAmount_Prop = serializedObject.FindProperty("collectAmount");
 
         hugeKnightNPC_Prop = serializedObject.FindProperty("hugeKnightNPC");
         enemyHealthBar_Prop = serializedObject.FindProperty("enemyHealthBar");
@@ -175,6 +179,8 @@ public class EnemyBehaviourEditor : Editor
                 EditorGUILayout.PropertyField(protectedResource_Prop, new GUIContent("Protected Resource"));
                 EditorGUILayout.PropertyField(resourceAreaBorderRange_Prop, new GUIContent("Resource Area Border Range"));
                 EditorGUILayout.PropertyField(carryingCapacity_Prop, new GUIContent("Carrying Capacity"));
+                EditorGUILayout.PropertyField(collectDuration_Prop, new GUIContent("Collect Duration"));
+                EditorGUILayout.PropertyField(collectAmount_Prop, new GUIContent("Collect Amount"));
                 EditorGUILayout.PropertyField(collectAnimatonsList_Prop, new GUIContent("Collect Animatons List"));
                 break;
         }
