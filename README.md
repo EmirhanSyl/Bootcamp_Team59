@@ -350,12 +350,18 @@ Toplantı Görüntüsü :
 
 ![image](https://user-images.githubusercontent.com/80157890/171126089-b5ee7fd6-f4af-4a13-a1c8-a074c3f469fc.png)
 
+![image](https://user-images.githubusercontent.com/80157890/171418766-32052d23-a952-4d7f-8478-d52cd1f2262a.png)
+
+
  
  
 
 -**Diğer Notlar**:
 
 Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
+
+![image](https://user-images.githubusercontent.com/80157890/171414317-9af2be0c-48e4-4544-94c5-2df236a6b6ab.png)
+
 
 https://miro.com/app/board/uXjVOw39A8o=/?share_link_id=864659999932
 
