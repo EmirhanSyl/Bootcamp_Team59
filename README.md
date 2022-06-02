@@ -284,7 +284,22 @@ https://miro.com/app/board/uXjVO0UI8As=/?share_link_id=124684485203
 
 PRODUCT BACKLOG URL :https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/EbzVFBtj2pRJqG7YZlq_99cBOJogD5vhNXlOWi7vTsjFOA?e=casoKf 
 
-USER STORY URL : 
+USER STORY URL : https://miro.com/app/board/uXjVOyY-7Y0=/?share_link_id=872612343201
+
+
+![image](https://user-images.githubusercontent.com/80157890/171419233-5c1a3aaa-7d99-462f-a53e-419ef9ce7e09.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419400-bdfed33e-e548-4018-8504-c89cdc6f9115.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419519-a5f36544-7235-41dc-89bc-f18a371c6e65.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419628-416f8eb9-ed06-4c28-b9c5-e521666498e4.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419776-719246b6-7dd2-4918-a696-cc2f08f8be49.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171419882-6d088a98-ffb3-43fa-9f5a-5ab64c76c884.png)
+
+![image](https://user-images.githubusercontent.com/80157890/171420057-a0f5430c-67f4-4323-bab3-bfa2f06e16d7.png)
 
 
 
@@ -320,7 +335,9 @@ https://miro.com/app/board/uXjVOyY-7Y0=/?share_link_id=268403764114
 
 
 
-Burndawn Chart Sprint 3 İçin : 
+Burndawn Chart Sprint 3 İçin : https://gtu-my.sharepoint.com/:x:/g/personal/h_erbey2019_gtu_edu_tr/ESHozjs2Yy9KinpIZqdufRoB8Vwf5gI9ssl21EjwXLPpnQ?e=5s2nZY
+
+![image](https://user-images.githubusercontent.com/80157890/171427729-1d6697ca-34fe-41df-9f10-608eeba03c3a.png)
 
 
 
@@ -350,12 +367,18 @@ Toplantı Görüntüsü :
 
 ![image](https://user-images.githubusercontent.com/80157890/171126089-b5ee7fd6-f4af-4a13-a1c8-a074c3f469fc.png)
 
+![image](https://user-images.githubusercontent.com/80157890/171418766-32052d23-a952-4d7f-8478-d52cd1f2262a.png)
+
+
  
  
 
 -**Diğer Notlar**:
 
 Sprint boyunca aklımıza takılan soruları yazabileceğimiz soru tahtası ile sürece dair soru işatretlerini hep birlikte görmüş olduk . 
+
+![image](https://user-images.githubusercontent.com/80157890/171414317-9af2be0c-48e4-4544-94c5-2df236a6b6ab.png)
+
 
 https://miro.com/app/board/uXjVOw39A8o=/?share_link_id=864659999932
 
@@ -365,7 +388,7 @@ https://miro.com/app/board/uXjVOw39A8o=/?share_link_id=864659999932
 
 ** Tüm Süreci Değerlendirme ve Oyunun Başka Versiyonlarında Bulunmasını Planladığımız Kısımlar : 
 
-Oyun genel hatları ile planlanan gibi ilerlemiş olsa da eklemek istediğimiz ve oyun içerinde olamasını istediğimiz bazı kısımlar zaman kısıtı nedeniyle yetişemedi . Yaklaşık iki aylık bir süreç olan bootcamp kapsamında en baştan itibaren tasarlamak istediğimiz oyunda karar kıldığımız için süreç boyunca çok ciddi değişiklikler yapmadık . Bazı kısımları zaman kısıtı nedeniyle ekleyememiş olsak bile yapmış olduğumuz oyunun geliştirilmesi ile çok daha güzel bir hal alacağının farkına vardık . Tüm bu süreci göz önüne aldığımızda başta çok fazla tereddütümüz vardı . Acaba parçalar birleşince gerçek bir oyun hissi uyandıracak mı ya da düzgün bir şekilde çalışabilecek mi diye bir sürü soru zihnimizde beliriyorudu . Bu soru işaretlerinin bazıları bizlere süreç içerisinde gerçekten sorun olarak döndü . Örneğin tasarlamış olduğumuz maplerin pushlanması kısmı sorun çıkardı . Github' daki data kotamızı doldurduğumuza dair mesaj aldık . Yüklemeleri yapamadık . Bir an sürecin bu kadar sonuna gelmişken böyle bir durum ile karşılaşılması mralimizi bozduama hemen çözüm yolları aramaya başladıkve problemi çözdük . Takımdaki tüm arkadaşlar süreç boyunca sorumluluklarının bilince hareket etti ve bu şekilde rotamızın çok da dışına çıkmamış olduk . Oyunumuzda eklemek istediğimiz bası kısımları koyamadığımızı ifade etmiştik bunlardan bazılarından bahsedecek olursak diyalog sistemi olmasını istiyorduk , map tasarımında üç farklı bölge üzerinde oyunumuz devam edecekti ama şuan iki bölgelei bir map üzerinden oyunu tasarladık . Oyunumuzda aker çeşitliliği ve bu askerlerin bazı büyü güçlerinin çok daha çeşitli olmasını istiyorduk , her bölgenin kendine özel bir kaynağının olmasını ve bu kaynağın bulunması halinde oyunda bazı hareketlenmelerin olmasını isterdik gibi bazı sıralamalar yapabiliriz . Bunlar bootcamp süreci sonlanması halinde oyunun biz takım üyeleri ile birlikte ileriki zamanlarda geliştirilmesi ile mümkün olabileceğini biliyoruz . Biz bu süreci çok sevdik ve çok şey öğrendik . Sorunlar ile karşılaşınca hemen takımca çözüm yolları aramayı , toplantılar yapmayı, gruplar halinde çalışmayı , sprint telimi yapmayı gibi birçok rutini geride bırakmış oluyoruz ama bu sürecin bize katmış olduklarından ve tanıştığımız birbirinden farklı farklı arakadaşların bize kattıkları ile güzel bir süreci sonlandırdığımız ifade temek isteriz. 
+Oyun genel hatları ile planlanan gibi ilerlemiş olsa da eklemek istediğimiz ve oyun içerinde olamasını istediğimiz bazı kısımlar zaman kısıtı nedeniyle yetişemedi . Yaklaşık iki aylık bir süreç olan bootcamp kapsamında en baştan itibaren tasarlamak istediğimiz oyunda karar kıldığımız için süreç boyunca çok ciddi değişiklikler yapmadık . Bazı kısımları zaman kısıtı nedeniyle ekleyememiş olsak bile yapmış olduğumuz oyunun geliştirilmesi ile çok daha güzel bir hal alacağının farkına vardık . Tüm bu süreci göz önüne aldığımızda başta çok fazla tereddütümüz vardı . Acaba parçalar birleşince gerçek bir oyun hissi uyandıracak mı ya da düzgün bir şekilde çalışabilecek mi diye bir sürü soru zihnimizde beliriyorudu . Bu soru işaretlerinin bazıları bizlere süreç içerisinde gerçekten sorun olarak döndü . Örneğin tasarlamış olduğumuz maplerin pushlanması kısmı sorun çıkardı . Github' daki data kotamızı doldurduğumuza dair mesaj aldık . Yüklemeleri yapamadık . Bir an sürecin bu kadar sonuna gelmişken böyle bir durum ile karşılaşılması mralimizi bozduama hemen çözüm yolları aramaya başladıkve problemi çözdük . Takımdaki tüm arkadaşlar süreç boyunca sorumluluklarının bilince hareket etti ve bu şekilde rotamızın çok da dışına çıkmamış olduk . Oyunumuzda eklemek istediğimiz bası kısımları koyamadığımızı ifade etmiştik bunlardan bazılarından bahsedecek olursak diyalog sistemi olmasını istiyorduk , map tasarımında üç farklı bölge üzerinde oyunumuz devam edecekti ama şuan iki bölgelei bir map üzerinden oyunu tasarladık . Oyunumuzda aker çeşitliliği ve bu askerlerin bazı büyü güçlerinin çok daha çeşitli olmasını istiyorduk , her bölgenin kendine özel bir kaynağının olmasını ve bu kaynağın bulunması halinde oyunda bazı hareketlenmelerin olmasını isterdik gibi bazı sıralamalar yapabiliriz . Bunlar bootcamp süreci sonlanması halinde oyunun biz takım üyeleri ile birlikte ileriki zamanlarda geliştirilmesi ile mümkün olabileceğini biliyoruz . Biz bu süreci çok sevdik ve çok şey öğrendik . Sorunlar ile karşılaşınca hemen takımca çözüm yolları aramayı , toplantılar yapmayı, gruplar halinde çalışmayı , sprint telimi yapmayı gibi birçok rutini geride bırakmış oluyoruz ama bu sürecin bize katmış olduklarından ve tanıştığımız birbirinden farklı farklı arkadaşların bize kattıkları ile güzel bir süreci sonlandırdığımızı ifade etmek  isteriz. 
 
 
 
