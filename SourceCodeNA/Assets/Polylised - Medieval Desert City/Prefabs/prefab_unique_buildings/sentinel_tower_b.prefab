@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4479073821956730}
   - component: {fileID: 33068830982041894}
   - component: {fileID: 23436056174255976}
+  - component: {fileID: 2320398992397424623}
   m_Layer: 0
   m_Name: sentinel_tower_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4479073821956730
 Transform:
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080326275983898}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.00000015258789, y: 0, z: 0.00000030517577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &33068830982041894
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59,9 +60,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7babb15a0d27e4348a084bff40ad4706, type: 2}
-  - {fileID: 2100000, guid: de430443e6642a54a8a7706118bac4de, type: 2}
-  - {fileID: 2100000, guid: df4b977bfd1cf0d4d8d1cdf38dea0f7b, type: 2}
+  - {fileID: 2100000, guid: fb2739ddbfff79741bb8381e28282be6, type: 2}
+  - {fileID: 2100000, guid: d8c290cee67022a4fa6b663ebf2650d4, type: 2}
+  - {fileID: 2100000, guid: 37323ff9e34397042a53f7ba0e5235d9, type: 2}
   - {fileID: 2100000, guid: 36a65869d1166934ba19b7ef5379c865, type: 2}
   - {fileID: 2100000, guid: 229c0aafe025bfc459086fa0e1971c4d, type: 2}
   m_StaticBatchInfo:
@@ -85,3 +86,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2320398992397424623
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080326275983898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 42dae9c689b614041936ba5f1a9b52e4, type: 3}

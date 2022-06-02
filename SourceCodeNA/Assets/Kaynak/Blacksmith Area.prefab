@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3358928}
   - component: {fileID: 2302938}
   - component: {fileID: 11453664}
+  - component: {fileID: 9205405312586090362}
   m_Layer: 0
   m_Name: Blacksmith Area
   m_TagString: Untagged
@@ -104,6 +105,20 @@ MonoBehaviour:
   minIntensity: 1
   maxIntensity: 2
   light: {fileID: 10895502}
+--- !u!64 &9205405312586090362
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a18d4e047674d424a853096fb8e932fd, type: 3}
 --- !u!1 &102550
 GameObject:
   m_ObjectHideFlags: 0

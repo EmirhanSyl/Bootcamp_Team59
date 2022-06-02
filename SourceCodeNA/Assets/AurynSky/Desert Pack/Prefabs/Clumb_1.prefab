@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4891161152760760}
   - component: {fileID: 33708746687521972}
   - component: {fileID: 23481228739704324}
+  - component: {fileID: 1696477599896984271}
   m_Layer: 0
   m_Name: Clumb_1
   m_TagString: Untagged
@@ -106,9 +107,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652611883545950}
-  m_LocalRotation: {x: -0, y: 0.49999917, z: -0, w: 0.8660259}
+  m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 6.25, y: 0, z: 2.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2666668, y: 0.33333334, z: 0.30769214}
   m_Children:
   - {fileID: 4223501818466712}
   m_Father: {fileID: 0}
@@ -163,3 +164,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1696477599896984271
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652611883545950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 526a4280e3a59224bbc1bad0f7323bae, type: 3}
