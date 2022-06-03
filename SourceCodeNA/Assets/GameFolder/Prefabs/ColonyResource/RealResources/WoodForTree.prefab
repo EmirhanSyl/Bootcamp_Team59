@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 1711128369973775121}
   - component: {fileID: 1711128369973775120}
   - component: {fileID: 1711128369973775123}
+  - component: {fileID: 8908050917623801400}
   m_Layer: 0
   m_Name: WoodForTree
-  m_TagString: Untagged
+  m_TagString: WoodResource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,6 +160,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &8908050917623801400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711128369973775122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebb1a2a4d153034aaf342e91c31fc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCountOnResource: 0
+  isExploiting: 0
+  whichRegionOnResource:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1711128370602864800
 GameObject:
   m_ObjectHideFlags: 0
