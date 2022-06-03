@@ -16,11 +16,7 @@ public class BluePrintCanvas : MonoBehaviour
     //ne kadar bina yerlestirilecegini ayarlayacagiz
     int _isCenterPlaced;
     int _isHousesPlaced;
-
-    private void LateUpdate()
-    {
-        LimitterForBuildButtons();
-    }
+    int _isBarrackPlaced;
 
     void LimitterForBuildButtons()
     {
@@ -32,6 +28,11 @@ public class BluePrintCanvas : MonoBehaviour
         if (_isHousesPlaced > 5)
         {
             this.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        if (_isBarrackPlaced != 0)
+        {
+            this.transform.GetChild(2).gameObject.SetActive(false);
         }
     }
 
@@ -49,6 +50,7 @@ public class BluePrintCanvas : MonoBehaviour
             Instantiate(_build[0]);
             _isCenterPlaced++;
         }
+        LimitterForBuildButtons();
     }
     public void InstantiateHouse()
     {
@@ -64,6 +66,7 @@ public class BluePrintCanvas : MonoBehaviour
             Instantiate(_build[1]);
             _isHousesPlaced++;
         }
+        LimitterForBuildButtons();
     }
 
     public void InstantiateBarrack()
@@ -77,8 +80,10 @@ public class BluePrintCanvas : MonoBehaviour
             Storage._food -= _foodCost;
             Storage._wood -= _woodCost;
             Storage._stone -= _stoneCost;
-            Instantiate(_build[1]);
+            Instantiate(_build[2]);
+            _isBarrackPlaced++;
         }
+        LimitterForBuildButtons();
     }
 
     public void InstantiateMagician()
@@ -92,7 +97,8 @@ public class BluePrintCanvas : MonoBehaviour
             Storage._food -= _foodCost;
             Storage._wood -= _woodCost;
             Storage._stone -= _stoneCost;
-            Instantiate(_build[1]);
+            Instantiate(_build[3]);
         }
+        LimitterForBuildButtons();
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _foodText;
-
     public static int _food = 100;
     public static int _stone = 100;
     public static int _wood = 100;
