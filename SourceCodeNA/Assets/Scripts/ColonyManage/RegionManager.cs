@@ -22,8 +22,6 @@ public class RegionManager : MonoBehaviour
     [SerializeField] private GameObject robotWorker;
 
     [SerializeField] private GameObject castleLocation;
-    [SerializeField] private GameObject militaryBaseLocation;
-    [SerializeField] private GameObject storageLocation;
     [SerializeField] private Transform spawnPosition;
 
     [SerializeField] private InformationHolder informationHolder;
@@ -158,8 +156,6 @@ public class RegionManager : MonoBehaviour
         groupManagerScript.groupTargetResource = targetResource;
         groupManagerScript.regionManager = this;
         groupManagerScript.castleLocation = castleLocation;
-        groupManagerScript.storage = storageLocation;
-        groupManagerScript.militaryBase = militaryBaseLocation;
 
         if (militaryPowerStat > 8 )
         {
@@ -197,17 +193,17 @@ public class RegionManager : MonoBehaviour
             //var instantiatedSoilder = Instantiate(soilder, new Vector3(spawnPosition.position.x + (i * 1.5f), spawnPosition.position.y, spawnPosition.position.z), Quaternion.identity);
             var instantiatedSoilder = Instantiate(soilder, new Vector3(spawnPosition.position.x + 1, spawnPosition.position.y, spawnPosition.position.z + (i * 1.5f)), Quaternion.identity);
             instantiatedSoilder.transform.parent = instantiatedGroupManager.transform;
-            //instantiatedSoilder.GetComponent<UnityEngine.AI.MonsterBehavior.EnemyBehaviours>().BackupAwake();
+            instantiatedSoilder.GetComponent<UnityEngine.AI.MonsterBehavior.EnemyBehaviours>().BackupAwake();
             if (i == soilderCapacity - 1)
             {
-                groupManagerScript.BackupStart();
+                //groupManagerScript.BackupStart();
             }
         }
         for (int i = 0; i < workerCapacity; i++)
         {
             var instantiatedWorker = Instantiate(robotWorker, new Vector3(spawnPosition.position.x - 1, spawnPosition.position.y, spawnPosition.position.z - (i * 1.5f)), Quaternion.identity);
             instantiatedWorker.transform.parent = instantiatedGroupManager.transform;
-            //instantiatedWorker.GetComponent<UnityEngine.AI.MonsterBehavior.EnemyBehaviours>().BackupAwake();
+            instantiatedWorker.GetComponent<UnityEngine.AI.MonsterBehavior.EnemyBehaviours>().BackupAwake();
             if (i == workerCapacity - 1)
             {
                 groupManagerScript.BackupStart();
