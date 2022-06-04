@@ -12,6 +12,7 @@ public class BluePrint : MonoBehaviour
 
     private void Start()
     {
+        //_cam = GameObject.FindGameObjectWithTag("RTSCam").GetComponentInChildren<Camera>();
         _cam = Camera.main;
     }
 

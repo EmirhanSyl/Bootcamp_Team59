@@ -192,6 +192,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void Update()
         {
+
             if (enemyHealthBar.gameObject.activeSelf)
             {
                 enemyHealthBar.SetHealth(enemyHealth);
@@ -945,6 +946,7 @@ namespace UnityEngine.AI.MonsterBehavior
             enemyDetector = player.GetComponentInChildren<EnemyDetector>();
             characterMovement = player.GetComponent<CharacterMovement>();
             playerCombat = player.GetComponent<PlayerCombat>();
+            magicAttacks = player.GetComponent<MagicAttacks>();
             animator = GetComponent<Animator>();
             if (enemyStateTypeDropdown != EnemyStateType.TowerWizard)
             {
@@ -958,6 +960,7 @@ namespace UnityEngine.AI.MonsterBehavior
             playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
             playerCombat.OnCounterAttack.AddListener((x) => OnPlayerCounter(x));
             playerCombat.OnLockedToEnemy.AddListener((x) => OnPlayerLockedToEnemy(x));
+
 
             if (regionDrowpdown == Region.Forest)
             {
@@ -986,6 +989,10 @@ namespace UnityEngine.AI.MonsterBehavior
             {
                 groupController = GetComponentInParent<NPCGroupManager>();
                 enemyLayers = groupController.enemyMask;
+            }
+            if (enemyHealthBar.gameObject.activeSelf)
+            {
+                enemyHealthBar.SetMaxHealth(enemyHealth);
             }
         }
         private void OnDrawGizmos()

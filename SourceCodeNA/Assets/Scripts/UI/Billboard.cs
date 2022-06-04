@@ -5,9 +5,10 @@ using UnityEngine;
 public class Billboard : MonoBehaviour
 {
     private Transform cam;
+
     private void Start()
     {
-        cam = Camera.main.transform;
+        cam = GameObject.FindGameObjectWithTag("PlayerCam").transform;
     }
     void LateUpdate()
     {

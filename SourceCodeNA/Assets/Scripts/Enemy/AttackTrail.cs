@@ -37,8 +37,7 @@ public class AttackTrail : MonoBehaviour
                 trail.transform.parent = leftFoot;
                 break;
         }
-        trail.emitting = true;
-
+        trail.emitting = true;       
     }
     public void DisableTrail()
     {

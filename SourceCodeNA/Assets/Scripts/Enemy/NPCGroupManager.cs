@@ -70,8 +70,8 @@ public class NPCGroupManager : MonoBehaviour
     {
         if (transform.childCount == 0)
         {
-            regionManager.troopCount++;
-            Destroy(gameObject);
+            //regionManager.troopCount++;
+            //Destroy(gameObject);
         }
 
         switch (troopTypeDropdown)

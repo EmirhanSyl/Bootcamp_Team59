@@ -412,9 +412,10 @@ GameObject:
   - component: {fileID: 1626965426606560083}
   - component: {fileID: 1626965426606560082}
   - component: {fileID: 1626965426606560081}
+  - component: {fileID: 8776457152874594198}
   m_Layer: 0
   m_Name: StoneForMine
-  m_TagString: Untagged
+  m_TagString: StoneResource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +482,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &8776457152874594198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626965426606560080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebb1a2a4d153034aaf342e91c31fc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCountOnResource: 0
+  isExploiting: 0
+  whichRegionOnResource:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &6703243847150501896
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,11 +835,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e8154936e27b60439438b81d2c2ec88, type: 3}
---- !u!4 &8183436371931102766 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7257871325868975100, guid: 9e8154936e27b60439438b81d2c2ec88, type: 3}
-  m_PrefabInstance: {fileID: 1524551493923839442}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9006201435912546264 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7625790423531862538, guid: 9e8154936e27b60439438b81d2c2ec88, type: 3}
@@ -833,3 +846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20eca6b1ef52bf40b1c25bfe7d3c791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8183436371931102766 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7257871325868975100, guid: 9e8154936e27b60439438b81d2c2ec88, type: 3}
+  m_PrefabInstance: {fileID: 1524551493923839442}
+  m_PrefabAsset: {fileID: 0}

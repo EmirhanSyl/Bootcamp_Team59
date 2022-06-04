@@ -31,12 +31,14 @@ public class PlayerCombat : MonoBehaviour
     private CharacterMovement characterMovement;
 
     private Coroutine attackCoroutine;
+    private Transform camera;
 
     void Awake()
     {
         enemyDetector = GetComponentInChildren<EnemyDetector>();
         characterMovement = GetComponent<CharacterMovement>();
         animator = GetComponent<Animator>();
+        camera = GameObject.FindGameObjectWithTag("PlayerCam").transform;
     }
 
     
@@ -136,7 +138,7 @@ public class PlayerCombat : MonoBehaviour
             //Particle codes
             playingCombatAnim = false;
         }
-        Camera.main.transform.DOShakePosition(0.5f, 1f);
+        camera.DOShakePosition(0.5f, 1f);
     }
 
     void Dodge()
