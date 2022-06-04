@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4498531509414183734}
   m_Layer: 0
   m_Name: ForRTS
-  m_TagString: Untagged
+  m_TagString: RTSCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,10 @@ PrefabInstance:
     - target: {fileID: 9017638749971884385, guid: da562d17f477c2e4b9b95bc0cf5403fb, type: 3}
       propertyPath: m_Name
       value: RTSCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017638749971884385, guid: da562d17f477c2e4b9b95bc0cf5403fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da562d17f477c2e4b9b95bc0cf5403fb, type: 3}

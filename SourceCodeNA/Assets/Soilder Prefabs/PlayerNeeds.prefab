@@ -82544,6 +82544,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047570685847934560}
     m_Modifications:
+    - target: {fileID: 3174860203122258801, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3174860204530719106, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -82592,8 +82596,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isometric Camera Pivot
       objectReference: {fileID: 0}
+    - target: {fileID: 3174860204530719107, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
+      propertyPath: m_TagString
+      value: PlayerCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174860204530719117, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 8654534341700733375}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
+--- !u!1 &612345274954006095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174860204530719107, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
+  m_PrefabInstance: {fileID: 2625636242893989836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &612345274954006094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3174860204530719106, guid: 4d4f2b8e0adfbd04591b5d98b31506a9, type: 3}
@@ -82672,6 +82689,18 @@ PrefabInstance:
       propertyPath: targetIndicator
       value: 
       objectReference: {fileID: 8649889390227159884}
+    - target: {fileID: 1567720946957259114, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567905849368424158, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568598822096138488, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1568688620041221996, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -82679,7 +82708,7 @@ PrefabInstance:
     - target: {fileID: 1568688620041221997, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
       propertyPath: cameraPivot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 612345274954006095}
     - target: {fileID: 1568688620041222007, guid: 2007dc83ff13d2c48a65be6e489da7cc, type: 3}
       propertyPath: healMagic
       value: 

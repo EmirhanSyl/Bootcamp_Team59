@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3484298832105464643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.92, y: 1.0415568, z: -1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 8224430034096804166}
   - {fileID: 3484298832640617070}
@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 8224430034096804166}
   - component: {fileID: 8240121987679475860}
   - component: {fileID: 8250033620612575740}
+  - component: {fileID: 6751935182913318767}
   m_Layer: 0
   m_Name: civilian_house_38_d
   m_TagString: Untagged
@@ -148,6 +149,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6751935182913318767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228052289659918000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.373386, y: 10.25, z: 7.625625}
+  m_Center: {x: 3.8373375, y: -0.0000009536743, z: 3.809718}
 --- !u!1001 &3484298832915162040
 PrefabInstance:
   m_ObjectHideFlags: 0

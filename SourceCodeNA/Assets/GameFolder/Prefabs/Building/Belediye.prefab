@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8888642351663624098}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -17.56773, y: 0.003093628, z: -29.78765}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,7 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dfd01c5172f21439acc0e5d6854ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buildingCanvas: {fileID: 8906800974739479560, guid: fa746e11a14b46042b24e08be3205939, type: 3}
 --- !u!65 &5927755539775491959
 BoxCollider:
   m_ObjectHideFlags: 0

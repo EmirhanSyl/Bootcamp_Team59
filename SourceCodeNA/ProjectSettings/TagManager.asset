@@ -26,6 +26,8 @@ TagManager:
   - IceBuilding
   - ForestBuilding
   - BuildingCanvas
+  - RTSCam
+  - PlayerCam
   layers:
   - Default
   - TransparentFX
