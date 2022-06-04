@@ -344,6 +344,11 @@ Burndawn Chart Sprint 3 İçin : https://gtu-my.sharepoint.com/:x:/g/personal/h_
 
 - **Ürün Durumu**: Ekran görüntüleri:
 
+![image](https://user-images.githubusercontent.com/80157890/172019743-79dc4b7c-c3b0-4126-8957-681c45e2ea53.png)
+
+![image](https://user-images.githubusercontent.com/80157890/172019755-99fcde72-3914-4e45-84d6-d9e90bfd2d21.png)
+
+
 
 
 
