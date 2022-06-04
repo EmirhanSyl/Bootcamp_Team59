@@ -22,7 +22,7 @@ public class BluePrintCanvas : MonoBehaviour
     {
         if (_isCenterPlaced != 0)
         {
-            this.transform.GetChild(0).gameObject.SetActive(false);
+            this.transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
         }
 
         if (_isHousesPlaced > 5)
