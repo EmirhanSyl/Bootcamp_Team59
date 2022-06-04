@@ -192,6 +192,17 @@ namespace UnityEngine.AI.MonsterBehavior
 
         void Update()
         {
+            playerCombat.OnDamageTaken.AddListener((x) => OnPlayerHit(x));
+            if (transform.parent.gameObject.GetComponent<NPCGroupManager>() != null)
+            {
+                controllingByGroupManager = true;
+            }
+            if (controllingByGroupManager)
+            {
+                groupController = GetComponentInParent<NPCGroupManager>();
+                enemyLayers = groupController.enemyMask;
+            }
+
             if (enemyHealthBar.gameObject.activeSelf)
             {
                 enemyHealthBar.SetHealth(enemyHealth);
