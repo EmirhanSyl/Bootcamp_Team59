@@ -330,7 +330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224155441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateStorage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &233968728
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1666285329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateLumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2032791874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8060,6 +8084,12 @@ MonoBehaviour:
   - {fileID: 1546119400204468209, guid: 9606961f87451ac4fa3d373e2cee8d05, type: 3}
   - {fileID: 3453529987338861876, guid: ba3fd09c378ae1e45aa891263a5a24d3, type: 3}
   - {fileID: 5341429777670024401, guid: 29506d6473d644b4ab73c224ae22d173, type: 3}
+  - {fileID: 19424032094546692, guid: 0cef5b8c7620a6747b4fac503cf94022, type: 3}
+  - {fileID: 63606581697195421, guid: 498ed95f91ee8304ab2c826378b802f5, type: 3}
+  - {fileID: 4367071653234471471, guid: 7c32e1225c881704e90db97807d80951, type: 3}
+  - {fileID: 7449602701017982522, guid: 3ed8768b8efd1dd499b23b3039f65226, type: 3}
+  - {fileID: 2392351176859001799, guid: 370553012362d0346b02af20f27cf908, type: 3}
+  - {fileID: 7155460009939405023, guid: e2eff4b7be559cb44a09ff280c02696c, type: 3}
   priceText: {fileID: 0}
 --- !u!1 &4927901351732139927
 GameObject:
@@ -8781,7 +8811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4927901352001073991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateMagician
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4927901352002439826
 GameObject:
   m_ObjectHideFlags: 0
@@ -8978,7 +9020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4927901352013131025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateTomb
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4927901352015173392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10541,7 +10595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4927901352732149898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateMill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4927901352747948256
 GameObject:
   m_ObjectHideFlags: 0
@@ -11392,7 +11458,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4927901353289419492}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935844116444749765}
+        m_TargetAssemblyTypeName: BluePrintCanvas, Assembly-CSharp
+        m_MethodName: InstantiateStoneMine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4927901353304421242
 GameObject:
   m_ObjectHideFlags: 0
@@ -11684,7 +11762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1.8127136, y: -0.00000095367}
+  m_AnchoredPosition: {x: 1.8153381, y: -0.00000095367}
   m_SizeDelta: {x: 88.7999, y: 75.6747}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4927901353350289472
