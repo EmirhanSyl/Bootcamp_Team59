@@ -200,9 +200,9 @@ MonoBehaviour:
   bloodParticles: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   enemyStateTypeDropdown: 2
-  regionDrowpdown: 0
+  regionDrowpdown: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -69580,7 +69580,7 @@ GameObject:
   - component: {fileID: 5015127025259561758}
   m_Layer: 0
   m_Name: TowerWizard
-  m_TagString: Untagged
+  m_TagString: ForestBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69623,7 +69623,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5015127025353218357}
-  m_LocalRotation: {x: -0, y: 0.7071066, z: -0, w: -0.70710707}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17702915, y: 0.19999999, z: 0.17702915}
   m_Children:
@@ -69631,7 +69631,7 @@ Transform:
   - {fileID: 5015127025259561758}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &5015127025353522655
 GameObject:
   m_ObjectHideFlags: 0
@@ -79105,7 +79105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5015127025564900507}
   - component: {fileID: 5015127025564900506}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: RegionInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

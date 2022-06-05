@@ -68,6 +68,7 @@ public class NPCGroupManager : MonoBehaviour
 
     private void Update()
     {
+        BackupStart();
         if (transform.childCount == 0)
         {
             //regionManager.troopCount++;
@@ -100,14 +101,17 @@ public class NPCGroupManager : MonoBehaviour
 
     void AttackerTroopBehaviors()
     {
-        if (troopCalledByPlayer)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            troopTarget = player;
+            //troopTarget = player;
+            //for (int i = 0; i < NPCGroup.Length; i++)
+            //{
+            //    NPCGroup[i].protectedResource = troopTarget;
+            //}
+            troopCalledByPlayer = true;
+
         }
-        else
-        {
-            troopTarget = militaryBase;
-        }
+         
     }
     void GuardianTroopBehaviors()
     {

@@ -24406,16 +24406,17 @@ MonoBehaviour:
   minHitDamage: 50
   maxHitDamage: 200
   distanceToTarget: 0
-  targetRegion: 1
-  mechineRegion: 0
+  targetRegion: 0
+  mechineRegion: 1
   targetRegionScript: {fileID: 0}
   healthBar: {fileID: 1154499433724656539}
   woodenParticles: {fileID: 1154499434680869269}
   smokeParticles: {fileID: 1352693543447197197}
   enemyBuildingLayers:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8192
   cols: []
+  _calledByPlayer: 0
 --- !u!136 &7422893916238459202
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -1885,9 +1885,10 @@ GameObject:
   - component: {fileID: 4378247107504912581}
   - component: {fileID: 4378247107504912583}
   - component: {fileID: 4378247107504912582}
+  - component: {fileID: 2265737009474185369}
   m_Layer: 7
   m_Name: RobotWorker
-  m_TagString: Untagged
+  m_TagString: Villiager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1998,7 +1999,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   enemyStateTypeDropdown: 3
-  regionDrowpdown: 0
+  regionDrowpdown: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2006,10 +2007,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rotatioSpeed: 50
-  controllingByGroupManager: 1
+  controllingByGroupManager: 0
   hittedByPlayer: 0
   friendWithPlayer: 0
-  distanceToTarget: 0
+  distanceToTarget: 11
   poisonedTakeDamageDuration: 2
   healDuration: 2
   poisonedHitCount: 3
@@ -2033,6 +2034,22 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 6726520963970960823}
   targetObject: {fileID: 0}
   targetVector: {x: 0, y: 0, z: 0}
+--- !u!54 &2265737009474185369
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378247107504912577}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4545646123817389943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,13 +3750,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed96475eb6ce6694691fc6a979ba2d97, type: 3}
---- !u!198 &5466857346154734138 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2436662523270569736, guid: ed96475eb6ce6694691fc6a979ba2d97, type: 3}
-  m_PrefabInstance: {fileID: 7642307769651248434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5466857346139531130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2436662523255364168, guid: ed96475eb6ce6694691fc6a979ba2d97, type: 3}
+  m_PrefabInstance: {fileID: 7642307769651248434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5466857346154734138 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2436662523270569736, guid: ed96475eb6ce6694691fc6a979ba2d97, type: 3}
   m_PrefabInstance: {fileID: 7642307769651248434}
   m_PrefabAsset: {fileID: 0}

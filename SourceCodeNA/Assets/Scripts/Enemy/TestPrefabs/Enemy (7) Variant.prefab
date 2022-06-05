@@ -467,6 +467,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 65532892a7d56984793f61618e50e488, type: 2}
+    - target: {fileID: 529829946318319946, guid: 2ffc9bca980299c46bea7977b997fa41, type: 3}
+      propertyPath: regionDrowpdown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529829946318319946, guid: 2ffc9bca980299c46bea7977b997fa41, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 529829946318319948, guid: 2ffc9bca980299c46bea7977b997fa41, type: 3}
       propertyPath: m_RootOrder
       value: 0

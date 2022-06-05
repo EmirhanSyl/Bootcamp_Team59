@@ -28,6 +28,8 @@ TagManager:
   - BuildingCanvas
   - RTSCam
   - PlayerCam
+  - PlayerCanvas
+  - AttackerGroup
   layers:
   - Default
   - TransparentFX

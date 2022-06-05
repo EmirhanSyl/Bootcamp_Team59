@@ -2,33 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI.MonsterBehavior;
 
 public class Storage : MonoBehaviour
 {
     public static int _food = 100;
     public static int _stone = 100;
     public static int _wood = 100;
-    public static int _soul = 100;    
+    public static int _soul = 100;
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.CompareTag("Villiager"))
         {
             return;
         }        
         else if (other.gameObject.CompareTag("Wood"))
         {
-            WoodGatherer(3);
+            WoodGatherer((int)other.gameObject.GetComponent<EnemyBehaviours>().carryingCapacity);
             other.gameObject.tag = "Villiager";
         }        
         else if (other.gameObject.CompareTag("Food"))
         {
-            FoodGatherer(3);
+            FoodGatherer((int)other.gameObject.GetComponent<EnemyBehaviours>().carryingCapacity);
             other.gameObject.tag = "Villiager";
         }        
         else if (other.gameObject.CompareTag("Stone"))
         {
-            StoneGatherer(3);
+            StoneGatherer((int)other.gameObject.GetComponent<EnemyBehaviours>().carryingCapacity);
             other.gameObject.tag = "Villiager";
         }
         else if (other.gameObject.CompareTag("Soul"))

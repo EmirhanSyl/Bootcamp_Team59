@@ -95,7 +95,7 @@ namespace UnityEngine.AI.MonsterBehavior
 
         //Robot Worker
         [SerializeField] private string[] collectAnimatonsList;
-        [SerializeField] private float carryingCapacity;
+        public float carryingCapacity;
         [SerializeField] private float collectDuration;
         [SerializeField] private float collectAmount;
 
@@ -214,6 +214,17 @@ namespace UnityEngine.AI.MonsterBehavior
                 {
                     LockToTheTarget();
                 }
+                else
+                {
+                    if (resourceCompletelyExploited == true)
+                    {
+                        targetVector = targetObject.transform.position;
+                        if (gameObject.CompareTag("Villiager"))
+                        {
+                            resourceCompletelyExploited = false;
+                        }
+                    }
+                }
 
                 if (!hugeKnightNPC || (hugeKnightNPC && !inHeavyAttack))
                 {
@@ -242,6 +253,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 {
                     groupController.SomebodyDied();
                     deadForOneTime = true;
+                    Storage._soul++;
                 }
                 IEnumerator DeadPart()
                 {
@@ -265,17 +277,21 @@ namespace UnityEngine.AI.MonsterBehavior
             //{
             //    return;
             //}
-
+            Debug.Log("Lock");
             if (Physics.CheckSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers))
             {
+                Debug.Log("ifLock");
                 //enemyColls = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers);
                
                 float distanceToClosestEnemy = Mathf.Infinity;
                 GameObject closestEnemy = null;
                 Collider[] allEnemies = Physics.OverlapSphere(gameObject.transform.position, maxDistanceToTarget, enemyLayers);
 
+                enemyColls = allEnemies;
+
                 foreach (var currentEnemyColl in allEnemies)
                 {
+                    Debug.Log("for");
                     if ((currentEnemyColl.gameObject.transform.parent.gameObject.CompareTag("Player") && PlayerHealth.dead) || (currentEnemyColl.GetComponentInParent<EnemyBehaviours>() != null && currentEnemyColl.GetComponentInParent<EnemyBehaviours>().IsDead()))
                     {
                         targetObject = null;
@@ -538,7 +554,7 @@ namespace UnityEngine.AI.MonsterBehavior
         
         void TowerWizard()
         {
-            if (targetVector == null)
+            if (targetObject == null)
             {
                 return;
             }
@@ -550,6 +566,7 @@ namespace UnityEngine.AI.MonsterBehavior
                 }
                 enemyHealthBar.gameObject.SetActive(true);
                 EnemyAttack();
+                Debug.Log("Tower");
             }
             else
             {
@@ -565,14 +582,17 @@ namespace UnityEngine.AI.MonsterBehavior
                 collectTimer += Time.deltaTime;
                 if (collectTimer > collectDuration)
                 {
+                    protectedResource.transform.GetChild(0).gameObject.GetComponent<ChangableResources>()._thisResource -= (int)collectAmount;
                     collectedResource += collectAmount;
                     collectTimer = 0;
                 }
             }
 
-            if (collectedResource >= carryingCapacity || resourceCompletelyExploited)
+            if (protectedResource.transform.GetChild(0).gameObject.GetComponent<ChangableResources>()._thisResource <= 0)
             {
-                groupController.questDone = true;
+                resourceCompletelyExploited = true;
+                protectedResource = GameObject.FindGameObjectWithTag("Storage");
+                targetObject = protectedResource;
             }
             if (!destinationPointSet)
             {

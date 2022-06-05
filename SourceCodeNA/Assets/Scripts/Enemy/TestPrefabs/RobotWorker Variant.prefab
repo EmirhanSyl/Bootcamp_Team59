@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotWorker Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4378247107504912577, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
       propertyPath: collectAmount
       value: 5
@@ -594,6 +598,10 @@ PrefabInstance:
     - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
       propertyPath: collectDuration
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
+      propertyPath: regionDrowpdown
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4378247107504912582, guid: 89fc4fa566d15d54a8ad092a61e09f39, type: 3}
       propertyPath: enemyLayers.m_Bits

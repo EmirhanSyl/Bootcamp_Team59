@@ -1900,9 +1900,9 @@ MonoBehaviour:
   bloodParticles: {fileID: 3126714061670064605, guid: c95c68cefe393a2408e1ce8c5deddfed, type: 3}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   enemyStateTypeDropdown: 1
-  regionDrowpdown: 0
+  regionDrowpdown: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1927,6 +1927,8 @@ MonoBehaviour:
   projectileInitLocation: {fileID: 0}
   collectAnimatonsList: []
   carryingCapacity: 0
+  collectDuration: 0
+  collectAmount: 0
   resourceCompletelyExploited: 0
   hugeKnightNPC: 0
   enemyHealthBar: {fileID: 1219148091134507694}

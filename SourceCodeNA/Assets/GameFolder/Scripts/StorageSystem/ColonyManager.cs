@@ -6,23 +6,25 @@ public class ColonyManager : MonoBehaviour
 {
     int _population;
     GameObject[] _villiagers;
+    GameObject _attackerGroup;
 
 
     private void Start()
     {
-        InvokeRepeating("DecraseFood", Time.deltaTime, 5.0f);
+        InvokeRepeating("DecraseFood", Time.deltaTime, 25.0f);
     }
 
     private void Update()
     {
         //bunu her bi spawn olan npcde calistiracagiz
+        _attackerGroup = GameObject.FindGameObjectWithTag("AttackerGroup");
          VilliagerPopulation();
          PopulationOfTheVilliage();         
     }
 
     void PopulationOfTheVilliage() //notplayerdan instancce alýp köylü sayýsýný alacaktým ama hata aldým oradaki sayýyý tekrar if'e attým -- zamaným olursa villiagerlarý daha optimize bi sekilde ayarlayacagým.
     {
-        _population = UnitSelections.Instance._unitList.Count + _villiagers.Length;
+        _population = _attackerGroup.transform.childCount + _villiagers.Length;
     }
 
     void DecraseFood()

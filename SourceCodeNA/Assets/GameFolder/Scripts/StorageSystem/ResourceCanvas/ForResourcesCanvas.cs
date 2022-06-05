@@ -52,10 +52,10 @@ public class ForResourcesCanvas : MonoBehaviour
         for (int i = 0; i < _villiagers.Length; i++)
         {
             _gathererVilliagers[i] = _villiagers[i].GetComponent<GathererVilliager>();
-
+            _villiagers[i].GetComponent<EnemyBehaviours>().protectedResource = this.gameObject;
             //_gathererVilliagers[i].GoToTheResource();
 
-            _gathererVilliagers[i].GetComponent<EnemyBehaviours>().protectedResource = this.gameObject;
+            //_gathererVilliagers[i].GetComponent<EnemyBehaviours>().protectedResource = this.gameObject;
             Debug.Log("AA");
         }
     }

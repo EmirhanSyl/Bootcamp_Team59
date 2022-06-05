@@ -52,6 +52,8 @@ public class SiegeMachines : MonoBehaviour
     private NavMeshAgent agent;
 
     public Collider[] cols;
+
+    public bool _calledByPlayer;
     void Start()
     {
         characterMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
@@ -107,7 +109,7 @@ public class SiegeMachines : MonoBehaviour
 
             foreach (var currentEnemyColl in allEnemies)
             {
-                if ((currentEnemyColl.GetComponentInParent<BuildingMnager>() != null && currentEnemyColl.GetComponentInParent<BuildingMnager>().isDestroyed) || (!currentEnemyColl.gameObject.transform.parent.gameObject.CompareTag(enemyBuildingTag)))
+                if ((currentEnemyColl.GetComponentInParent<BuildingMnager>() != null && currentEnemyColl.GetComponentInParent<BuildingMnager>().isDestroyed) || (!currentEnemyColl.gameObject.transform.parent.gameObject.CompareTag("DesertBuilding")))
                 {
                     Debug.Log("Target Removed");
                     targetObject = null;
@@ -119,6 +121,7 @@ public class SiegeMachines : MonoBehaviour
                     distanceToClosestEnemy = distanceToCurrentEnemy;
                     closestEnemy = currentEnemyColl.gameObject.transform.parent.gameObject;
                     targetObject = closestEnemy;
+                    Debug.Log("TARGEEEET");
                 }
             }
         }
@@ -127,7 +130,7 @@ public class SiegeMachines : MonoBehaviour
             if (temporaryTarget != null)
             {
 
-                if ((transform.position - temporaryTarget.transform.position).sqrMagnitude > 5f)
+                if ((transform.position - temporaryTarget.transform.position).magnitude > 10f)
                 {
                     agent.SetDestination(temporaryTarget.transform.position);
                 }
@@ -137,7 +140,11 @@ public class SiegeMachines : MonoBehaviour
                 }
                 return;
             }
-            temporaryTarget = groupManager.NPCGroup[Random.Range(0, groupManager.NPCGroup.Length)].gameObject;            
+
+            if (_calledByPlayer)
+            {
+                temporaryTarget = GameObject.FindGameObjectWithTag("Player");
+            }            
         }
 
         Vector3 targetVector = targetObject.transform.parent.transform.position - (targetObject.transform.forward * 4f);
@@ -153,6 +160,8 @@ public class SiegeMachines : MonoBehaviour
         {
             agent.SetDestination(targetVector);
         }
+
+
     }
 
     void Attack()
