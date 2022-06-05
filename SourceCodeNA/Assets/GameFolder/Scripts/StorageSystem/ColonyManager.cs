@@ -36,6 +36,6 @@ public class ColonyManager : MonoBehaviour
 
     void VilliagerPopulation()
     {
-        _villiagers = GameObject.FindGameObjectsWithTag("Villiager");    
+        _villiagers = GameObject.FindGameObjectsWithTag("Villiager");
     }
 }

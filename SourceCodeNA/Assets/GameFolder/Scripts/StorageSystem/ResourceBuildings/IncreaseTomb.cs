@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class IncreaseStoneMine : MonoBehaviour
+public class IncreaseTomb : MonoBehaviour
 {
-    int _increaseAmount = 10;
+    int _increaseAmount = 5;
 
     float _time;
 
@@ -12,7 +12,7 @@ public class IncreaseStoneMine : MonoBehaviour
         {
             _time += Time.deltaTime;
         }
-        
+
         if (_time > 4.5f)
         {
             IncreaseResource();
@@ -21,7 +21,7 @@ public class IncreaseStoneMine : MonoBehaviour
 
     void IncreaseResource()
     {
-        Storage._stone += _increaseAmount;
+        Storage._soul += _increaseAmount;
         _time = 0f;
     }
 }

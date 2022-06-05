@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class IncreaseMill : MonoBehaviour
 {
-    int _increaseAmount = 5;
+    int _increaseAmount = 10;
 
     float _time;
 
