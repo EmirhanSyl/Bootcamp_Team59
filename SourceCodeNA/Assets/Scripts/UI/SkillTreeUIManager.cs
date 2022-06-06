@@ -48,7 +48,7 @@ public class SkillTreeUIManager : MonoBehaviour
     [SerializeField] private TMP_Text text_SoulCost_HealUpgrateLevelAtInfoTab;
 
 
-    [SerializeField] private RegionManager regionManager;
+    //[SerializeField] private RegionManager regionManager;
     [SerializeField] private MagicAttacks magicAttacks;
 
     [SerializeField] private VideoPlayer videoPlayer;
@@ -173,9 +173,9 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_PoisonMagic)
         {
             case 0:
-                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level1.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level1.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_PoisonMagic_Level1)
+                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level1.ToString() + "/" + Storage._food;
+                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level1.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_PoisonMagic_Level1)
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -183,7 +183,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if(regionManager.foodCount < upgradeCosts.foodCost_PoisonMagic_Level1)
+                if(Storage._food < upgradeCosts.foodCost_PoisonMagic_Level1)
                 {
                     text_FoodCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -193,9 +193,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 1:
-                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level2.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level2.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_PoisonMagic_Level2)
+                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level2.ToString() + "/" + Storage._food;
+                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level2.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_PoisonMagic_Level2)
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -203,7 +203,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_PoisonMagic_Level2)
+                if (Storage._food < upgradeCosts.foodCost_PoisonMagic_Level2)
                 {
                     text_FoodCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -213,9 +213,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 2:
-                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level3.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level3.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_PoisonMagic_Level3)
+                text_FoodCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_PoisonMagic_Level3.ToString() + "/" + Storage._food;
+                text_SoulCost_PoisonUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_PoisonMagic_Level3.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_PoisonMagic_Level3)
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -223,7 +223,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_PoisonUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_PoisonMagic_Level3)
+                if (Storage._food < upgradeCosts.foodCost_PoisonMagic_Level3)
                 {
                     text_FoodCost_PoisonUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -253,7 +253,7 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_PoisonMagic)
         {
             case 0:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_PoisonMagic_Level1 && regionManager.foodCount >= upgradeCosts.foodCost_PoisonMagic_Level1)
+                if (Storage._soul >= upgradeCosts.soulCost_PoisonMagic_Level1 && Storage._food >= upgradeCosts.foodCost_PoisonMagic_Level1)
                 {
                     upgradeable_PoisonMagic = true;
                 }
@@ -265,7 +265,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_PoisonMagic_Level1;
                 break;
             case 1:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_PoisonMagic_Level2 && regionManager.foodCount >= upgradeCosts.foodCost_PoisonMagic_Level2)
+                if (Storage._soul >= upgradeCosts.soulCost_PoisonMagic_Level2 && Storage._food >= upgradeCosts.foodCost_PoisonMagic_Level2)
                 {
                     upgradeable_PoisonMagic = true;
                 }
@@ -277,7 +277,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_PoisonMagic_Level2;
                 break;
             case 2:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_PoisonMagic_Level3 && regionManager.foodCount >= upgradeCosts.foodCost_PoisonMagic_Level3)
+                if (Storage._soul >= upgradeCosts.soulCost_PoisonMagic_Level3 && Storage._food >= upgradeCosts.foodCost_PoisonMagic_Level3)
                 {
                     upgradeable_PoisonMagic = true;
                 }
@@ -301,8 +301,8 @@ public class SkillTreeUIManager : MonoBehaviour
         text_PoisonLevel.text = "Level: " + level_PoisonMagic.ToString();
         poisonMagicPanel.SetActive(false);
         status_PoisonMagicInfoPanel = false;
-        regionManager.foodCount -= used_FoodResource;
-        regionManager.soulCount -= used_SoulResource;
+        Storage._food -= used_FoodResource;
+        Storage._soul -= used_SoulResource;
     }    
 
 
@@ -326,9 +326,9 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_ElectricMagic)
         {
             case 0:
-                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level1.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level1.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_ElectricMagic_Level1)
+                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level1.ToString() + "/" + Storage._food;
+                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level1.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_ElectricMagic_Level1)
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -336,7 +336,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_ElectricMagic_Level1)
+                if (Storage._food < upgradeCosts.foodCost_ElectricMagic_Level1)
                 {
                     text_FoodCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -346,9 +346,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 1:
-                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level2.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level2.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_ElectricMagic_Level2)
+                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level2.ToString() + "/" + Storage._food;
+                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level2.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_ElectricMagic_Level2)
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -356,7 +356,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_ElectricMagic_Level2)
+                if (Storage._food < upgradeCosts.foodCost_ElectricMagic_Level2)
                 {
                     text_FoodCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -366,9 +366,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 2:
-                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level3.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level3.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_ElectricMagic_Level3)
+                text_FoodCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_ElectricMagic_Level3.ToString() + "/" + Storage._food;
+                text_SoulCost_ElectricUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_ElectricMagic_Level3.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_ElectricMagic_Level3)
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -376,7 +376,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_ElectricMagic_Level3)
+                if (Storage._food < upgradeCosts.foodCost_ElectricMagic_Level3)
                 {
                     text_SoulCost_ElectricUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -405,7 +405,7 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_ElectricMagic)
         {
             case 0:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_ElectricMagic_Level1 && regionManager.foodCount >= upgradeCosts.foodCost_ElectricMagic_Level1)
+                if (Storage._soul >= upgradeCosts.soulCost_ElectricMagic_Level1 && Storage._food >= upgradeCosts.foodCost_ElectricMagic_Level1)
                 {
                     upgradeable_ElectricMagic = true;
                 }
@@ -417,7 +417,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_ElectricMagic_Level1;
                 break;
             case 1:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_ElectricMagic_Level2 && regionManager.foodCount >= upgradeCosts.foodCost_ElectricMagic_Level2)
+                if (Storage._soul >= upgradeCosts.soulCost_ElectricMagic_Level2 && Storage._food >= upgradeCosts.foodCost_ElectricMagic_Level2)
                 {
                     upgradeable_ElectricMagic = true;
                 }
@@ -429,7 +429,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_ElectricMagic_Level2;
                 break;
             case 2:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_ElectricMagic_Level3 && regionManager.foodCount >= upgradeCosts.foodCost_ElectricMagic_Level3)
+                if (Storage._soul >= upgradeCosts.soulCost_ElectricMagic_Level3 && Storage._food >= upgradeCosts.foodCost_ElectricMagic_Level3)
                 {
                     upgradeable_ElectricMagic = true;
                 }
@@ -453,8 +453,8 @@ public class SkillTreeUIManager : MonoBehaviour
         text_ElectricLevel.text = "Level: " + level_ElectricMagic.ToString();
         electricMagicPanel.SetActive(false);
         status_ElectricMagicInfoPanel = false;
-        regionManager.foodCount -= used_FoodResource;
-        regionManager.soulCount -= used_SoulResource;
+        Storage._food -= used_FoodResource;
+        Storage._soul -= used_SoulResource;
     }
 
 
@@ -477,9 +477,9 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_HealMagic)
         {
             case 0:
-                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level1.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level1.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_HealMagic_Level1)
+                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level1.ToString() + "/" + Storage._food;
+                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level1.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_HealMagic_Level1)
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -487,7 +487,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_HealMagic_Level1)
+                if (Storage._food < upgradeCosts.foodCost_HealMagic_Level1)
                 {
                     text_FoodCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -497,9 +497,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 1:
-                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level2.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level2.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_HealMagic_Level2)
+                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level2.ToString() + "/" + Storage._food;
+                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level2.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_HealMagic_Level2)
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -507,7 +507,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_HealMagic_Level2)
+                if (Storage._food < upgradeCosts.foodCost_HealMagic_Level2)
                 {
                     text_FoodCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -517,9 +517,9 @@ public class SkillTreeUIManager : MonoBehaviour
                 }
                 break;
             case 2:
-                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level3.ToString() + "/" + regionManager.foodCount;
-                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level3.ToString() + "/" + regionManager.soulCount;
-                if (regionManager.soulCount < upgradeCosts.soulCost_HealMagic_Level3)
+                text_FoodCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.foodCost_HealMagic_Level3.ToString() + "/" + Storage._food;
+                text_SoulCost_HealUpgrateLevelAtInfoTab.text = upgradeCosts.soulCost_HealMagic_Level3.ToString() + "/" + Storage._soul;
+                if (Storage._soul < upgradeCosts.soulCost_HealMagic_Level3)
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -527,7 +527,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 {
                     text_SoulCost_HealUpgrateLevelAtInfoTab.color = Color.black;
                 }
-                if (regionManager.foodCount < upgradeCosts.foodCost_HealMagic_Level3)
+                if (Storage._food < upgradeCosts.foodCost_HealMagic_Level3)
                 {
                     text_FoodCost_HealUpgrateLevelAtInfoTab.color = Color.red;
                 }
@@ -557,7 +557,7 @@ public class SkillTreeUIManager : MonoBehaviour
         switch (level_HealMagic)
         {
             case 0:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_HealMagic_Level1 && regionManager.foodCount >= upgradeCosts.foodCost_HealMagic_Level1)
+                if (Storage._soul >= upgradeCosts.soulCost_HealMagic_Level1 && Storage._food >= upgradeCosts.foodCost_HealMagic_Level1)
                 {
                     upgradeable_HealMagic = true;
                 }
@@ -569,7 +569,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_HealMagic_Level1;
                 break;
             case 1:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_HealMagic_Level2 && regionManager.foodCount >= upgradeCosts.foodCost_HealMagic_Level2)
+                if (Storage._soul >= upgradeCosts.soulCost_HealMagic_Level2 && Storage._food >= upgradeCosts.foodCost_HealMagic_Level2)
                 {
                     upgradeable_HealMagic = true;
                 }
@@ -581,7 +581,7 @@ public class SkillTreeUIManager : MonoBehaviour
                 used_SoulResource = upgradeCosts.soulCost_HealMagic_Level2;
                 break;
             case 2:
-                if (regionManager.soulCount >= upgradeCosts.soulCost_HealMagic_Level3 && regionManager.foodCount >= upgradeCosts.foodCost_HealMagic_Level3)
+                if (Storage._soul >= upgradeCosts.soulCost_HealMagic_Level3 && Storage._food >= upgradeCosts.foodCost_HealMagic_Level3)
                 {
                     upgradeable_HealMagic = true;
                 }
@@ -605,8 +605,8 @@ public class SkillTreeUIManager : MonoBehaviour
         text_HealLevel.text = "Level: " + level_HealMagic.ToString();
         healMagicPanel.SetActive(false);
         status_HealMagicInfoPanel = false;
-        regionManager.foodCount -= used_FoodResource;
-        regionManager.soulCount -= used_SoulResource;
+        Storage._food -= used_FoodResource;
+        Storage._soul -= used_SoulResource;
     }
 
 
