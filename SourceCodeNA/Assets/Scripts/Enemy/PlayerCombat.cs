@@ -48,7 +48,7 @@ public class PlayerCombat : MonoBehaviour
         {
             AttackCheck();
         }
-        if (Input.GetKey(KeyCode.LeftAlt))
+        if (Input.GetKey(KeyCode.V))
         {
             Dodge();
         }
@@ -147,7 +147,7 @@ public class PlayerCombat : MonoBehaviour
         {
             return;
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else /*if (Input.GetKeyDown(KeyCode.E))*/
         {
             animator.SetTrigger("Dodge");
             transform.DOMove(transform.position + (transform.right * 5), 0.8f).SetDelay(0.2f);
