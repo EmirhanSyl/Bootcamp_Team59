@@ -30,6 +30,8 @@ TagManager:
   - PlayerCam
   - PlayerCanvas
   - AttackerGroup
+  - VilliagerText
+  - SoilderText
   layers:
   - Default
   - TransparentFX

@@ -13,13 +13,13 @@ public class TutorialPanel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H)) // m tuþuna basýnca
         {
-            if (this.transform.GetChild(0).gameObject.activeSelf == false) // eðer panel kapalýysa
+            if (this.transform.GetChild(2).gameObject.activeSelf == false) // eðer panel kapalýysa
             {
-                this.transform.GetChild(0).gameObject.SetActive(true); // paneli aç
+                this.transform.GetChild(2).gameObject.SetActive(true); // paneli aç
             }
             else
             {
-                this.transform.GetChild(0).gameObject.SetActive(false); // paneli kapat
+                this.transform.GetChild(2).gameObject.SetActive(false); // paneli kapat
             }
         }
     }
