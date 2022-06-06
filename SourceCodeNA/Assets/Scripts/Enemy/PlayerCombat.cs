@@ -57,6 +57,10 @@ public class PlayerCombat : MonoBehaviour
             animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
             turnedIntoASkeleton = true;
         }
+        else
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     void AttackCheck()
@@ -147,7 +151,7 @@ public class PlayerCombat : MonoBehaviour
         {
             return;
         }
-        else /*if (Input.GetKeyDown(KeyCode.E))*/
+        else 
         {
             animator.SetTrigger("Dodge");
             transform.DOMove(transform.position + (transform.right * 5), 0.8f).SetDelay(0.2f);

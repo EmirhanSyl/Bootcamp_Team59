@@ -9,7 +9,12 @@ public class NextScene : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            NextLevel();
         }
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

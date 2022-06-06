@@ -30,6 +30,9 @@ public class PlayerHealth : MonoBehaviour
     private MagicAttacks magicAttacks;
     Animator animator;
 
+    public bool _bool;
+    public float _can;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -62,12 +65,26 @@ public class PlayerHealth : MonoBehaviour
             health = currentHealth;
             animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
         }
+        else
+        {
+            if (!_bool)
+            {
+                animator = GetComponent<Animator>();
+                //animator.SetTrigger("Idle");
+                currentHealth = 300;
+                health = currentHealth;
+                _bool = true;
+            }
+            
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             health -= 110;
         }
 
         healthBar.SetHealth(health);
+
+        _can = health;
     }
     public void DamageTakenAnimPlaying()
     {
@@ -119,13 +136,13 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("HealMagic"))
-        {
-            Healing();
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("HealMagic"))
+    //    {
+    //        Healing();
+    //    }
+    //}
 
     IEnumerator NoTakeDamageCoroutine()
     {

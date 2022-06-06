@@ -9,8 +9,8 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isAttack;
 
-    [SerializeField] float movementSpeed = 5;
-    [SerializeField] float sprintSpeed = 8;
+    public float movementSpeed = 5;
+    public float sprintSpeed = 8;
     [SerializeField] float rotationSpeed = 360;
     [SerializeField] float movementSpeedWhileAttack = 2.5f;
     [SerializeField] float deathDownSpeed = 0.5f;
@@ -37,7 +37,7 @@ public class CharacterMovement : MonoBehaviour
     private bool BuryDownControl;
 
     Rigidbody rig;
-    Animator animator;
+    public Animator animator;
     CapsuleCollider coll;
     PlayerCombat playerCombat;
 
