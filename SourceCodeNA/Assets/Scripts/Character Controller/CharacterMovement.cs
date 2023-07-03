@@ -75,6 +75,11 @@ public class CharacterMovement : MonoBehaviour
             StartCoroutine(Dead());
         }
 
+        if(Skeleton && PlayerHealth.health <= 0)
+        {
+            //transform.position = 
+        }
+
         if (camRotTimer < 1)
         {
             camRotTimer += Time.deltaTime;
